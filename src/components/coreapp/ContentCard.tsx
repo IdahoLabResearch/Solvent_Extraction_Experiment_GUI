@@ -117,7 +117,7 @@ export default function ContentCard(props: any) {
                 Stage&nbsp;
                 {returnReadableId(currentContactor.id)}
               </span>
-              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentContactor.stage}</span>
+              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentContactor.stage?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
           </Box>
           <Box
@@ -213,7 +213,7 @@ export default function ContentCard(props: any) {
               }}
               variant="h4"
             >
-              <span style={{ }}>{currentStage.title}</span>
+              <span style={{ }}>{currentStage.title?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
           </Box>
           <Box
