@@ -1,13 +1,19 @@
-import React from 'react'
+// React
+import * as React from 'react';
 import ReactDOM from 'react-dom/client'
-
-import { store } from './app/store/index';
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
+// Import Redux and Store
+import { Provider } from 'react-redux';
+import { store } from './app/store/index';
+
+// Import Fonts
 import '@fontsource/source-sans-pro';
 
+// Import App
 import App from './App'
+
+// Styles
 import './styles/App.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

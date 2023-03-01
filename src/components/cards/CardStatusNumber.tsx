@@ -1,7 +1,12 @@
+// React
 import * as React from 'react';
 
-import Box from '@mui/material/Box';
+// MUI Components
+import {
+  Box,
+} from '@mui/material';
 
+// Import styles
 import '../../styles/App.scss';
 
 export default function CardStatusNumber(props: any) {

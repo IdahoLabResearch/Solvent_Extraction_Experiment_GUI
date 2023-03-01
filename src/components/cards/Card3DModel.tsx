@@ -1,16 +1,21 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useEffect } from 'react';
 
+// Three.js
 import {
   Canvas, useThree, useLoader,
 } from '@react-three/fiber';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+// Styles
 import '../../styles/App.scss';
 
 function Scene() {
-  const obj = useLoader(OBJLoader, '/octahedron.obj');
+  const obj = useLoader(OBJLoader, './public/octahedron.obj');
   return <primitive object={obj} />;
 }
 

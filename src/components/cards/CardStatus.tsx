@@ -1,10 +1,17 @@
+// React
 import * as React from 'react';
+
+// Import Packages
 import { v4 as uuidv4 } from 'uuid';
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
+// MUI Components
+import {
+  Box,
+  Grid,
+  Typography
+} from '@mui/material';
 
+// Import styles
 import '../../styles/App.scss';
 
 export default function CardStatus(props: any) {

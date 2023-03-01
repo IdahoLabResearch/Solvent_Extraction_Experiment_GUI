@@ -1,13 +1,19 @@
+// React
 import * as React from 'react';
 
-import { useAppSelector } from '../../app/hooks';
+// Hooks
+import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
+// MUI Components
 import { Grid } from '@mui/material';
+
+// Custom Components
 import ContentCard from '../coreapp/ContentCard';
 import ContentCardInline from '../coreapp/ContentCardInline';
 import CardStatus from './CardStatus';
-import Card3DModel2 from './Card3DModel2';
+import Card3DModel from './Card3DModel';
 
+// Import styles
 import '../../styles/App.scss';
 
 export default function CardSelectedStage() {
@@ -43,7 +49,7 @@ export default function CardSelectedStage() {
         </Grid>
         <Grid item xs={12} lg={6}>
           <ContentCardInline title="Process Block 3D Model">
-            <Card3DModel2 />
+            <Card3DModel />
           </ContentCardInline>
         </Grid>
 

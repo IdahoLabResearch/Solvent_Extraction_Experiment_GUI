@@ -1,15 +1,29 @@
+// React
 import * as React from 'react';
-import { useEffect, useState } from "react";
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
 
-import '../../styles/App.scss';
-import { Typography, Box, Button } from '@mui/material';
+// Hooks
+import { useEffect, useState } from "react";
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
+
+// Import Packages
 import classNames from 'classnames';
 
+// Import Redux Actions
 import { appStateActions } from '../../app/store/index';
 import { stagesActions } from '../../app/store/stages';
 
+// MUI Components
+import {
+  Typography,
+  Box,
+  Button
+} from '@mui/material';
+
+// Custom Components
 import Contactor2DModel from '../models/Contactor2DModel';
+
+// Import Styles
+import '../../styles/App.scss';
 
 export default function Card2DModel() {
   type selectedStage = {
@@ -74,7 +88,8 @@ export default function Card2DModel() {
                   display: 'flex',
                   flexDirection: 'column',
                   paddingTop: '16px',
-                  overflowX: 'hidden'
+                  overflowX: 'hidden',
+                  flexGrow: 1
                 }}
                 className={classNames(
                   {
@@ -86,11 +101,11 @@ export default function Card2DModel() {
                   },
                 )}
               >
-                <Box style={{ display: 'flex', flexDirection: 'row' }}>
+                <Box style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
                   {filteredRow1.filter((contactor: any) => contactor.stage === stage.title).map((contactor: any) => {
                     const contactorKey = Math.random();
                     return (
-                      <Box key={contactorKey} sx={{ display: 'flex' }} id='toprowcontainer'>
+                      <Box key={contactorKey} sx={{ display: 'flex', width: '100%' }} id='toprowcontainer'>
                         <Contactor2DModel id={contactor.id} stage={contactor.stage} statuses={contactor.statuses} mlStatus={contactor.mlStatus} ml={contactor.ml} />
                       </Box>
                     );

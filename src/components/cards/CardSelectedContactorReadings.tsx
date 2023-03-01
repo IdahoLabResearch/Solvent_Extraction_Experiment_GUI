@@ -1,13 +1,20 @@
+// React
 import * as React from 'react';
-import { useAppSelector } from '../../app/hooks';
 
-import { Grid } from '@mui/material';
+// Hooks
+import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
+
+// MUI Components
+import {
+  Grid
+} from '@mui/material';
 import ContentCard from '../coreapp/ContentCard';
 import ContentCardInline from '../coreapp/ContentCardInline';
 import CardStatus from './CardStatus';
 import Card3DModel from './Card3DModel';
 import CardLineGraph from './CardLineGraph';
 
+// Import styles
 import '../../styles/App.scss';
 
 export default function CardSelectedContactorReadings() {
