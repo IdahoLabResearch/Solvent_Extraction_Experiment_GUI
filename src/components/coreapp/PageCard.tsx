@@ -1,12 +1,16 @@
+// React
 import * as React from 'react';
 
+// MUI Components
 import {
   Card,
   CardContent,
   Typography,
 } from '@mui/material';
 
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
 
 export default function PageCard(props: any) {

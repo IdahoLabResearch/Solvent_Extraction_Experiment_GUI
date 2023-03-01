@@ -1,6 +1,10 @@
+// React
 import * as React from 'react';
+
+// Import Packages
 import Plot from 'react-plotly.js';
 
+// Import styles
 import '../../styles/App.scss';
 
 export default function CardLineGraph() {

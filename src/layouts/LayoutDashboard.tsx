@@ -1,13 +1,16 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useAppSelector } from '../app/hooks/reduxTypeScriptHooks';
 
-// Load transitions
+// MUI Transitions
 import Fade from '@mui/material/Fade';
 
-// Load MUI components
+// MUI Components
 import { Grid, Box } from '@mui/material';
 
-// Load Custom Components
+// Custom Components
 import ContentCard from '../components/coreapp/ContentCard';
 import ContentCardInline from '../components/coreapp/ContentCardInline';
 import CardStatusSafeguard from '../components/cards/CardStatusSafeguard';

@@ -1,19 +1,29 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
+// Import Packages
 import classNames from 'classnames';
 
+// MUI Components
 import {
   Grid,
   Box,
   Typography,
 } from '@mui/material';
+
+// MUI Icons
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 
+// Custom Components
 import ContentCard from '../coreapp/ContentCard';
 
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
 
 export default function CardSelectedContactorResults() {

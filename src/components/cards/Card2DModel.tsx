@@ -1,15 +1,29 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
-import '../../styles/App.scss';
-import { Typography, Box, Button } from '@mui/material';
+// Import Packages
 import classNames from 'classnames';
 
+// Import Redux Actions
 import { appStateActions } from '../../app/store/index';
 import { stagesActions } from '../../app/store/stages';
 
+// MUI Components
+import {
+  Typography,
+  Box,
+  Button
+} from '@mui/material';
+
+// Custom Components
 import Contactor2DModel from '../models/Contactor2DModel';
+
+// Import Styles
+import '../../styles/App.scss';
 
 export default function Card2DModel() {
   type selectedStage = {

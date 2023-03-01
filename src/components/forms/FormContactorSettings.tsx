@@ -1,8 +1,10 @@
+// React
 import * as React from 'react';
-import { useEffect, useState, useRef } from "react";
-import { flushSync } from 'react-dom';
+
+// Hooks
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
+// MUI Components
 import {
   Box,
   Grid,
@@ -11,9 +13,13 @@ import {
   TextField,
 } from '@mui/material';
 
-import COLORS from '../../styles/variables';
-
+// Import Redux Actions
 import { contactorsActions } from '../../app/store/contactors';
+
+// Import styles
+import '../../styles/App.scss';
+// @ts-ignore
+import COLORS from '../../styles/variables';
 
 const FormContactorSettings = () => {
   const dispatch = useAppDispatch();

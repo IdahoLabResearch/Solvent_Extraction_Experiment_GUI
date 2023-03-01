@@ -1,11 +1,18 @@
+// React
 import * as React from 'react';
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+// MUI Components
+import {
+  Box,
+  Typography
+} from '@mui/material';
 
+// MUI Icons
 import ErrorIcon from '@mui/icons-material/Error';
 
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
 
 const statusIcon = (

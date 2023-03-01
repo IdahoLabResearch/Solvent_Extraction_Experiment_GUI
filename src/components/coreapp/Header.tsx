@@ -1,3 +1,4 @@
+// React
 import * as React from 'react';
 
 // Hooks
@@ -6,27 +7,23 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptH
 // Import Redux actions
 import { appStateActions } from '../../app/store/index';
 
-import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TuneIcon from '@mui/icons-material/Tune';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import { Link } from 'react-router-dom';
+// MUI Styles
+import { styled } from '@mui/material/styles';
 
+// MUI Components
+import {
+  IconButton,
+  Toolbar,
+  Typography
+} from '@mui/material';
+import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+
+// MUI Icons
+import MenuIcon from '@mui/icons-material/Menu';
+
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
 
 const DrawerHeader = styled('div')(({ theme }) => ({

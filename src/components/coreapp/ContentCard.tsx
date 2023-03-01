@@ -1,20 +1,31 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import CancelIcon from '@mui/icons-material/Cancel';
-
+// Import Redux Actions
 import { appStateActions } from '../../app/store/index';
 import { contactorsActions } from '../../app/store/contactors';
 
+// MUI Components
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardContent,
+  IconButton,
+  Typography
+} from '@mui/material';
+
+// MUI Icons
+import CancelIcon from '@mui/icons-material/Cancel';
+
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
 
 export default function ContentCard(props: any) {

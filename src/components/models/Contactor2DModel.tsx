@@ -1,11 +1,18 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
+
+// Import Packages
 import classNames from 'classnames';
 
-import '../../styles/App.scss';
-
+// Import Redux Actions
 import { appStateActions } from '../../app/store/index';
 import { contactorsActions } from '../../app/store/contactors';
+
+// Import styles
+import '../../styles/App.scss';
 
 export default function Contactor2DModel(props: any) {
   const {

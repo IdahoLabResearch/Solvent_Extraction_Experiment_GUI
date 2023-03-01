@@ -1,20 +1,29 @@
+// React
 import * as React from 'react';
+
+// Hooks
 import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
+// Import Packages
+import { DateTime } from 'luxon';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 // import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+// MUI Components
+import {
+  Box,
+  Typography
+} from '@mui/material';
 
+// MUI Icons
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 
+// Import styles
 import '../../styles/App.scss';
+// @ts-ignore
 import COLORS from '../../styles/variables';
-
-import { DateTime } from 'luxon';
 
 export default function CardStatusComponents() {
   type components = Object[];

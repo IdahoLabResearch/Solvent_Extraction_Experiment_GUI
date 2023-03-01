@@ -1,13 +1,22 @@
+// React
 import * as React from 'react';
-import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 
-import '../styles/App.scss';
-import COLORS from '../../src/styles/variables';
+// MUI Styles
+import { useTheme } from '@mui/material/styles';
+
+// MUI Components
+import {
+  Box,
+} from '@mui/material';
 
 // Custom Components
 import Header from '../components/coreapp/Header';
 import Drawer from '../components/coreapp/Drawer';
+
+// Import styles
+import '../styles/App.scss';
+// @ts-ignore
+import COLORS from '../../styles/variables';
 
 export default function MainScaffold(props: any) {
   const { children } = props;
