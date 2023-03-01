@@ -33,3 +33,8 @@ Search files for code that does not match styles defined by style guide and styl
 ```
 npm run lint
 ```
+
+### Run Cypress App
+Open Cypress Application for testing
+```
+npx cypress open
