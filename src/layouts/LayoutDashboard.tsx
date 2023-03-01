@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useAppSelector } from '../app/hooks';
+import { useAppSelector } from '../app/hooks/reduxTypeScriptHooks';
 
 // Load transitions
 import Fade from '@mui/material/Fade';

@@ -6,6 +6,8 @@ import stagesReducer from './stages';
 import contactorsReducer from './contactors';
 
 const initialState = {
+  openDrawerLeft: true,
+  openDrawerLeftWidth: 265,
   status: 'good',
   contactorCurrentlySelected: false,
   stageCurrentlySelected: false,
@@ -36,6 +38,11 @@ const appStateSlice = createSlice({
   name: 'appState',
   initialState,
   reducers: {
+    toggleDrawerLeft: (state) => {
+      const store = state;
+      store.openDrawerLeft = !store.openDrawerLeft;
+    },
+
     makeContactorSelection(state) {
       const store = state;
       store.contactorCurrentlySelected = true;

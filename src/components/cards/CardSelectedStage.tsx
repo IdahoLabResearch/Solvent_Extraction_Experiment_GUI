@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useAppSelector } from '../../app/hooks';
+import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
 import { Grid } from '@mui/material';
 import ContentCard from '../coreapp/ContentCard';

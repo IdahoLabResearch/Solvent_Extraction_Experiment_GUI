@@ -2,13 +2,13 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { Box, CssBaseline } from '@mui/material';
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
-import { useAppSelector, useAppDispatch } from './app/hooks';
+import { useAppSelector, useAppDispatch } from './app/hooks/reduxTypeScriptHooks';
 import { contactorsActions } from './app/store/contactors';
 
 import './styles/App.scss';
 import { Routes, Route } from 'react-router-dom';
 
-import Header from './components/coreapp/Header';
+import MainScaffold from './layouts/MainScaffold';
 import Dashboard from './pages/Dashboard';
 import Settings from './pages/Settings';
 
@@ -96,14 +96,14 @@ function App() {
   return (
     <div className="App">
       <CssBaseline>
-        <Header>
+        <MainScaffold>
           <main>
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>
           </main>
-        </Header>
+        </MainScaffold>
       </CssBaseline>
     </div>
   );

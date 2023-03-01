@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
 import '../../styles/App.scss';
 import { Typography, Box, Button } from '@mui/material';
@@ -74,7 +74,8 @@ export default function Card2DModel() {
                   display: 'flex',
                   flexDirection: 'column',
                   paddingTop: '16px',
-                  overflowX: 'hidden'
+                  overflowX: 'hidden',
+                  flexGrow: 1
                 }}
                 className={classNames(
                   {
@@ -86,11 +87,11 @@ export default function Card2DModel() {
                   },
                 )}
               >
-                <Box style={{ display: 'flex', flexDirection: 'row' }}>
+                <Box style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
                   {filteredRow1.filter((contactor: any) => contactor.stage === stage.title).map((contactor: any) => {
                     const contactorKey = Math.random();
                     return (
-                      <Box key={contactorKey} sx={{ display: 'flex' }} id='toprowcontainer'>
+                      <Box key={contactorKey} sx={{ display: 'flex', width: '100%' }} id='toprowcontainer'>
                         <Contactor2DModel id={contactor.id} stage={contactor.stage} statuses={contactor.statuses} mlStatus={contactor.mlStatus} ml={contactor.ml} />
                       </Box>
                     );

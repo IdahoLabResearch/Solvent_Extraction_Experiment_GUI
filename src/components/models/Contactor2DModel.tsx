@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 import classNames from 'classnames';
 
 import '../../styles/App.scss';

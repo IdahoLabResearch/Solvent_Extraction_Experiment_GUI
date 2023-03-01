@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useAppSelector } from '../../app/hooks';
+import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 // import { ButtonBack, ButtonNext } from 'pure-react-carousel';

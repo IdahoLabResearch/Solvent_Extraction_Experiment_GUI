@@ -1,4 +1,11 @@
 import * as React from 'react';
+
+// Hooks
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
+
+// Import Redux actions
+import { appStateActions } from '../../app/store/index';
+
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -22,29 +29,6 @@ import { Link } from 'react-router-dom';
 import '../../styles/App.scss';
 import COLORS from '../../styles/variables';
 
-const drawerWidth = 240;
-
-const openedMixin = (theme: Theme): CSSObject => ({
-  width: drawerWidth,
-  transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen,
-  }),
-  overflowX: 'hidden',
-});
-
-const closedMixin = (theme: Theme): CSSObject => ({
-  transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
-  },
-});
-
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -67,8 +51,8 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: useAppSelector((state: any) => state.appState.openDrawerLeftWidth),
+    width: `calc(100% - ${useAppSelector((state: any) => state.appState.openDrawerLeftWidth)}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -76,114 +60,38 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    ...(open && {
-      ...openedMixin(theme),
-      '& .MuiDrawer-paper': openedMixin(theme),
-    }),
-    ...(!open && {
-      ...closedMixin(theme),
-      '& .MuiDrawer-paper': closedMixin(theme),
-    }),
-  }),
-);
+export default function Header(props: any) {
+  const dispatch = useAppDispatch();
 
-export default function MiniDrawer(props: any) {
-  const { children } = props;
+  type openDrawerLeftState = boolean;
+  const openDrawerLeftState: openDrawerLeftState = useAppSelector((state: any) => state.appState.openDrawerLeft);
 
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  type openDrawerLeftWidth = number;
+  const openDrawerLeftWidth: openDrawerLeftWidth = useAppSelector((state: any) => state.appState.openDrawerLeftWidth);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
+  const handleToggleOpenDrawerLeft = () => {
+    dispatch(appStateActions.toggleDrawerLeft());
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h1" noWrap component="div">
-            BCTC GUI
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-
-        <List>
-          <ListItem component={Link} to="/" key="Math.random()" disablePadding>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? 'initial' : 'center',
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : 'auto',
-                  justifyContent: 'center',
-                }}
-              >
-                <DashboardIcon />
-              </ListItemIcon>
-              <ListItemText primary="Dashboard" sx={{ opacity: open ? 1 : 0, color: COLORS.colorSecondary }} />
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <List>
-          <ListItem component={Link} to="/settings" key="Math.random()" disablePadding>
-            <ListItemButton
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? 'initial' : 'center',
-                px: 2.5,
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : 'auto',
-                  justifyContent: 'center',
-                }}
-              >
-                <TuneIcon />
-              </ListItemIcon>
-              <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0, color: COLORS.colorSecondary }} />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, padding: '85px 20px 20px' }}>
-        {children}
-      </Box>
-    </Box>
+    <AppBar position="fixed" open={openDrawerLeftState}>
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleToggleOpenDrawerLeft}
+          edge="start"
+          sx={{
+            marginRight: 5,
+            ...(openDrawerLeftState && { display: 'none' }),
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography variant="h1" noWrap component="div">
+          BCTC GUI
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 }

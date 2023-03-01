@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
