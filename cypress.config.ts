@@ -7,6 +7,11 @@ export default defineConfig({
     },
   },
 
+  env: {
+    dashboard: 'http://localhost:5173',
+    settings: 'http://localhost:5173/settings',
+  },
+
   component: {
     devServer: {
       framework: "react",
