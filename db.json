@@ -1,0 +1,813 @@
+{
+  "contactors": [
+    {
+      "id": 0,
+      "row": 1,
+      "stage": "extraction",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Expected Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": "RPMs are too high",
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "row": 1,
+      "stage": "scrub",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Expected Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "row": 1,
+      "stage": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Expected Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "row": 1,
+      "stage": "wash",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Expected Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "row": 1,
+      "stage": "rinse",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Expected Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Dy Nitrate: HNO\u2083"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": "Flowrate is low",
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    }
+  ],
+  "stages": [
+    {
+      "id": 0,
+      "title": "extraction",
+      "statuses": [
+        {
+          "title": "Flow Rate",
+          "value": 10,
+          "unit": "ml/min",
+          "label": ""
+        },
+        {
+          "title": "Density",
+          "value": 1.5,
+          "unit": "g/cm\u0033",
+          "label": ""
+        },
+        {
+          "title": "Organic In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Organic Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Aqueous In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        },
+        {
+          "title": "Aqueous Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "scrub",
+      "statuses": [
+        {
+          "title": "Flow Rate",
+          "value": 10,
+          "unit": "ml/min",
+          "label": ""
+        },
+        {
+          "title": "Density",
+          "value": 1.5,
+          "unit": "g/cm\u0033",
+          "label": ""
+        },
+        {
+          "title": "Organic In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Organic Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Aqueous In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        },
+        {
+          "title": "Aqueous Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "strip",
+      "statuses": [
+        {
+          "title": "Flow Rate",
+          "value": 10,
+          "unit": "ml/min",
+          "label": ""
+        },
+        {
+          "title": "Density",
+          "value": 1.5,
+          "unit": "g/cm\u0033",
+          "label": ""
+        },
+        {
+          "title": "Organic In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Organic Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Aqueous In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        },
+        {
+          "title": "Aqueous Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "wash",
+      "statuses": [
+        {
+          "title": "Flow Rate",
+          "value": 10,
+          "unit": "ml/min",
+          "label": ""
+        },
+        {
+          "title": "Density",
+          "value": 1.5,
+          "unit": "g/cm\u0033",
+          "label": ""
+        },
+        {
+          "title": "Organic In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Organic Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Aqueous In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        },
+        {
+          "title": "Aqueous Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "rinse",
+      "statuses": [
+        {
+          "title": "Flow Rate",
+          "value": 10,
+          "unit": "ml/min",
+          "label": ""
+        },
+        {
+          "title": "Density",
+          "value": 1.5,
+          "unit": "g/cm\u0033",
+          "label": ""
+        },
+        {
+          "title": "Organic In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Organic Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "Aqueous In",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        },
+        {
+          "title": "Aqueous Out",
+          "value": 8.3,
+          "unit": "mM",
+          "label": "Dy Concentration"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "title": "Data Historian",
+      "status": null,
+      "updated": "2022-10-22T21:38:00"
+    },
+    {
+      "title": "ML Adapter",
+      "status": "Adapter Error",
+      "updated": "2022-10-22T21:38:00"
+    },
+    {
+      "title": "Chemical Adapter",
+      "status": null,
+      "updated": "2022-10-22T21:38:00"
+    }
+  ]
+}

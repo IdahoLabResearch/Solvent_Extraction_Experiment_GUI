@@ -5,6 +5,10 @@ import { Routes, Route } from 'react-router-dom';
 // Hooks
 import { useAppSelector, useAppDispatch } from './app/hooks/reduxTypeScriptHooks';
 
+// Import Packages
+import "@fontsource/source-sans-pro/700.css"; // Weight 700.
+// import "@fontsource/open-sans/900-italic.css"; // Italic variant.
+
 // MUI Styles
 import { useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -51,7 +55,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
   typography: {
     fontFamily: [
       'Source Sans Pro',
-      'serif',
+      'sans-serif',
     ].join(','),
   },
   components: {

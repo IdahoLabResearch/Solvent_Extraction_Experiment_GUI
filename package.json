@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "json-server --watch db.json --port 3005",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:scripts": "eslint --ext .ts,.tsx src",
@@ -29,6 +30,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "json-server": "^0.17.2",
     "luxon": "^3.0.4",
     "plotly.js": "^2.16.0",
     "prettier": "^2.7.1",

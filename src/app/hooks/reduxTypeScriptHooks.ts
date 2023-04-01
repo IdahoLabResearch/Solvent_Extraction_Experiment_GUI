@@ -6,5 +6,5 @@ import type { RootState, AppDispatch } from '../store';
 //Typed `useSelector` to work better with TypeScript
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
 
-// Not typed, just created for sake of uniformity, since `useSelector` is typed. Regular `useDispatch` should still work fine.
+//Typed `useDispatch` to work better with TypeScript
 export const useAppDispatch: () => AppDispatch = useDispatch;

@@ -4,6 +4,9 @@ import * as React from 'react';
 // Hooks
 import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
+// API calls
+import { useFetchComponentsQuery } from '../../app/services/componentsDataApi';
+
 // Import Packages
 import { DateTime } from 'luxon';
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
@@ -20,15 +23,20 @@ import {
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 
+// Custom Components
+import StatusBox from '../status/StatusBox';
+
 // Import styles
 import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
 export default function CardStatusComponents() {
-  type components = Object[];
+  type componentsList = Array<{ [key: string]: any; }>;
+  const { data } = useFetchComponentsQuery();
+  let componentsList = data || [];
 
-  const componentsList: components = useAppSelector((state) => state.components.componentsList);
+  const alarmBoolean = (component: any) => component.status !== null;
 
   return (
     <CarouselProvider
@@ -42,7 +50,7 @@ export default function CardStatusComponents() {
       {/* <ButtonBack className='carousel-back-button'><ArrowBackIosNewIcon /></ButtonBack> */}
 
       <Slider className="carousel-slider">
-        {componentsList.map((component: any) => {
+        {componentsList?.map((component: any) => {
           const key = component.title;
           return (
             <Slide key={key} index={0}>
@@ -52,29 +60,7 @@ export default function CardStatusComponents() {
                   flexGrow: 1
                 }}
               >
-                { component.status === 'good'
-                  ? (
-                    <Box
-                      sx={{ display: 'flex', width: '50px', backgroundColor: COLORS.colorSuccessBackground }}
-                      alignItems="center"
-                      justifyContent="center"
-                    >
-                      <CheckCircleIcon
-                        sx={{ color: COLORS.colorSuccess }}
-                      />
-                    </Box>
-                  )
-                  : (
-                    <Box
-                      sx={{ display: 'flex', width: '50px', backgroundColor: COLORS.colorErrorBackground }}
-                      alignItems="center"
-                      justifyContent="center"
-                    >
-                      <ErrorIcon
-                        sx={{ color: COLORS.colorError }}
-                      />
-                    </Box>
-                  )}
+                <StatusBox alarm={alarmBoolean(component)} />
                 <Box
                   sx={{ display: 'flex', flex: '1 100%', backgroundColor: '#121212' }}
                 >

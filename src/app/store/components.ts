@@ -1,24 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialComponentsState = {
-  componentsList: [
-    {
-      title: 'Data Historian',
-      status: 'good',
-      updated: '2022-10-22T21:38:00',
-    },
-    {
-      title: 'ML Adapter',
-      status: 'error',
-      updated: '2022-10-22T21:38:00',
-    },
-    {
-      title: 'Chemical Adapter',
-      status: 'good',
-      updated: '2022-10-22T21:38:00',
-    },
-  ],
-};
+const initialComponentsState = {};
 
 const componentsSlice = createSlice({
   name: 'components',

@@ -1,9 +1,13 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { setupListeners } from '@reduxjs/toolkit/query';
 
 import componentReducer from './components';
 import systemReducer from './system';
 import stagesReducer from './stages';
 import contactorsReducer from './contactors';
+import { contactorsDataApi } from '../services/contactorsDataApi';
+import { stagesDataApi } from '../services/stagesDataApi';
+import { componentsDataApi } from '../services/componentsDataApi';
 
 const initialState = {
   openDrawerLeft: true,
@@ -79,8 +83,19 @@ export const store = configureStore({
     stages: stagesReducer,
     contactors: contactorsReducer,
     graphInfo: graphInfoSlice.reducer,
+    [contactorsDataApi.reducerPath]: contactorsDataApi.reducer,
+    [stagesDataApi.reducerPath]: stagesDataApi.reducer,
+    [componentsDataApi.reducerPath]: componentsDataApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) => {
+    return getDefaultMiddleware()
+      .concat(contactorsDataApi.middleware)
+      .concat(stagesDataApi.middleware)
+      .concat(componentsDataApi.middleware)
   },
 });
+
+setupListeners(store.dispatch);
 
 export const appStateActions = appStateSlice.actions;
 
