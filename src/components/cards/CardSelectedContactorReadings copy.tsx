@@ -4,7 +4,6 @@ import * as React from 'react';
 // Hooks
 import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
-
 // MUI Components
 import {
   Grid

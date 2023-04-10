@@ -94,14 +94,3 @@ export default function CardStatus(props: any) {
     </>
   );
 }
-
-// CardStatus.propTypes = {
-//   data: PropTypes.shape({
-//     value: PropTypes.oneOfType([
-//       PropTypes.number,
-//       PropTypes.arrayOf(PropTypes.any.isRequired).isRequired,
-//     ]),
-//     label: PropTypes.string,
-//     unit: PropTypes.string,
-//   }).isRequired,
-// };
