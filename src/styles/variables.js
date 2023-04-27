@@ -1,5 +1,6 @@
 const COLORS = {
   colorPrimary: '#005981',
+  colorPrimaryBackground: '#002334', 
   colorSecondary: '#338CB4',
   colorSuccess: 'rgba(78, 191, 148, 1)',
   colorSuccessBackground: 'rgba(78, 191, 148, 0.25)',

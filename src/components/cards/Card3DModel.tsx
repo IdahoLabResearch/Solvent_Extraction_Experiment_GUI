@@ -15,7 +15,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import '../../styles/App.scss';
 
 function Scene() {
-  const obj = useLoader(OBJLoader, './public/octahedron.obj');
+  const obj = useLoader(OBJLoader, './octahedron.obj');
   return <primitive object={obj} />;
 }
 
