@@ -66,16 +66,11 @@ export default function CardSelectedContactorReadings() {
           </ContentCardInline>
         </Grid>
 
-        {graphExampleInfo.map((object: any) => {
-          const key = object.title;
-          return (
-            <Grid item xs={12} lg={4} key={key}>
-              <ContentCardInline data={object} title={object.title}>
-                <CardLineGraph />
-              </ContentCardInline>
-            </Grid>
-          );
-        })}
+        <Grid item xs={12}>
+          <ContentCardInline title={'Sensor Readings Over Time'}>
+            <CardLineGraph />
+          </ContentCardInline>
+        </Grid>
       </Grid>
     </ContentCard>
   );
