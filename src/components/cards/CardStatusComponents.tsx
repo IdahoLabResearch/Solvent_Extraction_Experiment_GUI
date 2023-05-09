@@ -9,6 +9,9 @@ import { useFetchComponentsQuery } from '../../app/services/componentsDataApi';
 
 // Import Packages
 import { DateTime } from 'luxon';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+// import { ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 // MUI Components
 import {
