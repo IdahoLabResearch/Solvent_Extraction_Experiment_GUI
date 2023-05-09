@@ -10,8 +10,8 @@ import { stagesDataApi } from '../services/stagesDataApi';
 import { componentsDataApi } from '../services/componentsDataApi';
 
 const initialState = {
-  openDrawerLeft: true,
-  openDrawerLeftWidth: 265,
+  openDrawerLeft: false,
+  openDrawerLeftWidth: 64,
   status: 'good',
   contactorCurrentlySelected: false,
   stageCurrentlySelected: false,
@@ -42,9 +42,14 @@ const appStateSlice = createSlice({
   name: 'appState',
   initialState,
   reducers: {
+    // App functions
     toggleDrawerLeft: (state) => {
       const store = state;
       store.openDrawerLeft = !store.openDrawerLeft;
+    },
+    setDrawerLeftWidth: (state, action) => {
+      const store = state;
+      store.openDrawerLeftWidth = action.payload;
     },
 
     makeContactorSelection(state) {

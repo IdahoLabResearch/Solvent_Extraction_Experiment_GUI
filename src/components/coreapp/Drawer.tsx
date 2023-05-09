@@ -1,119 +1,75 @@
 // React
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 // Hooks
+import { useState, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
-// Import Redux actions
-import { appStateActions } from '../../app/store/index';
+// Import Packages
+import { v4 as uuidv4 } from 'uuid';
 
-// MUI Styles
-import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
+// Import Redux Actions
+import { appStateActions } from '../../app/store/index';
 
 // MUI Components
 import {
   Box,
-  Divider,
-  IconButton,
+  Drawer,
   List,
   ListItem,
-  ListItemButton,
   ListItemIcon,
-  ListItemText,
-  Paper,
-  Toolbar,
+  ListItemButton,
+  Tooltip,
+  Typography,
 } from '@mui/material';
-import MuiDrawer from '@mui/material/Drawer';
-import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+
 
 // MUI Icons
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import TuneIcon from '@mui/icons-material/Tune';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import DeviceHubIcon from '@mui/icons-material/DeviceHub';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuOpenIcon from '@mui/icons-material/MenuOpen';
+import GppGoodIcon from '@mui/icons-material/GppGood';
+import InfoIcon from '@mui/icons-material/Info';
+import SourceIcon from '@mui/icons-material/Source';
+import SettingsIcon from '@mui/icons-material/Settings';
+
+// Custom Components
+import DrawerContentsComponents from '../../layouts/drawercontents/DrawerContentsComponents';
+import DrawerContentsSafeguards from '../../layouts/drawercontents/DrawerContentsSafeguards';
+import DrawerContentsSettings from '../../layouts/drawercontents/DrawerContentsSettings';
+import DrawerContentsSources from '../../layouts/drawercontents/DrawerContentsSources';
 
 // Styles
 import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../../src/styles/variables';
 
-const drawerWidth = 265;
+type Props = {};
 
-const openedMixin = (theme: Theme): CSSObject => ({
-  width: drawerWidth,
-  transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen,
-  }),
-  overflowX: 'hidden',
-});
+const DrawerLeft: React.FC<Props> = ({}) => {
 
-const closedMixin = (theme: Theme): CSSObject => ({
-  transition: theme.transitions.create('width', {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
-  },
-});
+  const [selected, setSelected] = useState('safeguards');
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-}));
-
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})<AppBarProps>(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(['width', 'margin'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
-
-const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    width: drawerWidth,
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    ...(open && {
-      ...openedMixin(theme),
-      '& .MuiDrawer-paper': openedMixin(theme),
-    }),
-    ...(!open && {
-      ...closedMixin(theme),
-      '& .MuiDrawer-paper': closedMixin(theme),
-    }),
-  }),
-);
-
-export default function MiniDrawer(props: any) {
-  const { children } = props;
-
-  const theme = useTheme();
   const dispatch = useAppDispatch();
+
+  // useEffect(() => {
+  //   async function getNodes() {
+  //     const token = localStorage.getItem('user.token');
+
+  //     await axios.get ( `${location.origin}/containers/${containerId}/graphs/nodes`,
+  //       {
+  //         headers: {
+  //           Authorization: token
+  //         }
+  //       }).then (
+  //         (response: any) => {
+  //           setNodes(queryFilterData(searchQuery, response.data.value))
+  //         }
+  //       )
+  //   }
+
+  //   getNodes();
+  // }, []);
 
   type openDrawerLeftState = boolean;
   const openDrawerLeftState: openDrawerLeftState = useAppSelector((state: any) => state.appState.openDrawerLeft);
@@ -123,61 +79,198 @@ export default function MiniDrawer(props: any) {
 
   const handleToggleOpenDrawerLeft = () => {
     dispatch(appStateActions.toggleDrawerLeft());
+    if (openDrawerLeftWidth === 64) {
+      dispatch(appStateActions.setDrawerLeftWidth(430));
+    } else if (openDrawerLeftWidth === 430 || openDrawerLeftWidth === 800) {
+      dispatch(appStateActions.setDrawerLeftWidth(64));
+    }
   };
 
-  return (
-    <Drawer variant="permanent" open={openDrawerLeftState}>
-      <DrawerHeader>
-        <IconButton onClick={handleToggleOpenDrawerLeft}>
-          {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-        </IconButton>
-      </DrawerHeader>
-      <Divider />
+  // Menu links and menu link selection
+  const menuLinkList = [
+    {
+      title: 'Safeguards',
+      icon: GppGoodIcon,
+      pane: 'safeguards'
+    },
+    {
+      title: 'Components',
+      icon: DeviceHubIcon,
+      pane: 'components'
+    },
+    {
+      title: 'Sources',
+      icon: SourceIcon,
+      pane: 'sources'
+    },
+    {
+      title: 'Settings',
+      icon: SettingsIcon,
+      pane: 'settings'
+    },
+  ]
 
-      <List>
-        <ListItem component={Link} to="/" key="Math.random()" disablePadding>
-          <ListItemButton
-            sx={{
-              minHeight: 48,
-              justifyContent: openDrawerLeftState ? 'initial' : 'center',
-              px: 2.5,
-            }}
-          >
-            <ListItemIcon
+  const handleSelectMenuLink = (selectedLink: string) => {
+    setSelected(selectedLink);
+    if (openDrawerLeftState === false) {
+      dispatch(appStateActions.toggleDrawerLeft());
+    }
+    dispatch(appStateActions.setDrawerLeftWidth(430));
+  };
+
+  // Component display switching
+  const menuItemMatchesComponent = (pane: string) => selected === pane;
+
+  return (
+    <Drawer variant="permanent" open={openDrawerLeftState}
+      sx={{
+        position: 'relative',
+        height: 'auto',
+        display: 'flex',
+        '& > .MuiDrawer-paper': {
+          border: 'none',
+          position: 'relative',
+          height: 'auto',
+          display: 'flex',
+        },
+        ...(openDrawerLeftState === true && {
+          transition: 'width .4s',
+          width: openDrawerLeftWidth,
+          '& .MuiDrawer-paper': {
+            transition: 'width .4s',
+            width: openDrawerLeftWidth
+          }
+        }),
+        ...(openDrawerLeftState === false && {
+          transition: 'width .4s',
+          width: '64px',
+          '& .MuiDrawer-paper': {
+            transition: 'width .4s',
+            width: '64px'
+          }
+        })
+      }}
+    >
+      <Box sx={{ display: 'flex', height: '100%', flexDirection: 'row'}}>
+        <Box sx={{ width: '64px', height: '100%' }}>
+          <List sx={{ p: 0 }}>
+            {/* Hamburger menu icon to open and close Drawer */}
+            <ListItem key={uuidv4()} disablePadding>
+              <ListItemButton
+                sx={{
+                  minHeight: 64,
+                  px: 2.5,
+                  backgroundColor: `${COLORS.colorPrimary} !important`,
+                  '&.Mui-selected': {
+                    backgroundColor: `${COLORS.colorSecondary} !important`
+                  },
+                  '&.Mui-focusVisible': {
+                    backgroundColor: `${COLORS.colorSecondary} !important`
+                  },
+                  '&:hover': {
+                    backgroundColor: `${COLORS.colorSecondary} !important`
+                  }
+                }}
+                onClick={handleToggleOpenDrawerLeft}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  {openDrawerLeftState ? <MenuOpenIcon /> : <MenuIcon />}
+                </ListItemIcon>
+              </ListItemButton>
+            </ListItem>
+
+            {/* Drawer Menu link list */}
+            {menuLinkList.map((menuLinkItem, index) => {
+              const MenuLinkItemIcon = menuLinkItem.icon;
+              return (
+                <ListItem key={uuidv4()} disablePadding>
+                  <ListItemButton
+                    sx={{
+                      minHeight: 64,
+                      px: 2.5,
+                      '&.Mui-selected': {
+                        backgroundColor: `${COLORS.colorListSelectBlue} !important`
+                      },
+                      '&.Mui-focusVisible': {
+                        backgroundColor: `${COLORS.colorListSelectBlue} !important`
+                      },
+                      '&:hover': {
+                        backgroundColor: `${COLORS.colorListSelectBlue} !important`
+                      }
+                    }}
+                    selected={menuItemMatchesComponent(menuLinkItem.pane)}
+                    onClick={() => handleSelectMenuLink(menuLinkItem.pane)}
+                  >
+                    <ListItemIcon
+                      sx={{
+                        minWidth: 0,
+                        mr: 'auto',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <MenuLinkItemIcon />
+                    </ListItemIcon>
+                  </ListItemButton>
+                </ListItem>
+              )
+            })}
+          </List>
+        </Box>
+        <Box sx={{ display: 'flex', flex: '1 1 100%', flexDirection: 'column'}}>
+          <Box sx={{ flex: '1, 1, auto', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '16px' }}>
+            <Typography
+              variant="h3"
               sx={{
-                minWidth: 0,
-                mr: openDrawerLeftState ? 3 : 'auto',
-                justifyContent: 'center',
+                alignItems: 'center',
+                padding: '5px 0px'
               }}
             >
-              <DashboardIcon />
-            </ListItemIcon>
-            <ListItemText primary="Dashboard" sx={{ opacity: openDrawerLeftState ? 1 : 0, color: COLORS.colorSecondary }} />
-          </ListItemButton>
-        </ListItem>
-      </List>
-      <List>
-        <ListItem component={Link} to="/settings" key="Math.random()" disablePadding>
-          <ListItemButton
-            sx={{
-              minHeight: 48,
-              justifyContent: openDrawerLeftState ? 'initial' : 'center',
-              px: 2.5,
-            }}
-          >
-            <ListItemIcon
-              sx={{
-                minWidth: 0,
-                mr: openDrawerLeftState ? 3 : 'auto',
-                justifyContent: 'center',
-              }}
-            >
-              <TuneIcon />
-            </ListItemIcon>
-            <ListItemText primary="Settings" sx={{ opacity: openDrawerLeftState ? 1 : 0, color: COLORS.colorSecondary }} />
-          </ListItemButton>
-        </ListItem>
-      </List>
+              { selected === 'safeguards' ? 'Safeguards'
+                : selected === 'components' ? 'System Components'
+                : selected === 'sources' ? 'Sources'
+                : selected === 'settings' ? 'Settings'
+                : null
+              }
+            </Typography>
+            <Tooltip title={
+              selected === 'safeguards' ? 'View safeguards notifications'
+              : selected === 'components' ? 'View system component health'
+              : selected === 'sources' ? 'View and change Sources'
+              : selected === 'settings' ? 'View and edit Settings'
+              : null
+            }>
+              <InfoIcon
+                sx={{
+                  marginLeft: '10px',
+                  marginRight: '10px',
+                  height: '15px',
+                  width: '15px'
+                }}
+              />
+            </Tooltip>
+          </Box>
+          {selected === 'safeguards' && 
+            <DrawerContentsSafeguards />
+          }
+          {selected === 'components' && 
+            <DrawerContentsComponents />
+          }
+          {selected === 'sources' && 
+            <DrawerContentsSources />
+          }
+          {selected === 'settings' && 
+            <DrawerContentsSettings />
+          }
+        </Box>
+      </Box>
     </Drawer>
   );
 }
+
+export default DrawerLeft;

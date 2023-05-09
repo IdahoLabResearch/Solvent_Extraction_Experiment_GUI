@@ -13,6 +13,7 @@ const COLORS = {
   colorGrayDarkest: 'rgb(18, 18, 18, 1)',
   colorGrayDarker: 'rgba(30, 30, 30, 1)',
   colorGrayDark: 'rgba(255, 82, 82, 0.25)',
+  colorListSelectBlue: '#002334'
 };
 
 export default COLORS;

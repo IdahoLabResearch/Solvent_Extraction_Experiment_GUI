@@ -20,6 +20,10 @@ html {
   background-color: var(--color-gray-darkest) !important;
 }
 
+body {
+  margin: 0; /* prevents scrollbars */
+}
+
 .App {
   text-align: center;
 }
