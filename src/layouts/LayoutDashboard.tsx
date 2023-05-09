@@ -35,7 +35,7 @@ function LayoutDashboard() {
   return (
     <Box sx={{ padding: '30px' }}>
       <Grid container spacing={3}>
-        <Grid item xs={12} lg={3} style={{ display: 'flex', flexDirection: 'column' }}>
+        {/* <Grid item xs={12} lg={3} style={{ display: 'flex', flexDirection: 'column' }}>
           <ContentCard className="safeguard-notification" title="Safeguard Notification">
             <CardStatusSafeguard />
           </ContentCard>
@@ -44,7 +44,7 @@ function LayoutDashboard() {
           <ContentCard className="system-component-status" title="System Component Status">
             <CardStatusComponents />
           </ContentCard>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} lg={12}>
           <ContentCard className="contactor-system" title="Contactor System">
             <Grid container spacing={2}>

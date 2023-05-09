@@ -128,6 +128,7 @@ const DrawerLeft: React.FC<Props> = ({}) => {
         height: 'auto',
         display: 'flex',
         '& > .MuiDrawer-paper': {
+          backgroundColor: COLORS.colorCardGray,
           border: 'none',
           position: 'relative',
           height: 'auto',
