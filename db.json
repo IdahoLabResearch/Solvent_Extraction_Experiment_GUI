@@ -1,4 +1,82 @@
 {
+  "flowsheet": [
+    {
+      "title": "Fresh Organic",
+      "value": [
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Ni Concentration"
+        }
+      ],
+      "unit": "",
+      "label": ""
+    },
+    {
+      "title": "Organic Recycle",
+      "value": [
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Ni Concentration"
+        }
+      ],
+      "unit": "",
+      "label": ""
+    },
+    {
+      "title": "Aqueous Feed",
+      "value": [
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Ni Concentration"
+        }
+      ],
+      "unit": "",
+      "label": ""
+    },
+    {
+      "title": "Strip Product",
+      "value": [
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Nd Concentration"
+        },
+        {
+          "title": "",
+          "value": 0,
+          "unit": "mM",
+          "label": "Ni Concentration"
+        }
+      ],
+      "unit": "",
+      "label": ""
+    }
+  ],
   "stages": [
     {
       "id": 0,
@@ -24,31 +102,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -61,31 +121,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -140,31 +182,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -177,31 +201,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -256,31 +262,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -293,31 +281,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -372,31 +342,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -409,31 +361,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -488,31 +422,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",
@@ -525,31 +441,13 @@
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Nd Concentration"
             },
             {
               "title": "",
               "value": 8.3,
               "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Dy Nitrate: HNO\u2083"
+              "label": "Ni Concentration"
             }
           ],
           "unit": "",

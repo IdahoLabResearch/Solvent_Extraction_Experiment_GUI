@@ -2,9 +2,10 @@ import { createSlice, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 import componentReducer from './components';
-import systemReducer from './system';
+import flowsheetReducer from './flowsheet';
 import sectionsReducer from './sections';
 import stagesReducer from './stages';
+import { flowsheetDataApi } from '../services/flowsheetDataApi';
 import { stagesDataApi } from '../services/stagesDataApi';
 import { sectionsDataApi } from '../services/sectionsDataApi';
 import { componentsDataApi } from '../services/componentsDataApi';
@@ -84,16 +85,18 @@ export const store = configureStore({
   reducer: {
     appState: appStateSlice.reducer,
     components: componentReducer,
-    system: systemReducer,
+    flowsheet: flowsheetReducer,
     sections: sectionsReducer,
     stages: stagesReducer,
     graphInfo: graphInfoSlice.reducer,
+    [flowsheetDataApi.reducerPath]: flowsheetDataApi.reducer,
     [stagesDataApi.reducerPath]: stagesDataApi.reducer,
     [sectionsDataApi.reducerPath]: sectionsDataApi.reducer,
     [componentsDataApi.reducerPath]: componentsDataApi.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
+      .concat(flowsheetDataApi.middleware)
       .concat(stagesDataApi.middleware)
       .concat(sectionsDataApi.middleware)
       .concat(componentsDataApi.middleware)

@@ -4,6 +4,9 @@ import * as React from 'react';
 // Hooks
 import { useAppSelector } from '../app/hooks/reduxTypeScriptHooks';
 
+// API calls
+import { useFetchFlowsheetQuery } from '../app/services/flowsheetDataApi';
+
 // MUI Transitions
 import Fade from '@mui/material/Fade';
 
@@ -13,8 +16,8 @@ import { Grid, Box } from '@mui/material';
 // Custom Components
 import ContentCard from '../components/coreapp/ContentCard';
 import ContentCardInline from '../components/coreapp/ContentCardInline';
-import CardStatusSafeguard from '../components/cards/CardStatusSafeguard';
-import CardStatusComponents from '../components/cards/CardStatusComponents';
+// import CardStatusSafeguard from '../components/cards/CardStatusSafeguard';
+// import CardStatusComponents from '../components/cards/CardStatusComponents';
 import CardStatus from '../components/cards/CardStatus';
 import Card2DModel from '../components/cards/Card2DModel';
 import CardSelectedStageReadings from '../components/cards/CardSelectedStageReadings';
@@ -24,13 +27,15 @@ import CardSelectedSection from '../components/cards/CardSelectedSection';
 function LayoutDashboard() {
   type stageCurrentlySelected = boolean;
   type sectionCurrentlySelected = boolean;
-  type systemConcentrations = [];
+  type flowsheetConcentrations = [];
   type stageInfoState = string;
 
   const selectionIsCurrentStage: stageCurrentlySelected = useAppSelector((state: any) => state.appState.stageCurrentlySelected);
   const selectionIsCurrentSection: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
-  const showSystemConcentrations: systemConcentrations = useAppSelector((state: any) => state.system.systemConcentrations);
   const getStageInfoState: stageInfoState = useAppSelector((state: any) => state.stages.stageInfoState);
+
+  type flowsheetConcentrationsList = Array<{ [key: string]: any; }>;
+  const { data: flowsheetConcentrationsList } = useFetchFlowsheetQuery();
 
   return (
     <Box sx={{ padding: '30px' }}>
@@ -41,14 +46,14 @@ function LayoutDashboard() {
           </ContentCard>
         </Grid>
         <Grid item xs={12} lg={9} style={{ display: 'flex' }}>
-          <ContentCard className="system-component-status" title="System Component Status">
+          <ContentCard className="flowsheet-component-status" title="Flowsheet Component Status">
             <CardStatusComponents />
           </ContentCard>
         </Grid> */}
         <Grid item xs={12} lg={12}>
-          <ContentCard className="stage-system" title="Flowsheet Overview">
+          <ContentCard className="stage-flowsheet" title="Flowsheet Overview">
             <Grid container spacing={2}>
-              {showSystemConcentrations.map((object: any) => {
+              {flowsheetConcentrationsList?.map((object: any) => {
                 const id = object.title;
                 return (
                   <Grid item xs={6} lg={3} key={id}>
