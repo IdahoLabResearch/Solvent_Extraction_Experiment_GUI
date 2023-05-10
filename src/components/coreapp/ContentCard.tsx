@@ -33,10 +33,10 @@ export default function ContentCard(props: any) {
 
   type selectedContactor = {
     id?: number;
-    stage?: string;
+    section?: string;
   };
 
-  type selectedStage = {
+  type selectedSection = {
     id?: number;
     title?: string;
   };
@@ -60,7 +60,7 @@ export default function ContentCard(props: any) {
   };
 
   const currentContactor: selectedContactor = useAppSelector((state) => state.contactors.selectedContactor);
-  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
+  const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
 
   const classes = `card ${className}`;
 
@@ -78,7 +78,7 @@ export default function ContentCard(props: any) {
       }}
       className={classes}
     >
-      {title === 'Selected Contactor' ? (
+      {title === 'Selected Contactor Readings' ? (
         <Box
           className="card-title-container"
           sx={{
@@ -128,7 +128,7 @@ export default function ContentCard(props: any) {
                 Stage&nbsp;
                 {returnReadableId(currentContactor.id)}
               </span>
-              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentContactor.stage?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
+              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentContactor.section?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
           </Box>
           <Box
@@ -178,7 +178,7 @@ export default function ContentCard(props: any) {
             </IconButton>
           </Box>
         </Box>
-      ) : title === 'Selected Stage' ? (
+      ) : title === 'Selected Section' ? (
         <Box
           className="card-title-container"
           sx={{
@@ -224,7 +224,7 @@ export default function ContentCard(props: any) {
               }}
               variant="h4"
             >
-              <span style={{ }}>{currentStage.title?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
+              <span style={{ }}>{currentSection.title?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
           </Box>
           <Box

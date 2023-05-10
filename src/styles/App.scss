@@ -221,7 +221,7 @@ Button {
   text-transform: capitalize !important;
 }
 
-.stage-background {
+.section-background {
   &-1 {
     background-color: #0036EA;
   }
@@ -257,7 +257,7 @@ Button {
   }
 }
 
-.btn-stage {
+.btn-section {
   &-unselected, &-selected {
     transition: all 0.5s ease;
   }

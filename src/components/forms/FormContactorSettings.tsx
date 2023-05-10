@@ -27,7 +27,7 @@ const FormContactorSettings = () => {
   const defaultItem = {
     id: 0,
     row: 1,
-    stage: 'extraction',
+    section: 'extraction',
     statuses: [
       {
         title: 'RPM',
@@ -160,11 +160,11 @@ const FormContactorSettings = () => {
   let filteredRowsWash;
   let filteredRowsRinse;
 
-  filteredRowsExtraction = contactorList.filter((contactor: any) => contactor.stage === 'extraction');
-  filteredRowsScrub = contactorList.filter((contactor: any) => contactor.stage === 'scrub');
-  filteredRowsStrip = contactorList.filter((contactor: any) => contactor.stage === 'strip');
-  filteredRowsWash = contactorList.filter((contactor: any) => contactor.stage === 'wash');
-  filteredRowsRinse = contactorList.filter((contactor: any) => contactor.stage === 'rinse');
+  filteredRowsExtraction = contactorList.filter((contactor: any) => contactor.section === 'extraction');
+  filteredRowsScrub = contactorList.filter((contactor: any) => contactor.section === 'scrub');
+  filteredRowsStrip = contactorList.filter((contactor: any) => contactor.section === 'strip');
+  filteredRowsWash = contactorList.filter((contactor: any) => contactor.section === 'wash');
+  filteredRowsRinse = contactorList.filter((contactor: any) => contactor.section === 'rinse');
   
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -193,7 +193,7 @@ const FormContactorSettings = () => {
     let newContactorList: newContactorList = [];
     contactorNumbers.forEach((formEntry) => {
       for(let i = 0; i < formEntry.value; i++) {
-        const newItem = {...defaultItem, stage: formEntry.title}
+        const newItem = {...defaultItem, section: formEntry.title}
         newContactorList.push(newItem);
       }
     });

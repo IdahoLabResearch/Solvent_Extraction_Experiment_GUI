@@ -3,7 +3,7 @@
     {
       "id": 0,
       "row": 1,
-      "stage": "extraction",
+      "section": "extraction",
       "statuses": [
         {
           "title": "RPM",
@@ -119,7 +119,7 @@
     {
       "id": 1,
       "row": 1,
-      "stage": "scrub",
+      "section": "scrub",
       "statuses": [
         {
           "title": "RPM",
@@ -235,7 +235,7 @@
     {
       "id": 2,
       "row": 1,
-      "stage": "strip",
+      "section": "strip",
       "statuses": [
         {
           "title": "RPM",
@@ -351,7 +351,7 @@
     {
       "id": 3,
       "row": 1,
-      "stage": "wash",
+      "section": "wash",
       "statuses": [
         {
           "title": "RPM",
@@ -467,7 +467,7 @@
     {
       "id": 4,
       "row": 1,
-      "stage": "rinse",
+      "section": "rinse",
       "statuses": [
         {
           "title": "RPM",
@@ -581,7 +581,7 @@
       ]
     }
   ],
-  "stages": [
+  "sections": [
     {
       "id": 0,
       "title": "extraction",

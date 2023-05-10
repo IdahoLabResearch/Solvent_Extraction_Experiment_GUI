@@ -19,16 +19,16 @@ import CardStatus from '../components/cards/CardStatus';
 import Card2DModel from '../components/cards/Card2DModel';
 import CardSelectedContactorReadings from '../components/cards/CardSelectedContactorReadings';
 import CardSelectedContactorResults from '../components/cards/CardSelectedContactorResults';
-import CardSelectedStage from '../components/cards/CardSelectedStage';
+import CardSelectedSection from '../components/cards/CardSelectedSection';
 
 function LayoutDashboard() {
   type contactorCurrentlySelected = boolean;
-  type stageCurrentlySelected = boolean;
+  type sectionCurrentlySelected = boolean;
   type systemConcentrations = [];
   type contactorInfoState = string;
 
   const selectionIsCurrentContactor: contactorCurrentlySelected = useAppSelector((state: any) => state.appState.contactorCurrentlySelected);
-  const selectionIsCurrentStage: stageCurrentlySelected = useAppSelector((state: any) => state.appState.stageCurrentlySelected);
+  const selectionIsCurrentSection: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
   const showSystemConcentrations: systemConcentrations = useAppSelector((state: any) => state.system.systemConcentrations);
   const getContactorInfoState: contactorInfoState = useAppSelector((state: any) => state.contactors.contactorInfoState);
 
@@ -46,7 +46,7 @@ function LayoutDashboard() {
           </ContentCard>
         </Grid> */}
         <Grid item xs={12} lg={12}>
-          <ContentCard className="contactor-system" title="Contactor System">
+          <ContentCard className="contactor-system" title="Flowsheet Overview">
             <Grid container spacing={2}>
               {showSystemConcentrations.map((object: any) => {
                 const id = object.title;
@@ -73,9 +73,9 @@ function LayoutDashboard() {
           </Grid>
         </Fade>
 
-        <Fade in={selectionIsCurrentStage} unmountOnExit>
+        <Fade in={selectionIsCurrentSection} unmountOnExit>
           <Grid item xs={12} lg={12}>
-            <CardSelectedStage />
+            <CardSelectedSection />
           </Grid>
         </Fade>
       </Grid>

@@ -22,7 +22,7 @@ export default function CardSelectedContactorReadings() {
   type selectedContactor = {
     id?: number;
     statuses?: Array<{ [key: string]: any; }>;
-    stage?: string;
+    section?: string;
     ml?: Array<{ [key: string]: any; }>;
     mlStatus?: string;
   };
@@ -33,7 +33,7 @@ export default function CardSelectedContactorReadings() {
   const graphExampleInfo: graphInfo = useAppSelector((state) => state.graphInfo.graphInfo);
 
   return (
-    <ContentCard className="selected-contactor" title="Selected Contactor">
+    <ContentCard className="selected-contactor" title="Selected Contactor Readings">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
           <Grid

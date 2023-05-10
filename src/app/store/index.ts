@@ -3,10 +3,10 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 
 import componentReducer from './components';
 import systemReducer from './system';
-import stagesReducer from './stages';
+import sectionsReducer from './sections';
 import contactorsReducer from './contactors';
 import { contactorsDataApi } from '../services/contactorsDataApi';
-import { stagesDataApi } from '../services/stagesDataApi';
+import { sectionsDataApi } from '../services/sectionsDataApi';
 import { componentsDataApi } from '../services/componentsDataApi';
 
 const initialState = {
@@ -14,7 +14,7 @@ const initialState = {
   openDrawerLeftWidth: 64,
   status: 'good',
   contactorCurrentlySelected: false,
-  stageCurrentlySelected: false,
+  sectionCurrentlySelected: false,
 
   graphInfo: [
     {
@@ -55,18 +55,18 @@ const appStateSlice = createSlice({
     makeContactorSelection(state) {
       const store = state;
       store.contactorCurrentlySelected = true;
-      store.stageCurrentlySelected = false;
+      store.sectionCurrentlySelected = false;
     },
 
-    makeStageSelection(state) {
+    makeSectionSelection(state) {
       const store = state;
       store.contactorCurrentlySelected = false;
-      store.stageCurrentlySelected = true;
+      store.sectionCurrentlySelected = true;
     },
 
     cancelSelection(state) {
       const store = state;
-      store.stageCurrentlySelected = false;
+      store.sectionCurrentlySelected = false;
       store.contactorCurrentlySelected = false;
     },
   },
@@ -85,17 +85,17 @@ export const store = configureStore({
     appState: appStateSlice.reducer,
     components: componentReducer,
     system: systemReducer,
-    stages: stagesReducer,
+    sections: sectionsReducer,
     contactors: contactorsReducer,
     graphInfo: graphInfoSlice.reducer,
     [contactorsDataApi.reducerPath]: contactorsDataApi.reducer,
-    [stagesDataApi.reducerPath]: stagesDataApi.reducer,
+    [sectionsDataApi.reducerPath]: sectionsDataApi.reducer,
     [componentsDataApi.reducerPath]: componentsDataApi.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
       .concat(contactorsDataApi.middleware)
-      .concat(stagesDataApi.middleware)
+      .concat(sectionsDataApi.middleware)
       .concat(componentsDataApi.middleware)
   },
 });

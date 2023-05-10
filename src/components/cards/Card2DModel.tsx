@@ -7,7 +7,7 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptH
 
 // API calls
 import { useFetchContactorsQuery } from '../../app/services/contactorsDataApi';
-import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
+import { useFetchSectionsQuery } from '../../app/services/sectionsDataApi';
 
 // Import Packages
 import classNames from 'classnames';
@@ -15,7 +15,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 // Import Redux Actions
 import { appStateActions } from '../../app/store/index';
-import { stagesActions } from '../../app/store/stages';
+import { sectionsActions } from '../../app/store/sections';
 
 // MUI Components
 import {
@@ -33,16 +33,16 @@ import '../../styles/App.scss';
 export default function Card2DModel() {
   type contactorList = Array<{ [key: string]: any; }>;
   const { data: contactorList } = useFetchContactorsQuery();
-  type stagesList = Array<{ [key: string]: any; }>;
-  const { data: stagesList } = useFetchStagesQuery();
+  type sectionsList = Array<{ [key: string]: any; }>;
+  const { data: sectionsList } = useFetchSectionsQuery();
 
-  type selectedStage = {
+  type selectedSection = {
     title?: string;
   };
-  type stageCurrentlySelected = boolean;
+  type sectionCurrentlySelected = boolean;
 
-  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
-  const currentStageSelectionExists: stageCurrentlySelected = useAppSelector((state: any) => state.appState.stageCurrentlySelected);
+  const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
+  const currentSectionSelectionExists: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
 
   type contactorListDefault = Array<{ [key: string]: any; }>;
   const contactorListDefault: contactorListDefault = useAppSelector((state) => state.contactors.contactorListDefaults);
@@ -69,11 +69,11 @@ export default function Card2DModel() {
       >
         Select
         {' '}
-        <strong className="text--blue">process block</strong>
+        <strong className="text--blue">section</strong>
         {' '}
         or
         {' '}
-        <strong className="text--blue">contactor</strong>
+        <strong className="text--blue">stage</strong>
         {' '}
         below to view its information
       </Typography>
@@ -97,11 +97,11 @@ export default function Card2DModel() {
               }}
             >
 
-              {/* Loop through stages to see if contactors in the filtered row have each stage. 
-              If there is a match, create a new element for that stage. 
-              That element is a container for all contactors that match the stage. */}
-              {stagesList?.map((stage: any) => {
-                if (row?.find((o: any) => o.stage === stage.title)) {
+              {/* Loop through sections to see if contactors in the filtered row have each section. 
+              If there is a match, create a new element for that section. 
+              That element is a container for all contactors that match the section. */}
+              {sectionsList?.map((section: any) => {
+                if (row?.find((o: any) => o.section === section.title)) {
                   const key = uuidv4();
                   return (
                     <Box
@@ -117,22 +117,22 @@ export default function Card2DModel() {
                       }}
                       className={classNames(
                         {
-                          'stage-background-1': stage.title === 'extraction',
-                          'stage-background-2': stage.title === 'scrub',
-                          'stage-background-3': stage.title === 'strip',
-                          'stage-background-4': stage.title === 'wash',
-                          'stage-background-5': stage.title === 'rinse',
+                          'section-background-1': section.title === 'extraction',
+                          'section-background-2': section.title === 'scrub',
+                          'section-background-3': section.title === 'strip',
+                          'section-background-4': section.title === 'wash',
+                          'section-background-5': section.title === 'rinse',
                         },
                       )}
                     >
                       <Box style={{ display: 'flex' }}>
 
                         {/* Create a contactor for each entry in the filtered row. */}
-                        {row.filter((contactor: any) => contactor.stage === stage.title).map((contactor: any) => {
+                        {row.filter((contactor: any) => contactor.section === section.title).map((contactor: any) => {
                           const key = uuidv4();
                           return (
                             <Box key={key} sx={{ display: 'flex', }}>
-                              <Contactor2DModel id={contactor.id} stage={contactor.stage} statuses={contactor.statuses} mlStatus={contactor.mlStatus} ml={contactor.ml} />
+                              <Contactor2DModel id={contactor.id} section={contactor.section} statuses={contactor.statuses} mlStatus={contactor.mlStatus} ml={contactor.ml} />
                             </Box>
                           );
                         })}
@@ -142,8 +142,8 @@ export default function Card2DModel() {
                           className={classNames(
                             'capital-btn',
                             {
-                              'btn-stage-unselected': currentStage.title !== stage.title || !currentStageSelectionExists,
-                              'btn-stage-selected': currentStage.title === stage.title && currentStageSelectionExists,
+                              'btn-section-unselected': currentSection.title !== section.title || !currentSectionSelectionExists,
+                              'btn-section-selected': currentSection.title === section.title && currentSectionSelectionExists,
                             },
                           )}
                           sx={{
@@ -159,16 +159,16 @@ export default function Card2DModel() {
                           variant="contained"
                           onClick={() => {
                             dispatch(
-                              stagesActions.changeStage({
-                                id: stage.id,
-                                title: stage.title,
-                                statuses: stage.statuses,
+                              sectionsActions.changeSection({
+                                id: section.id,
+                                title: section.title,
+                                statuses: section.statuses,
                               }),
                             );
-                            dispatch(appStateActions.makeStageSelection());
+                            dispatch(appStateActions.makeSectionSelection());
                           }}
                         >
-                          <span>{stage.title}</span>
+                          <span>{section.title}</span>
                         </Button>
                       </Box>
                     </Box>

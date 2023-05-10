@@ -8,7 +8,7 @@ const initialContactorsState = {
     {
       id: 0,
       row: 1,
-      stage: 'extraction',
+      section: 'extraction',
       statuses: [
         {
           title: 'RPM',
@@ -124,7 +124,7 @@ const initialContactorsState = {
     {
       id: 1,
       row: 1,
-      stage: 'scrub',
+      section: 'scrub',
       statuses: [
         {
           title: 'RPM',
@@ -240,7 +240,7 @@ const initialContactorsState = {
     {
       id: 2,
       row: 1,
-      stage: 'strip',
+      section: 'strip',
       statuses: [
         {
           title: 'RPM',
@@ -356,7 +356,7 @@ const initialContactorsState = {
     {
       id: 3,
       row: 1,
-      stage: 'wash',
+      section: 'wash',
       statuses: [
         {
           title: 'RPM',
@@ -472,7 +472,7 @@ const initialContactorsState = {
     {
       id: 4,
       row: 1,
-      stage: 'rinse',
+      section: 'rinse',
       statuses: [
         {
           title: 'RPM',

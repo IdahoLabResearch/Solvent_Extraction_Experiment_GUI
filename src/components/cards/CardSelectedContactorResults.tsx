@@ -29,7 +29,7 @@ import COLORS from '../../styles/variables';
 export default function CardSelectedContactorResults() {
   type selectedContactor = {
     id?: number;
-    stage?: string;
+    section?: string;
     ml?: Array<{ [key: string]: any; }>;
     mlStatus?: string;
   };
@@ -37,7 +37,7 @@ export default function CardSelectedContactorResults() {
   const currentContactor: selectedContactor = useAppSelector((state) => state.contactors.selectedContactor);
 
   return (
-    <ContentCard className="selected-contactor" title="Selected Contactor">
+    <ContentCard className="selected-contactor" title="Selected Contactor Readings">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={12}>
           <Grid

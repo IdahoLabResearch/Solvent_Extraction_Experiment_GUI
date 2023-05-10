@@ -17,7 +17,7 @@ import '../../styles/App.scss';
 export default function Contactor2DModel(props: any) {
   const {
     id,
-    stage,
+    section,
     statuses,
     mlStatus,
     ml,
@@ -38,7 +38,7 @@ export default function Contactor2DModel(props: any) {
     dispatch(appStateActions.makeContactorSelection());
     dispatch(contactorsActions.changeContactor({
       id,
-      stage,
+      section,
       statuses,
       mlStatus,
       ml,
