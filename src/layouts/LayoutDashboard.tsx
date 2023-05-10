@@ -17,20 +17,20 @@ import CardStatusSafeguard from '../components/cards/CardStatusSafeguard';
 import CardStatusComponents from '../components/cards/CardStatusComponents';
 import CardStatus from '../components/cards/CardStatus';
 import Card2DModel from '../components/cards/Card2DModel';
-import CardSelectedContactorReadings from '../components/cards/CardSelectedContactorReadings';
-import CardSelectedContactorResults from '../components/cards/CardSelectedContactorResults';
+import CardSelectedStageReadings from '../components/cards/CardSelectedStageReadings';
+import CardSelectedStageResults from '../components/cards/CardSelectedStageResults';
 import CardSelectedSection from '../components/cards/CardSelectedSection';
 
 function LayoutDashboard() {
-  type contactorCurrentlySelected = boolean;
+  type stageCurrentlySelected = boolean;
   type sectionCurrentlySelected = boolean;
   type systemConcentrations = [];
-  type contactorInfoState = string;
+  type stageInfoState = string;
 
-  const selectionIsCurrentContactor: contactorCurrentlySelected = useAppSelector((state: any) => state.appState.contactorCurrentlySelected);
+  const selectionIsCurrentStage: stageCurrentlySelected = useAppSelector((state: any) => state.appState.stageCurrentlySelected);
   const selectionIsCurrentSection: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
   const showSystemConcentrations: systemConcentrations = useAppSelector((state: any) => state.system.systemConcentrations);
-  const getContactorInfoState: contactorInfoState = useAppSelector((state: any) => state.contactors.contactorInfoState);
+  const getStageInfoState: stageInfoState = useAppSelector((state: any) => state.stages.stageInfoState);
 
   return (
     <Box sx={{ padding: '30px' }}>
@@ -46,7 +46,7 @@ function LayoutDashboard() {
           </ContentCard>
         </Grid> */}
         <Grid item xs={12} lg={12}>
-          <ContentCard className="contactor-system" title="Flowsheet Overview">
+          <ContentCard className="stage-system" title="Flowsheet Overview">
             <Grid container spacing={2}>
               {showSystemConcentrations.map((object: any) => {
                 const id = object.title;
@@ -66,10 +66,10 @@ function LayoutDashboard() {
             </Grid>
           </ContentCard>
         </Grid>
-        <Fade in={selectionIsCurrentContactor} unmountOnExit>
+        <Fade in={selectionIsCurrentStage} unmountOnExit>
           <Grid item xs={12} lg={12}>
-            {getContactorInfoState === 'readings' && <CardSelectedContactorReadings />}
-            {getContactorInfoState === 'results' && <CardSelectedContactorResults />}
+            {getStageInfoState === 'readings' && <CardSelectedStageReadings />}
+            {getStageInfoState === 'results' && <CardSelectedStageResults />}
           </Grid>
         </Fade>
 

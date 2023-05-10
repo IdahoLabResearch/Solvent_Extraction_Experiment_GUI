@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
 // API calls
-import { useFetchContactorsQuery } from '../../app/services/contactorsDataApi';
+import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
 import { useFetchSectionsQuery } from '../../app/services/sectionsDataApi';
 
 // Import Packages
@@ -25,14 +25,14 @@ import {
 } from '@mui/material';
 
 // Custom Components
-import Contactor2DModel from '../models/Contactor2DModel';
+import Stage2DModel from '../models/Stage2DModel';
 
 // Import Styles
 import '../../styles/App.scss';
 
 export default function Card2DModel() {
-  type contactorList = Array<{ [key: string]: any; }>;
-  const { data: contactorList } = useFetchContactorsQuery();
+  type stageList = Array<{ [key: string]: any; }>;
+  const { data: stageList } = useFetchStagesQuery();
   type sectionsList = Array<{ [key: string]: any; }>;
   const { data: sectionsList } = useFetchSectionsQuery();
 
@@ -44,18 +44,18 @@ export default function Card2DModel() {
   const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
   const currentSectionSelectionExists: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
 
-  type contactorListDefault = Array<{ [key: string]: any; }>;
-  const contactorListDefault: contactorListDefault = useAppSelector((state) => state.contactors.contactorListDefaults);
+  type stageListDefault = Array<{ [key: string]: any; }>;
+  const stageListDefault: stageListDefault = useAppSelector((state) => state.stages.stageListDefaults);
 
   let data;
-  if (contactorList?.length !== 0) {
-    data = contactorList;
+  if (stageList?.length !== 0) {
+    data = stageList;
   } else {
-    data = contactorListDefault;
+    data = stageListDefault;
   }
 
-  let filteredRow1 = data?.filter((contactor: any) => contactor.row === 1);
-  let filteredRow2 = data?.filter((contactor: any) => contactor.row === 2);
+  let filteredRow1 = data?.filter((stage: any) => stage.row === 1);
+  let filteredRow2 = data?.filter((stage: any) => stage.row === 2);
   let filteredRowsCombined = [filteredRow1, filteredRow2];
 
   const dispatch = useAppDispatch();
@@ -83,7 +83,7 @@ export default function Card2DModel() {
       }}
       >
 
-      {/* Create row of contactors if contactors have that row designation in their data. */}
+      {/* Create row of stages if stages have that row designation in their data. */}
       {filteredRowsCombined.map((row: any) => {
         const key = uuidv4();
         if (row?.length !== 0) {
@@ -97,9 +97,9 @@ export default function Card2DModel() {
               }}
             >
 
-              {/* Loop through sections to see if contactors in the filtered row have each section. 
+              {/* Loop through sections to see if stages in the filtered row have each section. 
               If there is a match, create a new element for that section. 
-              That element is a container for all contactors that match the section. */}
+              That element is a container for all stages that match the section. */}
               {sectionsList?.map((section: any) => {
                 if (row?.find((o: any) => o.section === section.title)) {
                   const key = uuidv4();
@@ -127,12 +127,12 @@ export default function Card2DModel() {
                     >
                       <Box style={{ display: 'flex' }}>
 
-                        {/* Create a contactor for each entry in the filtered row. */}
-                        {row.filter((contactor: any) => contactor.section === section.title).map((contactor: any) => {
+                        {/* Create a stage for each entry in the filtered row. */}
+                        {row.filter((stage: any) => stage.section === section.title).map((stage: any) => {
                           const key = uuidv4();
                           return (
                             <Box key={key} sx={{ display: 'flex', }}>
-                              <Contactor2DModel id={contactor.id} section={contactor.section} statuses={contactor.statuses} mlStatus={contactor.mlStatus} ml={contactor.ml} />
+                              <Stage2DModel id={stage.id} section={stage.section} statuses={stage.statuses} mlStatus={stage.mlStatus} ml={stage.ml} />
                             </Box>
                           );
                         })}

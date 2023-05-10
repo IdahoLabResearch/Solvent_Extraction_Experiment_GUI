@@ -7,7 +7,7 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptH
 
 // Import Redux Actions
 import { appStateActions } from '../../app/store/index';
-import { contactorsActions } from '../../app/store/contactors';
+import { stagesActions } from '../../app/store/stages';
 
 // MUI Components
 import {
@@ -31,7 +31,7 @@ import COLORS from '../../styles/variables';
 export default function ContentCard(props: any) {
   const { title, children, className } = props;
 
-  type selectedContactor = {
+  type selectedStage = {
     id?: number;
     section?: string;
   };
@@ -52,14 +52,14 @@ export default function ContentCard(props: any) {
     const { name } = e.target;
     setActiveButton(name);
     // console.log(activeButton);
-    dispatch(contactorsActions.changeContactorInfoState(name));
+    dispatch(stagesActions.changeStageInfoState(name));
   };
 
   const cancelSelection = () => {
     dispatch(appStateActions.cancelSelection());
   };
 
-  const currentContactor: selectedContactor = useAppSelector((state) => state.contactors.selectedContactor);
+  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
   const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
 
   const classes = `card ${className}`;
@@ -78,7 +78,7 @@ export default function ContentCard(props: any) {
       }}
       className={classes}
     >
-      {title === 'Selected Contactor Readings' ? (
+      {title === 'Selected Stage Readings' ? (
         <Box
           className="card-title-container"
           sx={{
@@ -126,9 +126,9 @@ export default function ContentCard(props: any) {
             >
               <span>
                 Stage&nbsp;
-                {returnReadableId(currentContactor.id)}
+                {returnReadableId(currentStage.id)}
               </span>
-              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentContactor.section?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
+              <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentStage.section?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
           </Box>
           <Box
@@ -146,7 +146,7 @@ export default function ContentCard(props: any) {
                 onClick={clickedButtonHandler}
                 className={activeButton === 'readings' ? 'btn-active' : ''}
               >
-                Contactor Readings
+                Stage Readings
               </Button>
               <Button
                 name="results"

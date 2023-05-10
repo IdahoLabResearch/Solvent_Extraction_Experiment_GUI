@@ -1,10 +1,10 @@
 // React
 import * as React from 'react';
 
-function Contactors() {
+function Stages() {
   return (
-    <h1>The Contactors Page</h1>
+    <h1>The Stages Page</h1>
   );
 }
 
-export default Contactors;
+export default Stages;

@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // API calls
-import { useFetchContactorsQuery } from '../../app/services/contactorsDataApi';
+import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
 
 // MUI Components
 import {
@@ -20,12 +20,12 @@ import COLORS from '../../styles/variables';
 
 
 export default function CardStatusSafeguard(props: any) {
-  type contactorList = Array<{ [key: string]: any; }>;
-  const { data: contactorList } = useFetchContactorsQuery();
+  type stageList = Array<{ [key: string]: any; }>;
+  const { data: stageList } = useFetchStagesQuery();
 
-  type contactorListWithErrors = Array<{ [key: string]: any; }>;
-  const contactorListWithErrors = new Array(contactorList?.filter((contactor: any) => contactor.mlStatus !== null));
-  const alarmBoolean = () => contactorListWithErrors?.length > 0;
+  type stageListWithErrors = Array<{ [key: string]: any; }>;
+  const stageListWithErrors = new Array(stageList?.filter((stage: any) => stage.mlStatus !== null));
+  const alarmBoolean = () => stageListWithErrors?.length > 0;
 
   return (
     <>

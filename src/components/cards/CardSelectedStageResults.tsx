@@ -26,18 +26,18 @@ import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
-export default function CardSelectedContactorResults() {
-  type selectedContactor = {
+export default function CardSelectedStageResults() {
+  type selectedStage = {
     id?: number;
     section?: string;
     ml?: Array<{ [key: string]: any; }>;
     mlStatus?: string;
   };
 
-  const currentContactor: selectedContactor = useAppSelector((state) => state.contactors.selectedContactor);
+  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
 
   return (
-    <ContentCard className="selected-contactor" title="Selected Contactor Readings">
+    <ContentCard className="selected-stage" title="Selected Stage Readings">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={12}>
           <Grid
@@ -64,12 +64,12 @@ export default function CardSelectedContactorResults() {
                 }}
                 className={classNames(
                   {
-                    'outline-success': currentContactor.mlStatus === 'good',
-                    'outline-error': currentContactor.mlStatus === 'alarm',
+                    'outline-success': currentStage.mlStatus === 'good',
+                    'outline-error': currentStage.mlStatus === 'alarm',
                   },
                 )}
               >
-                {currentContactor.mlStatus === 'good'
+                {currentStage.mlStatus === 'good'
                   ? (
                     <Box
                       sx={{
@@ -128,13 +128,13 @@ export default function CardSelectedContactorResults() {
                       display: 'block',
                     }}
                   >
-                    {currentContactor.mlStatus === 'good' && 'Functioning Properly'}
-                    {currentContactor.mlStatus === 'alarm' && 'Alarm'}
+                    {currentStage.mlStatus === 'good' && 'Functioning Properly'}
+                    {currentStage.mlStatus === 'alarm' && 'Alarm'}
                   </Typography>
                 </Box>
               </Box>
             </Grid>
-            {currentContactor?.ml?.map((object: any) => {
+            {currentStage?.ml?.map((object: any) => {
               const key = object.title;
               return (
                 <Grid

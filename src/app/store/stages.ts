@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialContactorsState = {
-  selectedContactor: {},
-  contactorInfoState: 'readings',
-  contactorList: [],
-  contactorListDefaults: [
+const initialStagesState = {
+  selectedStage: {},
+  stageInfoState: 'readings',
+  stageList: [],
+  stageListDefaults: [
     {
       id: 0,
       row: 1,
@@ -588,37 +588,37 @@ const initialContactorsState = {
   ],
 };
 
-const contactorsSlice = createSlice({
-  name: 'contactors',
-  initialState: initialContactorsState,
+const stagesSlice = createSlice({
+  name: 'stages',
+  initialState: initialStagesState,
   reducers: {
-    setContactors(state: any) {
+    setStages(state: any) {
       const store = state;
-      store.contactorList = store.contactorListDefaults;
+      store.stageList = store.stageListDefaults;
     },
 
-    changeContactor(state, action) {
+    changeStage(state, action) {
       const store = state;
-      store.selectedContactor = action.payload;
+      store.selectedStage = action.payload;
     },
 
-    resetContactor(state) {
+    resetStage(state) {
       const store = state;
-      store.selectedContactor = {};
+      store.selectedStage = {};
     },
 
-    changeContactorInfoState(state, action) {
+    changeStageInfoState(state, action) {
       const store = state;
-      store.contactorInfoState = action.payload;
+      store.stageInfoState = action.payload;
     },
 
-    updateContactorList(state, action) {
+    updateStageList(state, action) {
       const store = state;
-      store.contactorList = action.payload;
+      store.stageList = action.payload;
     }
   },
 });
 
-export const contactorsActions = contactorsSlice.actions;
+export const stagesActions = stagesSlice.actions;
 
-export default contactorsSlice.reducer;
+export default stagesSlice.reducer;

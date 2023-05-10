@@ -18,8 +18,8 @@ import CardLineGraph from './CardLineGraph';
 // Import styles
 import '../../styles/App.scss';
 
-export default function CardSelectedContactorReadings() {
-  type selectedContactor = {
+export default function CardSelectedStageReadings() {
+  type selectedStage = {
     id?: number;
     statuses?: Array<{ [key: string]: any; }>;
     section?: string;
@@ -29,11 +29,11 @@ export default function CardSelectedContactorReadings() {
 
   type graphInfo = Array<{ [key: string]: any; }>;
 
-  const currentContactor: selectedContactor = useAppSelector((state) => state.contactors.selectedContactor);
+  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
   const graphExampleInfo: graphInfo = useAppSelector((state) => state.graphInfo.graphInfo);
 
   return (
-    <ContentCard className="selected-contactor" title="Selected Contactor Readings">
+    <ContentCard className="selected-stage" title="Selected Stage Readings">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
           <Grid
@@ -43,7 +43,7 @@ export default function CardSelectedContactorReadings() {
               height: 'calc(100% + 16px)',
             }}
           >
-            {currentContactor?.statuses?.map((object: any) => {
+            {currentStage?.statuses?.map((object: any) => {
               const key = object.title;
               return (
                 <Grid
@@ -61,7 +61,7 @@ export default function CardSelectedContactorReadings() {
           </Grid>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <ContentCardInline title="Contactor 3D Model">
+          <ContentCardInline title="Stage 3D Model">
             <Card3DModel />
           </ContentCardInline>
         </Grid>
