@@ -3,18 +3,18 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 
 import componentReducer from './components';
 import systemReducer from './system';
+import sectionsReducer from './sections';
 import stagesReducer from './stages';
-import contactorsReducer from './contactors';
-import { contactorsDataApi } from '../services/contactorsDataApi';
 import { stagesDataApi } from '../services/stagesDataApi';
+import { sectionsDataApi } from '../services/sectionsDataApi';
 import { componentsDataApi } from '../services/componentsDataApi';
 
 const initialState = {
-  openDrawerLeft: true,
-  openDrawerLeftWidth: 265,
+  openDrawerLeft: false,
+  openDrawerLeftWidth: 64,
   status: 'good',
-  contactorCurrentlySelected: false,
   stageCurrentlySelected: false,
+  sectionCurrentlySelected: false,
 
   graphInfo: [
     {
@@ -42,27 +42,32 @@ const appStateSlice = createSlice({
   name: 'appState',
   initialState,
   reducers: {
+    // App functions
     toggleDrawerLeft: (state) => {
       const store = state;
       store.openDrawerLeft = !store.openDrawerLeft;
     },
-
-    makeContactorSelection(state) {
+    setDrawerLeftWidth: (state, action) => {
       const store = state;
-      store.contactorCurrentlySelected = true;
-      store.stageCurrentlySelected = false;
+      store.openDrawerLeftWidth = action.payload;
     },
 
     makeStageSelection(state) {
       const store = state;
-      store.contactorCurrentlySelected = false;
       store.stageCurrentlySelected = true;
+      store.sectionCurrentlySelected = false;
+    },
+
+    makeSectionSelection(state) {
+      const store = state;
+      store.stageCurrentlySelected = false;
+      store.sectionCurrentlySelected = true;
     },
 
     cancelSelection(state) {
       const store = state;
+      store.sectionCurrentlySelected = false;
       store.stageCurrentlySelected = false;
-      store.contactorCurrentlySelected = false;
     },
   },
 });
@@ -80,17 +85,17 @@ export const store = configureStore({
     appState: appStateSlice.reducer,
     components: componentReducer,
     system: systemReducer,
+    sections: sectionsReducer,
     stages: stagesReducer,
-    contactors: contactorsReducer,
     graphInfo: graphInfoSlice.reducer,
-    [contactorsDataApi.reducerPath]: contactorsDataApi.reducer,
     [stagesDataApi.reducerPath]: stagesDataApi.reducer,
+    [sectionsDataApi.reducerPath]: sectionsDataApi.reducer,
     [componentsDataApi.reducerPath]: componentsDataApi.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
-      .concat(contactorsDataApi.middleware)
       .concat(stagesDataApi.middleware)
+      .concat(sectionsDataApi.middleware)
       .concat(componentsDataApi.middleware)
   },
 });

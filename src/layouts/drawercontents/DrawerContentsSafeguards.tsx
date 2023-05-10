@@ -1,8 +1,14 @@
 // React
 import * as React from 'react';
 
+// Hooks
+import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
+
 // API calls
 import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
+
+// Import Packages
+import { DateTime } from 'luxon';
 
 // MUI Components
 import {
@@ -11,15 +17,16 @@ import {
 } from '@mui/material';
 
 // Custom Components
-import StatusBox from '../status/StatusBox';
+import StatusBox from '../../components/status/StatusBox';
 
 // Import styles
 import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
+type Props = {};
 
-export default function CardStatusSafeguard(props: any) {
+const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
   type stageList = Array<{ [key: string]: any; }>;
   const { data: stageList } = useFetchStagesQuery();
 
@@ -28,7 +35,7 @@ export default function CardStatusSafeguard(props: any) {
   const alarmBoolean = () => stageListWithErrors?.length > 0;
 
   return (
-    <>
+    <Box sx={{ padding: '16px'}}>
       <Box
         sx={{
           width: '100%',
@@ -66,6 +73,8 @@ export default function CardStatusSafeguard(props: any) {
           </Typography>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 }
+
+export default DrawerContentsSafeguards;

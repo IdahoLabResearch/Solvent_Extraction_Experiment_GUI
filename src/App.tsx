@@ -124,11 +124,11 @@ function App() {
 const darkModeTheme = createTheme(getDesignTokens('dark'));
 
 export default function DarkThemeWithCustomPalette() {
-  type contactorList = Array<{ [key: string]: any; }>;
-  const contactorList: contactorList = useAppSelector((state) => state.contactors.contactorList);
+  type stageList = Array<{ [key: string]: any; }>;
+  const stageList: stageList = useAppSelector((state) => state.stages.stageList);
   const dispatch = useAppDispatch();
   // useEffect(() => {
-  //   dispatch(contactorsActions.setContactors());
+  //   dispatch(stagesActions.setStages());
   // });
   return (
     <ThemeProvider theme={darkModeTheme}>

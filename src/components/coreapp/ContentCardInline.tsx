@@ -25,6 +25,7 @@ export default function ContentCardInline(props: any) {
         overflow: 'visible',
         backgroundColor: 'var(--color-gray-darkest)',
         height: '100%',
+        position: 'relative'
       }}
       className={classes}
     >
@@ -74,15 +75,3 @@ export default function ContentCardInline(props: any) {
     </Card>
   );
 }
-
-// ContentCardInline.defaultProps = {
-//   title: '',
-//   className: '',
-// };
-
-// ContentCardInline.propTypes = {
-//   data: PropTypes.object,
-//   title: PropTypes.string,
-//   children: PropTypes.node.isRequired,
-//   className: PropTypes.string,
-// };

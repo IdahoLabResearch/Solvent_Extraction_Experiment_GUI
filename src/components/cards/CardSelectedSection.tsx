@@ -16,11 +16,11 @@ import Card3DModel from './Card3DModel';
 // Import styles
 import '../../styles/App.scss';
 
-export default function CardSelectedStage() {
-  const selectedStage = useAppSelector((state: any) => state.stages.selectedStage);
+export default function CardSelectedSection() {
+  const selectedSection = useAppSelector((state: any) => state.sections.selectedSection);
 
   return (
-    <ContentCard className="selected-stage" title="Selected Stage">
+    <ContentCard className="selected-section" title="Selected Section">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
           <Grid
@@ -30,7 +30,7 @@ export default function CardSelectedStage() {
               height: 'calc(100% + 16px)',
             }}
           >
-            {selectedStage.statuses.map((object: any) => {
+            {selectedSection.statuses.map((object: any) => {
               const key = object.title;
               return (
                 <Grid
@@ -48,7 +48,7 @@ export default function CardSelectedStage() {
           </Grid>
         </Grid>
         <Grid item xs={12} lg={6}>
-          <ContentCardInline title="Process Block 3D Model">
+          <ContentCardInline title="Section 3D Model">
             <Card3DModel />
           </ContentCardInline>
         </Grid>

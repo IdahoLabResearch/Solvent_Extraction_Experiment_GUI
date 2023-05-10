@@ -14,20 +14,20 @@ import {
 } from '@mui/material';
 
 // Import Redux Actions
-import { contactorsActions } from '../../app/store/contactors';
+import { stagesActions } from '../../app/store/stages';
 
 // Import styles
 import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
-const FormContactorSettings = () => {
+const FormStageSettings = () => {
   const dispatch = useAppDispatch();
 
   const defaultItem = {
     id: 0,
     row: 1,
-    stage: 'extraction',
+    section: 'extraction',
     statuses: [
       {
         title: 'RPM',
@@ -140,8 +140,8 @@ const FormContactorSettings = () => {
       },
     ],
   };
-  type contactorList = Array<{ [key: string]: any; }>;
-  const contactorList: contactorList = useAppSelector((state) => state.contactors.contactorList);
+  type stageList = Array<{ [key: string]: any; }>;
+  const stageList: stageList = useAppSelector((state) => state.stages.stageList);
 
   // useEffect(() => {
   //   const data = window.localStorage.getItem('MY_APP_STATE');
@@ -149,7 +149,7 @@ const FormContactorSettings = () => {
   //   if ( data !== null ) {
   //     setRowsData(JSON.parse(data));
   //   } else {
-  //     setRowsData(contactorList);
+  //     setRowsData(stageList);
   //     window.localStorage.setItem('MY_APP_STATE', JSON.stringify(rowsData));
   //   }
   // }, []);
@@ -160,11 +160,11 @@ const FormContactorSettings = () => {
   let filteredRowsWash;
   let filteredRowsRinse;
 
-  filteredRowsExtraction = contactorList.filter((contactor: any) => contactor.stage === 'extraction');
-  filteredRowsScrub = contactorList.filter((contactor: any) => contactor.stage === 'scrub');
-  filteredRowsStrip = contactorList.filter((contactor: any) => contactor.stage === 'strip');
-  filteredRowsWash = contactorList.filter((contactor: any) => contactor.stage === 'wash');
-  filteredRowsRinse = contactorList.filter((contactor: any) => contactor.stage === 'rinse');
+  filteredRowsExtraction = stageList.filter((stage: any) => stage.section === 'extraction');
+  filteredRowsScrub = stageList.filter((stage: any) => stage.section === 'scrub');
+  filteredRowsStrip = stageList.filter((stage: any) => stage.section === 'strip');
+  filteredRowsWash = stageList.filter((stage: any) => stage.section === 'wash');
+  filteredRowsRinse = stageList.filter((stage: any) => stage.section === 'rinse');
   
   const handleSubmit = (event: any) => {
     event.preventDefault();
@@ -181,7 +181,7 @@ const FormContactorSettings = () => {
     let wash: wash = data.get('wash');
     let rinse: rinse = data.get('rinse');
 
-    const contactorNumbers = [
+    const stageNumbers = [
       {title: 'extraction', value: parseInt(extraction)},
       {title: 'scrub', value: parseInt(scrub)},
       {title: 'strip', value: parseInt(strip)},
@@ -189,20 +189,20 @@ const FormContactorSettings = () => {
       {title: 'rinse', value: parseInt(rinse)}
     ];
 
-    type newContactorList = Array<{ [key: string]: any; }>;
-    let newContactorList: newContactorList = [];
-    contactorNumbers.forEach((formEntry) => {
+    type newStageList = Array<{ [key: string]: any; }>;
+    let newStageList: newStageList = [];
+    stageNumbers.forEach((formEntry) => {
       for(let i = 0; i < formEntry.value; i++) {
-        const newItem = {...defaultItem, stage: formEntry.title}
-        newContactorList.push(newItem);
+        const newItem = {...defaultItem, section: formEntry.title}
+        newStageList.push(newItem);
       }
     });
 
-    newContactorList.forEach((contactor, index) => {
-      contactor.id = index;
+    newStageList.forEach((stage, index) => {
+      stage.id = index;
     })
 
-    dispatch(contactorsActions.updateContactorList(newContactorList))
+    dispatch(stagesActions.updateStageList(newStageList))
   };
 
   return (
@@ -292,4 +292,4 @@ const FormContactorSettings = () => {
   );
 }
 
-export default FormContactorSettings;
+export default FormStageSettings;

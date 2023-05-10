@@ -20,6 +20,10 @@ html {
   background-color: var(--color-gray-darkest) !important;
 }
 
+body {
+  margin: 0; /* prevents scrollbars */
+}
+
 .App {
   text-align: center;
 }
@@ -217,7 +221,7 @@ Button {
   text-transform: capitalize !important;
 }
 
-.stage-background {
+.section-background {
   &-1 {
     background-color: #0036EA;
   }
@@ -239,7 +243,7 @@ Button {
   }
 }
 
-.svg-contactor {
+.svg-stage {
   &-unselected, &-selected {
     transition: all 0.5s ease;
   }
@@ -253,7 +257,7 @@ Button {
   }
 }
 
-.btn-stage {
+.btn-section {
   &-unselected, &-selected {
     transition: all 0.5s ease;
   }
@@ -282,6 +286,6 @@ Button {
   }
 }
 
-.contactor-svg {
+.stage-svg {
   cursor: pointer;
 }

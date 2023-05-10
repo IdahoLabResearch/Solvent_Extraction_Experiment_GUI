@@ -19,10 +19,6 @@ import {
   Typography
 } from '@mui/material';
 
-// MUI Icons
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import ErrorIcon from '@mui/icons-material/Error';
-
 // Custom Components
 import StatusBox from '../status/StatusBox';
 
