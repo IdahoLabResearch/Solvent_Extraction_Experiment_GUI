@@ -69,11 +69,11 @@ export default function Card2DModel() {
       >
         Select
         {' '}
-        <strong className="text--blue">section</strong>
+        <strong className="text--blue">stage</strong>
         {' '}
         or
         {' '}
-        <strong className="text--blue">stage</strong>
+        <strong className="text--blue">section</strong>
         {' '}
         below to view its information
       </Typography>
@@ -100,7 +100,7 @@ export default function Card2DModel() {
               {/* Loop through sections to see if stages in the filtered row have each section. 
               If there is a match, create a new element for that section. 
               That element is a container for all stages that match the section. */}
-              {sectionsList?.map((section: any) => {
+              {sectionsList?.map((section: any, sectionIndex) => {
                 if (row?.find((o: any) => o.section === section.title)) {
                   const key = uuidv4();
                   return (
@@ -117,11 +117,11 @@ export default function Card2DModel() {
                       }}
                       className={classNames(
                         {
-                          'section-background-1': section.title === 'extraction',
-                          'section-background-2': section.title === 'scrub',
-                          'section-background-3': section.title === 'strip',
-                          'section-background-4': section.title === 'wash',
-                          'section-background-5': section.title === 'rinse',
+                          'section-background-1': sectionIndex === 0,
+                          'section-background-2': sectionIndex === 1,
+                          'section-background-3': sectionIndex === 2,
+                          'section-background-4': sectionIndex === 3,
+                          'section-background-5': sectionIndex === 4,
                         },
                       )}
                     >

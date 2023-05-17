@@ -20,7 +20,7 @@ export default function CardSelectedSection() {
   const selectedSection = useAppSelector((state: any) => state.sections.selectedSection);
 
   return (
-    <ContentCard className="selected-section" title="Selected Section">
+    <ContentCard className="selected-section" title="Selected Section Information">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
           <Grid

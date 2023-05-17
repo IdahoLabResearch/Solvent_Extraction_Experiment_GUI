@@ -96,7 +96,7 @@
           "label": ""
         },
         {
-          "title": "Expected Concentration",
+          "title": "Modeled Concentration",
           "value": [
             {
               "title": "",
@@ -161,7 +161,7 @@
     {
       "id": 1,
       "row": 1,
-      "section": "scrub",
+      "section": "extraction",
       "statuses": [
         {
           "title": "RPM",
@@ -176,7 +176,7 @@
           "label": ""
         },
         {
-          "title": "Expected Concentration",
+          "title": "Modeled Concentration",
           "value": [
             {
               "title": "",
@@ -214,7 +214,7 @@
           "label": ""
         }
       ],
-      "mlStatus": null,
+      "mlStatus": "RPMs are too high",
       "ml": [
         {
           "title": "Findings",
@@ -241,7 +241,7 @@
     {
       "id": 2,
       "row": 1,
-      "section": "strip",
+      "section": "extraction",
       "statuses": [
         {
           "title": "RPM",
@@ -256,7 +256,7 @@
           "label": ""
         },
         {
-          "title": "Expected Concentration",
+          "title": "Modeled Concentration",
           "value": [
             {
               "title": "",
@@ -294,7 +294,7 @@
           "label": ""
         }
       ],
-      "mlStatus": null,
+      "mlStatus": "RPMs are too high",
       "ml": [
         {
           "title": "Findings",
@@ -321,7 +321,7 @@
     {
       "id": 3,
       "row": 1,
-      "section": "wash",
+      "section": "extraction",
       "statuses": [
         {
           "title": "RPM",
@@ -336,7 +336,247 @@
           "label": ""
         },
         {
-          "title": "Expected Concentration",
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": "RPMs are too high",
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "row": 1,
+      "section": "extraction",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": "RPMs are too high",
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "row": 1,
+      "section": "extraction",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": "RPMs are too high",
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
           "value": [
             {
               "title": "",
@@ -399,7 +639,1767 @@
       ]
     },
     {
-      "id": 4,
+      "id": 7,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "row": 1,
+      "section": "strip",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "row": 1,
+      "section": "wash",
+      "statuses": [
+        {
+          "title": "RPM",
+          "value": 3000,
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Temperature",
+          "value": 23,
+          "unit": "\u2103",
+          "label": ""
+        },
+        {
+          "title": "Modeled Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        },
+        {
+          "title": "Predicted Concentration",
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
+        }
+      ],
+      "mlStatus": null,
+      "ml": [
+        {
+          "title": "Findings",
+          "value": "Unexpected Low Concentration"
+        },
+        {
+          "title": "Sensors of Interest",
+          "value": "VNIR"
+        },
+        {
+          "title": "Temporal Trend",
+          "value": "Fast"
+        },
+        {
+          "title": "Process Upset Indicators",
+          "value": "Yes"
+        },
+        {
+          "title": "Response",
+          "value": "Further Investigation"
+        }
+      ]
+    },
+    {
+      "id": 29,
       "row": 1,
       "section": "rinse",
       "statuses": [
@@ -416,7 +2416,7 @@
           "label": ""
         },
         {
-          "title": "Expected Concentration",
+          "title": "Modeled Concentration",
           "value": [
             {
               "title": "",
@@ -498,27 +2498,79 @@
         },
         {
           "title": "Organic In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Organic Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         }
       ]
     },

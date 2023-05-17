@@ -78,7 +78,7 @@ export default function ContentCard(props: any) {
       }}
       className={classes}
     >
-      {title === 'Selected Stage Readings' ? (
+      {title === 'Selected Stage Information' ? (
         <Box
           className="card-title-container"
           sx={{
@@ -178,7 +178,7 @@ export default function ContentCard(props: any) {
             </IconButton>
           </Box>
         </Box>
-      ) : title === 'Selected Section' ? (
+      ) : title === 'Selected Section Information' ? (
         <Box
           className="card-title-container"
           sx={{

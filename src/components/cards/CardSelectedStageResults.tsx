@@ -37,7 +37,7 @@ export default function CardSelectedStageResults() {
   const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
 
   return (
-    <ContentCard className="selected-stage" title="Selected Stage Readings">
+    <ContentCard className="selected-stage" title="Selected Stage Information">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={12}>
           <Grid
