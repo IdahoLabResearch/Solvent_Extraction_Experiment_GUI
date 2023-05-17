@@ -162,7 +162,7 @@ const CardLineGraph: React.FC<Props> = ({
             <Grid container spacing={2}>
               {[...Array(timePointSlots)].map((e, i) => {
                 return (
-                    <Grid item xs={12} sm={6} md={timePointSlots === 1 ? 8 : 4} key={i}>
+                    <Grid item xs={12} sm={6} md={4} key={i}>
                       <Card sx={{ padding: '16px', position: 'relative' }}>
                         <Typography sx={{ marginTop: '-4px', marginBottom: '16px' }} variant="h3">Time Point { i + 1 }</Typography>
                         {timePointSlots > 1 && 
