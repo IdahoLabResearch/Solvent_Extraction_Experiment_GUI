@@ -2592,27 +2592,79 @@
         },
         {
           "title": "Organic In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Organic Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         }
       ]
     },
@@ -2634,27 +2686,79 @@
         },
         {
           "title": "Organic In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Organic Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         }
       ]
     },
@@ -2676,27 +2780,79 @@
         },
         {
           "title": "Organic In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Organic Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         }
       ]
     },
@@ -2718,27 +2874,79 @@
         },
         {
           "title": "Organic In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Organic Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Nd Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous In",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         },
         {
           "title": "Aqueous Out",
-          "value": 8.3,
-          "unit": "mM",
-          "label": "Dy Concentration"
+          "value": [
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Nd Concentration"
+            },
+            {
+              "title": "",
+              "value": 8.3,
+              "unit": "mM",
+              "label": "Ni Concentration"
+            }
+          ],
+          "unit": "",
+          "label": ""
         }
       ]
     }
