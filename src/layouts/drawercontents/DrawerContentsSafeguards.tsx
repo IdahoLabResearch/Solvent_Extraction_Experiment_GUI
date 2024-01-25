@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
 
 // API calls
-import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
+import { useFetchSectionsQuery } from '../../app/services/sectionsDataApi';
 
 // Import Packages
 import { DateTime } from 'luxon';
@@ -13,11 +13,13 @@ import { DateTime } from 'luxon';
 // MUI Components
 import {
   Box,
+  Grid,
   Typography
 } from '@mui/material';
 
 // Custom Components
 import StatusBox from '../../components/status/StatusBox';
+import ContentCardInline from '../../components/coreapp/ContentCardInline';
 
 // Import styles
 import '../../styles/App.scss';
@@ -27,19 +29,24 @@ import COLORS from '../../styles/variables';
 type Props = {};
 
 const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
-  type stageList = Array<{ [key: string]: any; }>;
-  const { data: stageList } = useFetchStagesQuery();
+  type sectionList = Array<{ [key: string]: any; }>;
+  const { data: sectionList } = useFetchSectionsQuery();
 
-  type stageListWithErrors = Array<{ [key: string]: any; }>;
-  const stageListWithErrors = new Array(stageList?.filter((stage: any) => stage.mlStatus !== null));
-  const alarmBoolean = () => stageListWithErrors?.length > 0;
+  type sectionListWithErrors = Array<{ [key: string]: any; }>;
+  const sectionListWithErrors = new Array(sectionList?.filter((section: any) => section.mlStatus !== null));
+  const alarmBoolean = () => sectionListWithErrors?.length > 0;
+
+  type sectionListWithSensorsAndError = Array<{ [key: string]: any; }>;
+  const sectionListWithSensorsAndError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus !== "");
+
+  type sectionListWithSensorsAndNoError = Array<{ [key: string]: any; }>;
+  const sectionListWithSensorsAndNoError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus === "");
 
   return (
     <Box sx={{ padding: '16px'}}>
       <Box
         sx={{
           width: '100%',
-          height: '100%',
           display: 'flex',
           alignItems: 'stretch',
           flexDirection: 'row',
@@ -67,12 +74,159 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
               ? (
                 <span>Optimal system function</span>
               ) : (
-                <span><strong>Alarm:&nbsp;</strong>Investigation needed</span>
+                <span><strong>Alert:&nbsp;</strong>2 Sections with Issues</span>
               )
             }
           </Typography>
         </Box>
       </Box>
+      <Grid container spacing={2} sx={{ marginTop: '0px' }}>
+
+      {sectionListWithSensorsAndError?.map((section: any, index: number) => {
+        const key = index;
+
+        return (
+          <Grid item xs={12}>
+            <ContentCardInline title={`Section: ${ section.title?.replace(/\b\w/, (c: string) => c.toUpperCase()) }`} >
+              <Box key={key} sx={{ paddingTop: '8px'}}>
+                {section.ml.map((mlValue: any, index: number) => {
+                  return (
+                    <Box
+                      key={index}
+                      sx={{
+                        width: '100%',
+                        alignItems: 'stretch',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        marginBottom: '8px',
+                        '&:last-of-type': {
+                          marginBottom: 0
+                        }
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          backgroundColor: COLORS.colorGrayDark,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '8px',
+                          width: '130px !important'
+                        }}
+                      >
+                        <Typography
+                          align="center"
+                          sx={{ fontSize: '14px'}}
+                        >
+                          {mlValue.title}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexGrow: 1,
+                          backgroundColor: COLORS.colorGrayDarker,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '8px'
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            textAlign: 'center',
+                            lineHeight: '1.25',
+                            fontSize: '.8rem'
+                          }}
+                        >
+                          {mlValue.value}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  )
+                })}
+              </Box>
+            </ContentCardInline>
+          </Grid>
+        )
+      })}
+      </Grid>
+
+      {/* <Typography sx={{ background: COLORS.colorSuccess, marginTop: '24px', padding: '16px' }}>
+        2 Monitored Sections Working Optimally
+      </Typography> */}
+      <Grid container spacing={2} sx={{ marginTop: '0px' }}>
+
+      {sectionListWithSensorsAndNoError?.map((section: any, index: number) => {
+        const key = index;
+
+        return (
+          <Grid item xs={12}>
+            <ContentCardInline title={`Section ${ section.title }`} >
+              <Box key={key} sx={{ paddingTop: '8px'}}>
+                {section.ml.map((mlValue: any, index: number) => {
+                  return (
+                    <Box
+                      key={index}
+                      sx={{
+                        width: '100%',
+                        alignItems: 'stretch',
+                        display: 'flex',
+                        flexDirection: 'row',
+                        justifyContent: 'center',
+                        marginBottom: '8px',
+                        '&:last-of-type': {
+                          marginBottom: 0
+                        }
+                      }}
+                    >
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          backgroundColor: COLORS.colorGrayDark,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '8px',
+                          width: '130px !important'
+                        }}
+                      >
+                        <Typography
+                          align="center"
+                          sx={{ fontSize: '14px'}}
+                        >
+                          {mlValue.title}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexGrow: 1,
+                          backgroundColor: COLORS.colorGrayDarker,
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '8px'
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            textAlign: 'center',
+                            lineHeight: '1.25',
+                            fontSize: '.8rem'
+                          }}
+                        >
+                          {mlValue.value}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  )
+                })}
+              </Box>
+            </ContentCardInline>
+          </Grid>
+        )
+      })}
+      </Grid>
+
     </Box>
   );
 }

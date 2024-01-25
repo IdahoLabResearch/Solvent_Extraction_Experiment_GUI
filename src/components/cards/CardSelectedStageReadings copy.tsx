@@ -32,7 +32,7 @@ export default function CardSelectedStageReadings() {
   const graphExampleInfo: graphInfo = useAppSelector((state) => state.graphInfo.graphInfo);
 
   return (
-    <ContentCard className="selected-stage" title="Selected Stage Readings">
+    <ContentCard className="selected-stage" title="Selected Stage Information">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={6}>
           <Grid

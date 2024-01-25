@@ -58,7 +58,6 @@ export default function CardStatus(props: any) {
               <Grid
                 item
                 xs={12}
-                md={6}
                 key={key}
                 sx={{
                   '&:nth-of-type(odd):last-child': {

@@ -1,121 +1,101 @@
-// // React
-// import * as React from 'react';
-
-// // Hooks
-// import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
-
-// // Import Redux actions
-// import { appStateActions } from '../../app/store/index';
-
-// // MUI Styles
-// import { styled } from '@mui/material/styles';
-
-// // MUI Components
-// import {
-//   IconButton,
-//   Toolbar,
-//   Typography
-// } from '@mui/material';
-// import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-
-// // MUI Icons
-// import MenuIcon from '@mui/icons-material/Menu';
-
-// // Import styles
-// import '../../styles/App.scss';
-// // @ts-ignore
-// import COLORS from '../../styles/variables';
-
-// const DrawerHeader = styled('div')(({ theme }) => ({
-//   display: 'flex',
-//   alignItems: 'center',
-//   justifyContent: 'flex-end',
-//   padding: theme.spacing(0, 1),
-//   // necessary for content to be below app bar
-//   ...theme.mixins.toolbar,
-// }));
-
-// interface AppBarProps extends MuiAppBarProps {
-//   open?: boolean;
-// }
-
-// const AppBar = styled(MuiAppBar, {
-//   shouldForwardProp: (prop) => prop !== 'open',
-// })<AppBarProps>(({ theme, open }) => ({
-//   zIndex: theme.zIndex.drawer + 1,
-//   transition: theme.transitions.create(['width', 'margin'], {
-//     easing: theme.transitions.easing.sharp,
-//     duration: theme.transitions.duration.leavingScreen,
-//   }),
-//   ...(open && {
-//     marginLeft: useAppSelector((state: any) => state.appState.openDrawerLeftWidth),
-//     width: `calc(100% - ${useAppSelector((state: any) => state.appState.openDrawerLeftWidth)}px)`,
-//     transition: theme.transitions.create(['width', 'margin'], {
-//       easing: theme.transitions.easing.sharp,
-//       duration: theme.transitions.duration.enteringScreen,
-//     }),
-//   }),
-// }));
-
-// export default function Header(props: any) {
-//   const dispatch = useAppDispatch();
-
-//   type openDrawerLeftState = boolean;
-//   const openDrawerLeftState: openDrawerLeftState = useAppSelector((state: any) => state.appState.openDrawerLeft);
-
-//   type openDrawerLeftWidth = number;
-//   const openDrawerLeftWidth: openDrawerLeftWidth = useAppSelector((state: any) => state.appState.openDrawerLeftWidth);
-
-//   const handleToggleOpenDrawerLeft = () => {
-//     dispatch(appStateActions.toggleDrawerLeft());
-//   };
-
-//   return (
-//     <AppBar position="fixed" open={openDrawerLeftState}>
-//       <Toolbar>
-//         <IconButton
-//           color="inherit"
-//           aria-label="open drawer"
-//           onClick={handleToggleOpenDrawerLeft}
-//           edge="start"
-//           sx={{
-//             marginRight: 5,
-//             ...(openDrawerLeftState && { display: 'none' }),
-//           }}
-//         >
-//           <MenuIcon />
-//         </IconButton>
-//         <Typography variant="h1" noWrap component="div">
-//           BCTC GUI
-//         </Typography>
-//       </Toolbar>
-//     </AppBar>
-//   );
-// }
-
 // React
 import * as React from 'react';
+
+// API calls
+import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
+
+// Hooks
+import { useState, useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
+
+// Import Redux Actions
+import { appStateActions } from '../../app/store/index';
 
 // MUI Components
 import {
   AppBar,
   Box,
+  Button,
   Paper,
   Toolbar,
   Typography
 } from '@mui/material';
+
+// Custom Components
+import StatusBox from '../../components/status/StatusBox';
 
 // Styles
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
 export default function Header(props: any) {
+  const dispatch = useAppDispatch();
+
+  type stageList = Array<{ [key: string]: any; }>;
+  const { data: stageList } = useFetchStagesQuery();
+
+  type stageListWithErrors = Array<{ [key: string]: any; }>;
+  const stageListWithErrors = new Array(stageList?.filter((stage: any) => stage.mlStatus !== null));
+  const alarmBoolean = () => stageListWithErrors?.length > 0;
+
+  type openDrawerLeftState = boolean;
+  const openDrawerLeftState: openDrawerLeftState = useAppSelector((state: any) => state.appState.openDrawerLeft);
+
+  type openDrawerLeftWidth = number;
+  const openDrawerLeftWidth: openDrawerLeftWidth = useAppSelector((state: any) => state.appState.openDrawerLeftWidth);
+
+  const handleToggleOpenDrawerLeft = () => {
+    dispatch(appStateActions.toggleDrawerLeft());
+    if (openDrawerLeftWidth === 64) {
+      dispatch(appStateActions.setDrawerLeftWidth(450));
+    } else if (openDrawerLeftWidth === 450 || openDrawerLeftWidth === 800) {
+      dispatch(appStateActions.setDrawerLeftWidth(64));
+    }
+  };
+
   return (
     <AppBar elevation={3} color={"secondary"} >
-      <Toolbar >
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" noWrap component="div">
           BCTC GUI
         </Typography>
+        <Box
+          sx={{
+            height: '50px',
+            display: 'flex',
+            alignItems: 'stretch',
+            flexDirection: 'row',
+            marginRight: '-24px'
+          }}
+        >
+
+          <StatusBox alarm={alarmBoolean()} />
+          <Box
+            sx={{
+              display: 'flex', padding: '0 10px', backgroundColor: '#121212', alignItems: 'center',
+            }}
+          >
+            {alarmBoolean() === false
+              ? (
+                <Typography 
+                  sx={{  
+                    ...(alarmBoolean() === false && {
+                      color: COLORS.colorSuccess
+                    }),
+                    ...(alarmBoolean() === true && {
+                      color: COLORS.colorError
+                    }),
+                  }}
+                >
+                  <span>No Safeguard Alerts</span>
+                </Typography>
+              ) : (
+                <Button variant="contained" color="error" size="small" onClick={() => handleToggleOpenDrawerLeft() }>See Safeguard Alerts</Button>
+              )
+            }
+            
+          </Box>
+        </Box>
       </Toolbar>
     </AppBar>
   );

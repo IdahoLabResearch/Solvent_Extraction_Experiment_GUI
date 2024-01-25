@@ -11,7 +11,7 @@ import {
 
 // Custom Components
 import Header from '../components/coreapp/Header';
-import Drawer from '../components/coreapp/Drawer';
+import DrawerLeft from '../components/coreapp/DrawerLeft';
 
 // Import styles
 import '../styles/App.scss';
@@ -30,7 +30,7 @@ export default function MainScaffold(props: any) {
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'row', height: 'calc(100vh - 64px)' }}>
 
-          <Drawer />
+        <DrawerLeft />
 
         <Box component="main" sx={{ flexGrow: 1, padding: '20px', overflow: 'auto', margin: 0 }}>
           {children}

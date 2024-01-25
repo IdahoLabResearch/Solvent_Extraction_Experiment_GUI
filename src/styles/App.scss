@@ -272,8 +272,13 @@ Button {
 }
 
 .btn-active {
-  border: 1px solid white !important;
+  color: white !important;
   background-color: var(--color-secondary) !important;
+}
+
+.btn-inactive {
+  color: white !important;
+  background-color: var(--color-gray-dark) !important;
 }
 
 .outline {

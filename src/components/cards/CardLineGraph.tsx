@@ -31,6 +31,10 @@ import '../../styles/App.scss';
 // @ts-ignore
 import COLORS from '../../styles/variables';
 
+// Custom Components
+import PlotlyLineGraph from '../wrappers/PlotlyLineGraph';
+import ContentCardInline from '../coreapp/ContentCardInline';
+
 type Props = {
   // data: any
 };
@@ -38,7 +42,7 @@ type Props = {
 const CardLineGraph: React.FC<Props> = ({
   // data
 }) => {
-  const data: any = [
+  const wavelengthData: any = [
     {
       type: 'scatter', mode: 'lines', x: [1, 2, 3], y: [2, 5, 3]
     },
@@ -58,7 +62,7 @@ const CardLineGraph: React.FC<Props> = ({
       type: 'scatter', mode: 'lines', x: [1, 2, 3], y: [2, 5, 3]
     },
   ];
-  const layout: any = {
+  const wavelengthLayout: any = {
     autosize: true,
     plot_bgcolor: 'transparent',
     paper_bgcolor: 'transparent',
@@ -162,7 +166,7 @@ const CardLineGraph: React.FC<Props> = ({
             <Grid container spacing={2}>
               {[...Array(timePointSlots)].map((e, i) => {
                 return (
-                    <Grid item xs={12} sm={6} md={timePointSlots === 1 ? 8 : 4} key={i}>
+                    <Grid item xs={12} sm={6} md={4} key={i}>
                       <Card sx={{ padding: '16px', position: 'relative' }}>
                         <Typography sx={{ marginTop: '-4px', marginBottom: '16px' }} variant="h3">Time Point { i + 1 }</Typography>
                         {timePointSlots > 1 && 
@@ -220,9 +224,28 @@ const CardLineGraph: React.FC<Props> = ({
               }
             </Grid>
           </Grid>
+          <Grid item xs={12}>
+            <Grid container spacing={0}>
+              <Grid item xs={12} sx={{ marginTop: '20px'}}>
+                <ContentCardInline title='Concentration Over Time'>
+                  <PlotlyLineGraph title='' data={wavelengthData} xAxis='Time (seconds)' yAxis='Concentration in mM (milli-Molar)'/>
+                </ContentCardInline>
+              </Grid>
+              <Grid item xs={12} sx={{ marginTop: '20px'}}>
+                <ContentCardInline title='Wavelength'>
+                  <PlotlyLineGraph title='' data={wavelengthData} xAxis='Wavelength (nm)' yAxis='Absorbance'/>
+                </ContentCardInline>
+              </Grid>
+              <Grid item xs={12} sx={{ marginTop: '20px'}}>
+                <ContentCardInline title='UV/Vis'>
+                  <PlotlyLineGraph title='' data={wavelengthData} xAxis='Time (seconds)' yAxis='Concentration in mM (milli-Molar)'/>
+                </ContentCardInline>
+              </Grid>
+            </Grid>
+          </Grid>
         </Grid>
       </Box>
-      <Box sx={{ padding: '24px' }}>
+      {/* <Box sx={{ padding: '24px' }}>
         <Plot
           data={data}
           layout={layout}
@@ -232,7 +255,8 @@ const CardLineGraph: React.FC<Props> = ({
           }}
           useResizeHandler
         />
-      </Box>
+      </Box> */}
+
     </>
   );
 }

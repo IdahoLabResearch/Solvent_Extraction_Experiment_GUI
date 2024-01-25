@@ -12,7 +12,8 @@ const COLORS = {
   colorCardGray: '#1e1e1e',
   colorGrayDarkest: 'rgb(18, 18, 18, 1)',
   colorGrayDarker: 'rgba(30, 30, 30, 1)',
-  colorGrayDark: 'rgba(255, 82, 82, 0.25)',
+  colorGrayDark: 'rgba(60, 60, 60, 1)',
+  colorGrayLight: 'rgba(150, 150, 150, 1)',
   colorListSelectBlue: '#002334'
 };
 
