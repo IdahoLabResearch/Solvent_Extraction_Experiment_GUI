@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialSectionsState = {
-  selectedSection: {}
+  selectedSection: {},
+  sectionInfoState: 'readings',
 };
 
 const sectionsSlice = createSlice({
@@ -13,9 +14,14 @@ const sectionsSlice = createSlice({
       store.selectedSection = action.payload;
     },
 
-    resetSsection(state) {
+    resetSection(state) {
       const store = state;
       store.selectedSection = {};
+    },
+
+    changeSectionInfoState(state, action) {
+      const store = state;
+      store.sectionInfoState = action.payload;
     },
   },
 });

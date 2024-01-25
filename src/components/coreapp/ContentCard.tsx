@@ -7,7 +7,7 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptH
 
 // Import Redux Actions
 import { appStateActions } from '../../app/store/index';
-import { stagesActions } from '../../app/store/stages';
+import { sectionsActions } from '../../app/store/sections';
 
 // MUI Components
 import {
@@ -41,18 +41,27 @@ export default function ContentCard(props: any) {
     title?: string;
   };
 
-  const [activeButton, setActiveButton] = useState('readings');
-
   const dispatch = useAppDispatch();
 
   const returnReadableId = (id: any) => id + 1;
 
-  const clickedButtonHandler = (e: React.ChangeEvent<any>): void => {
-    // console.log(e.target);
-    const { name } = e.target;
-    setActiveButton(name);
-    // console.log(activeButton);
-    dispatch(stagesActions.changeStageInfoState(name));
+  const buttonLinkList = [
+    {
+      title: 'Chemical Readings',
+      pane: 'readings'
+    },
+    {
+      title: 'Timeseries Data',
+      pane: 'timeseries'
+    },
+    {
+      title: 'Safeguards Assessment',
+      pane: 'results'
+    },
+  ]
+
+  const handleSelectButtonLink = (selectedLink: string) => {
+    dispatch(sectionsActions.changeSectionInfoState(selectedLink));
   };
 
   const cancelSelection = () => {
@@ -61,6 +70,7 @@ export default function ContentCard(props: any) {
 
   const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
   const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
+  const getStageInfoState = useAppSelector((state: any) => state.stages.stageInfoState);
 
   const classes = `card ${className}`;
 
@@ -130,34 +140,6 @@ export default function ContentCard(props: any) {
               </span>
               <span style={{ borderLeft: '1px solid white', marginLeft: '8px', paddingLeft: '8px' }}>{currentStage.section?.replace(/\b\w/, (c) => c.toUpperCase())}</span>
             </Typography>
-          </Box>
-          <Box
-            sx={{
-              backgroundColor: COLORS.colorPrimary,
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <ButtonGroup variant="contained" size="small" aria-label="small button group">
-              <Button
-                name="readings"
-                sx={{ whiteSpace: 'nowrap', padding: '0px 12px' }}
-                key="readings"
-                onClick={clickedButtonHandler}
-                className={activeButton === 'readings' ? 'btn-active' : ''}
-              >
-                Stage Readings
-              </Button>
-              <Button
-                name="results"
-                sx={{ whiteSpace: 'nowrap', padding: '0px 12px' }}
-                key="results"
-                onClick={clickedButtonHandler}
-                className={activeButton === 'results' ? 'btn-active' : ''}
-              >
-                Machine Learning Results
-              </Button>
-            </ButtonGroup>
           </Box>
           <Box
             sx={{
@@ -242,7 +224,7 @@ export default function ContentCard(props: any) {
               size="small"
               onClick={cancelSelection}
             >
-              <CancelIcon />
+              <CancelIcon sx={{}}/>
             </IconButton>
           </Box>
         </Box>
@@ -284,8 +266,44 @@ export default function ContentCard(props: any) {
           flexGrow: 1,
           flexDirection: 'column',
           alignItems: 'stretch',
+          position: 'relative',
         }}
       >
+        <Box
+          sx={{
+            position: 'absolute',
+            right: '16px',
+            top: '-32px'
+          }}
+        >
+          {title === 'Selected Section Information' &&
+            <ButtonGroup
+              variant="contained"
+              size="small"
+              aria-label="small button group" 
+              sx={{
+                '&.MuiButtonGroup-root .MuiButtonGroup-grouped': {
+                  minWidth: 'unset',
+                  borderColor: `${COLORS.colorCardGray} !important`
+                }
+              }}
+            >
+            {buttonLinkList.map((buttonLinkItem, index) => {
+              return (
+                <Button
+                  name={buttonLinkItem.pane}
+                  sx={{ whiteSpace: 'nowrap', padding: '2px 12px 0px' }}
+                  key={buttonLinkItem.pane}
+                  onClick={() => handleSelectButtonLink(buttonLinkItem.pane)}
+                  className={getStageInfoState === `${buttonLinkItem.pane}` ? 'btn-active' : 'btn-inactive'}
+                >
+                  {buttonLinkItem.title}
+                </Button>
+              )
+            })}
+            </ButtonGroup>
+          }
+        </Box>
         {children}
       </CardContent>
     </Card>

@@ -25,6 +25,8 @@ import Settings from './pages/Settings';
 
 // Styles
 import './styles/App.scss';
+// @ts-ignore
+import COLORS from './styles/variables';
 
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
@@ -32,6 +34,9 @@ const getDesignTokens = (mode: PaletteMode) => ({
     // primary: {
     //   main: 'rgb(18, 18, 18)',
     // },
+    error: {
+      main: COLORS.colorError
+    },
     background: {
       default: 'rgb(18, 18, 18)',
       paper: 'rgb(18, 18, 18)',
@@ -48,9 +53,6 @@ const getDesignTokens = (mode: PaletteMode) => ({
           }),
     },
     'card-gray': '#1e1e1e',
-    error: {
-      main: '#ff5252',
-    },
   },
   typography: {
     fontFamily: [
@@ -112,7 +114,6 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/settings" element={<Settings />} />
             </Routes>
           </main>
         </MainScaffold>

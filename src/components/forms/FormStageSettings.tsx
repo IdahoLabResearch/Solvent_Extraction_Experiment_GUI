@@ -123,16 +123,16 @@ const FormStageSettings = () => {
         value: 'Unexpected Low Concentration',
       },
       {
-        title: 'Sensors of Interest',
-        value: 'VNIR',
+        title: 'Locations of Interest',
+        value: 'Inlet',
       },
       {
-        title: 'Temporal Trend',
-        value: 'Fast',
+        "title": "Anomaly Strength",
+        "value": "Strong"
       },
       {
-        title: 'Process Upset Indicators',
-        value: 'Yes',
+        title: 'Nd Concentration',
+        value: '0mM, Predicted 0mM, Modeled',
       },
       {
         title: 'Response',

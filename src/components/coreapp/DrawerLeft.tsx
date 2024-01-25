@@ -42,7 +42,7 @@ import DrawerContentsSources from '../../layouts/drawercontents/DrawerContentsSo
 // Styles
 import '../../styles/App.scss';
 // @ts-ignore
-import COLORS from '../../../src/styles/variables';
+import COLORS from '../../styles/variables';
 
 type Props = {};
 
@@ -80,8 +80,8 @@ const DrawerLeft: React.FC<Props> = ({}) => {
   const handleToggleOpenDrawerLeft = () => {
     dispatch(appStateActions.toggleDrawerLeft());
     if (openDrawerLeftWidth === 64) {
-      dispatch(appStateActions.setDrawerLeftWidth(430));
-    } else if (openDrawerLeftWidth === 430 || openDrawerLeftWidth === 800) {
+      dispatch(appStateActions.setDrawerLeftWidth(450));
+    } else if (openDrawerLeftWidth === 450 || openDrawerLeftWidth === 800) {
       dispatch(appStateActions.setDrawerLeftWidth(64));
     }
   };
@@ -89,7 +89,7 @@ const DrawerLeft: React.FC<Props> = ({}) => {
   // Menu links and menu link selection
   const menuLinkList = [
     {
-      title: 'Safeguards',
+      title: 'Safeguards Assessment',
       icon: GppGoodIcon,
       pane: 'safeguards'
     },
@@ -115,7 +115,7 @@ const DrawerLeft: React.FC<Props> = ({}) => {
     if (openDrawerLeftState === false) {
       dispatch(appStateActions.toggleDrawerLeft());
     }
-    dispatch(appStateActions.setDrawerLeftWidth(430));
+    dispatch(appStateActions.setDrawerLeftWidth(450));
   };
 
   // Component display switching
@@ -223,16 +223,16 @@ const DrawerLeft: React.FC<Props> = ({}) => {
             })}
           </List>
         </Box>
-        <Box sx={{ display: 'flex', flex: '1 1 100%', flexDirection: 'column'}}>
-          <Box sx={{ flex: '1, 1, auto', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '16px' }}>
+        <Box sx={{ display: 'flex', flex: '1 1 100%', flexDirection: 'column', overflow: 'hidden'}}>
+          <Box sx={{ flex: '1, 1, auto', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '16px 16px 4px' }}>
             <Typography
               variant="h3"
               sx={{
                 alignItems: 'center',
-                padding: '5px 0px'
+                padding: '0px'
               }}
             >
-              { selected === 'safeguards' ? 'Safeguards'
+              { selected === 'safeguards' ? 'Safeguards Assessment'
                 : selected === 'components' ? 'System Components'
                 : selected === 'sources' ? 'Sources'
                 : selected === 'settings' ? 'Settings'
@@ -256,18 +256,20 @@ const DrawerLeft: React.FC<Props> = ({}) => {
               />
             </Tooltip>
           </Box>
-          {selected === 'safeguards' && 
-            <DrawerContentsSafeguards />
-          }
-          {selected === 'components' && 
-            <DrawerContentsComponents />
-          }
-          {selected === 'sources' && 
-            <DrawerContentsSources />
-          }
-          {selected === 'settings' && 
-            <DrawerContentsSettings />
-          }
+          <Box sx={{ overflowY: 'scroll'}}>
+            {selected === 'safeguards' && 
+              <DrawerContentsSafeguards />
+            }
+            {selected === 'components' && 
+              <DrawerContentsComponents />
+            }
+            {selected === 'sources' && 
+              <DrawerContentsSources />
+            }
+            {selected === 'settings' && 
+              <DrawerContentsSettings />
+            }
+          </Box>
         </Box>
       </Box>
     </Drawer>

@@ -21,18 +21,19 @@ import ContentCardInline from '../components/coreapp/ContentCardInline';
 import CardStatus from '../components/cards/CardStatus';
 import Card2DModel from '../components/cards/Card2DModel';
 import CardSelectedStageReadings from '../components/cards/CardSelectedStageReadings';
-import CardSelectedStageResults from '../components/cards/CardSelectedStageResults';
-import CardSelectedSection from '../components/cards/CardSelectedSection';
+import CardSelectedSectionTimeseries from '../components/cards/CardSelectedSectionTimeseries';
+import CardSelectedSectionResults from '../components/cards/CardSelectedSectionResults';
+import CardSelectedSectionReadings from '../components/cards/CardSelectedSectionReadings';
 
 function LayoutDashboard() {
   type stageCurrentlySelected = boolean;
   type sectionCurrentlySelected = boolean;
   type flowsheetConcentrations = [];
-  type stageInfoState = string;
+  type sectionInfoState = string;
 
   const selectionIsCurrentStage: stageCurrentlySelected = useAppSelector((state: any) => state.appState.stageCurrentlySelected);
   const selectionIsCurrentSection: sectionCurrentlySelected = useAppSelector((state: any) => state.appState.sectionCurrentlySelected);
-  const getStageInfoState: stageInfoState = useAppSelector((state: any) => state.stages.stageInfoState);
+  const getSectionInfoState: sectionInfoState = useAppSelector((state: any) => state.sections.sectionInfoState);
 
   type flowsheetConcentrationsList = Array<{ [key: string]: any; }>;
   const { data: flowsheetConcentrationsList } = useFetchFlowsheetQuery();
@@ -73,14 +74,15 @@ function LayoutDashboard() {
         </Grid>
         <Fade in={selectionIsCurrentStage} unmountOnExit>
           <Grid item xs={12} lg={12}>
-            {getStageInfoState === 'readings' && <CardSelectedStageReadings />}
-            {getStageInfoState === 'results' && <CardSelectedStageResults />}
+            <CardSelectedStageReadings />
           </Grid>
         </Fade>
 
         <Fade in={selectionIsCurrentSection} unmountOnExit>
           <Grid item xs={12} lg={12}>
-            <CardSelectedSection />
+            {getSectionInfoState === 'readings' && <CardSelectedSectionReadings />}
+            {getSectionInfoState === 'timeseries' && <CardSelectedSectionTimeseries />}
+            {getSectionInfoState === 'results' && <CardSelectedSectionResults />}
           </Grid>
         </Fade>
       </Grid>

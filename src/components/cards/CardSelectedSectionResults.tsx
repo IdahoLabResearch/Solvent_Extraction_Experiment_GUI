@@ -20,6 +20,7 @@ import ErrorIcon from '@mui/icons-material/Error';
 
 // Custom Components
 import ContentCard from '../coreapp/ContentCard';
+import ContentCardInline from '../coreapp/ContentCardInline';
 
 // Import styles
 import '../../styles/App.scss';
@@ -27,23 +28,27 @@ import '../../styles/App.scss';
 import COLORS from '../../styles/variables';
 
 export default function CardSelectedStageResults() {
-  type selectedStage = {
+  type selectedSection = {
     id?: number;
-    section?: string;
+    title?: string;
     ml?: Array<{ [key: string]: any; }>;
     mlStatus?: string;
   };
 
-  const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
+  const selectedSection = useAppSelector((state: any) => state.sections.selectedSection);
+
+  console.log(selectedSection.mlStatus)
 
   return (
-    <ContentCard className="selected-stage" title="Selected Stage Information">
+    <ContentCard className="selected-stage" title="Selected Section Information">
       <Grid container spacing={2}>
         <Grid item xs={12} lg={12}>
+        <ContentCardInline title={'Safeguards Assessment'}>
           <Grid
             container
             spacing={2}
             sx={{
+              paddingTop: '12px',
               height: 'calc(100% + 16px)',
             }}
           >
@@ -64,12 +69,12 @@ export default function CardSelectedStageResults() {
                 }}
                 className={classNames(
                   {
-                    'outline-success': currentStage.mlStatus === 'good',
-                    'outline-error': currentStage.mlStatus === 'alarm',
+                    'outline-success': selectedSection.mlStatus === 'good',
+                    'outline-error': selectedSection.mlStatus === 'alarm',
                   },
                 )}
               >
-                {currentStage.mlStatus === 'good'
+                {selectedSection.mlStatus === 'good'
                   ? (
                     <Box
                       sx={{
@@ -106,7 +111,7 @@ export default function CardSelectedStageResults() {
                     display: 'flex',
                     flexGrow: 1,
                     flexDirection: 'column',
-                    backgroundColor: COLORS.colorGrayDarkest,
+                    backgroundColor: COLORS.colorGrayDarker,
                     minHeight: '50px',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -128,13 +133,13 @@ export default function CardSelectedStageResults() {
                       display: 'block',
                     }}
                   >
-                    {currentStage.mlStatus === 'good' && 'Functioning Properly'}
-                    {currentStage.mlStatus === 'alarm' && 'Alarm'}
+                    {selectedSection.mlStatus === 'good' && 'Functioning Properly'}
+                    {selectedSection.mlStatus === 'alarm' && 'Alarm'}
                   </Typography>
                 </Box>
               </Box>
             </Grid>
-            {currentStage?.ml?.map((object: any) => {
+            {selectedSection?.ml?.map((object: any) => {
               const key = object.title;
               return (
                 <Grid
@@ -156,7 +161,7 @@ export default function CardSelectedStageResults() {
                     <Box
                       sx={{
                         display: 'flex',
-                        backgroundColor: COLORS.colorPrimary,
+                        backgroundColor: COLORS.colorGrayDark,
                         minHeight: '50px',
                         alignItems: 'center',
                         justifyContent: 'center'
@@ -164,6 +169,7 @@ export default function CardSelectedStageResults() {
                     >
                       <Typography
                         align="center"
+                        sx={{ fontSize: '14px'}}
                       >
                         {object.title}
                       </Typography>
@@ -172,7 +178,7 @@ export default function CardSelectedStageResults() {
                       sx={{
                         display: 'flex',
                         flexGrow: 1,
-                        backgroundColor: COLORS.colorGrayDarkest,
+                        backgroundColor: COLORS.colorGrayDarker,
                         minHeight: '50px',
                         alignItems: 'center',
                         justifyContent: 'center',
@@ -194,6 +200,7 @@ export default function CardSelectedStageResults() {
               );
             })}
           </Grid>
+          </ContentCardInline>
         </Grid>
       </Grid>
     </ContentCard>

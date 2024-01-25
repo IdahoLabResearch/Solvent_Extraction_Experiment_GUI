@@ -4,6 +4,13 @@ import * as React from 'react';
 // API calls
 import { useFetchStagesQuery } from '../../app/services/stagesDataApi';
 
+// Hooks
+import { useState, useEffect } from 'react';
+import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
+
+// Import Redux Actions
+import { appStateActions } from '../../app/store/index';
+
 // MUI Components
 import {
   AppBar,
@@ -22,12 +29,29 @@ import StatusBox from '../../components/status/StatusBox';
 import COLORS from '../../styles/variables';
 
 export default function Header(props: any) {
+  const dispatch = useAppDispatch();
+
   type stageList = Array<{ [key: string]: any; }>;
   const { data: stageList } = useFetchStagesQuery();
 
   type stageListWithErrors = Array<{ [key: string]: any; }>;
   const stageListWithErrors = new Array(stageList?.filter((stage: any) => stage.mlStatus !== null));
   const alarmBoolean = () => stageListWithErrors?.length > 0;
+
+  type openDrawerLeftState = boolean;
+  const openDrawerLeftState: openDrawerLeftState = useAppSelector((state: any) => state.appState.openDrawerLeft);
+
+  type openDrawerLeftWidth = number;
+  const openDrawerLeftWidth: openDrawerLeftWidth = useAppSelector((state: any) => state.appState.openDrawerLeftWidth);
+
+  const handleToggleOpenDrawerLeft = () => {
+    dispatch(appStateActions.toggleDrawerLeft());
+    if (openDrawerLeftWidth === 64) {
+      dispatch(appStateActions.setDrawerLeftWidth(450));
+    } else if (openDrawerLeftWidth === 450 || openDrawerLeftWidth === 800) {
+      dispatch(appStateActions.setDrawerLeftWidth(64));
+    }
+  };
 
   return (
     <AppBar elevation={3} color={"secondary"} >
@@ -66,7 +90,7 @@ export default function Header(props: any) {
                   <span>No Safeguard Alerts</span>
                 </Typography>
               ) : (
-                <Button variant="contained" color="error" size="small">See Safeguard Alerts</Button>
+                <Button variant="contained" color="error" size="small" onClick={() => handleToggleOpenDrawerLeft() }>See Safeguard Alerts</Button>
               )
             }
             

@@ -19,6 +19,7 @@ import { sectionsActions } from '../../app/store/sections';
 
 // MUI Components
 import {
+  Tooltip,
   Typography,
   Box,
   Button
@@ -29,6 +30,8 @@ import Stage2DModel from '../models/Stage2DModel';
 
 // Import Styles
 import '../../styles/App.scss';
+// @ts-ignore
+import COLORS from '../../styles/variables';
 
 export default function Card2DModel() {
   type stageList = Array<{ [key: string]: any; }>;
@@ -75,7 +78,7 @@ export default function Card2DModel() {
         {' '}
         <strong className="text--blue">section</strong>
         {' '}
-        below to view its information
+        below to view its information. Hover over arrows to see terms relating to the flow. Dashed lines are Organic Flow. Solid lines entering and exiting the stages are Aqueous Flow.
       </Typography>
 
       <Box sx={{
@@ -91,12 +94,48 @@ export default function Card2DModel() {
             <Box 
               key={key}
               sx={{
-
+                position: 'relative',
                 display: 'flex',
                 flex: '1 1 50%'
               }}
             >
+              
 
+                <Box sx={{ position: 'absolute', zIndex: 0, width: '100%'}}>
+                  <Box sx={{ position: 'absolute', top: '0px', left: '50%', height: '12px', width: '40px',}}>
+                    <Tooltip title="Organic Recycle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{height: '100%', width: '100%'}}
+                      >
+                        <polygon x="0" y="0" style={{fill:'white'}} points="0,5.81 5.03,2.91 10.06,0 10.06,5.81 10.06,11.62 5.03,8.72 "/>
+                        <line style={{stroke:'white', strokeWidth: '4px'}} x1="8" y1="5.81" x2="40" y2="5.81" />
+                      </svg>
+                    </Tooltip>
+                  </Box>
+                  <Box sx={{ position: 'absolute', bottom: '0px', left: '50%', height: '12px', width: '40px', transform: 'rotate(180deg)'}}>
+                    <Tooltip title="Loaded Organic">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        style={{height: '100%', width: '100%'}}
+                      >
+                        <polygon x="0" y="0" style={{fill:'white'}} points="0,5.81 5.03,2.91 10.06,0 10.06,5.81 10.06,11.62 5.03,8.72 "/>
+                        <line style={{stroke:'white', strokeWidth: '4px'}} x1="8" y1="5.81" x2="40" y2="5.81" />
+                      </svg>
+                    </Tooltip>
+                  </Box>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMinYMin meet"
+                    style={{marginTop: '10px', marginLeft:'10px', height: '40px', width: 'calc(100% - 20px)'}}
+                  >
+                      <rect 
+                        x="0"
+                        y="0"
+                        style={{fill:'none', stroke:`${COLORS.colorGrayLight}`, strokeDasharray: 4, strokeWidth: '8px', height: '100%', width: '100%'}}
+                      />
+                  </svg>
+                </Box>
               {/* Loop through sections to see if stages in the filtered row have each section. 
               If there is a match, create a new element for that section. 
               That element is a container for all stages that match the section. */}
@@ -109,7 +148,7 @@ export default function Card2DModel() {
                       sx={{
                         display: 'flex',
                         flexDirection: 'column',
-                        paddingTop: '16px',
+                        paddingTop: '50px',
                         overflowX: 'hidden',
                         flexGrow: 1,
                         alignItems: 'center',
@@ -128,11 +167,24 @@ export default function Card2DModel() {
                       <Box style={{ display: 'flex' }}>
 
                         {/* Create a stage for each entry in the filtered row. */}
-                        {row.filter((stage: any) => stage.section === section.title).map((stage: any) => {
+                        {row.filter((stage: any) => stage.section === section.title).map((stage: any, index: number) => {
                           const key = uuidv4();
+                          const rowLen = row.filter((stage: any) => stage.section === section.title).length;
                           return (
-                            <Box key={key} sx={{ display: 'flex', }}>
-                              <Stage2DModel id={stage.id} section={stage.section} statuses={stage.statuses} mlStatus={stage.mlStatus} ml={stage.ml} />
+                            <Box key={key} sx={{ display: 'flex' }}>
+                              <Stage2DModel
+                                id={stage.id}
+                                section={stage.section}
+                                statuses={stage.statuses}
+                                mlStatus={stage.mlStatus}
+                                ml={stage.ml}
+                                firstItem={
+                                  index === 0 ? true : false
+                                }
+                                lastItem={
+                                  index === rowLen - 1 ? true : false
+                                }
+                              />
                             </Box>
                           );
                         })}
@@ -163,6 +215,9 @@ export default function Card2DModel() {
                                 id: section.id,
                                 title: section.title,
                                 statuses: section.statuses,
+                                mlStatus: section.mlStatus,
+                                ml: section.ml,
+                                timeseries: section.timeseries
                               }),
                             );
                             dispatch(appStateActions.makeSectionSelection());
