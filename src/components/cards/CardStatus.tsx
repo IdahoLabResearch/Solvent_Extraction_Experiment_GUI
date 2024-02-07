@@ -17,12 +17,13 @@ import '../../styles/App.scss';
 export default function CardStatus(props: any) {
   const { data } = props;
 
-  const getItemSize = (index: number) => {
-    if (data.length === 1) {
+  // getItemSize should check data.value.length if data.value is an Array
+  const getItemSize = (index: number, arrayLength: number) => {
+    if (arrayLength === 1) {
       return 12;
-    } else if (data.length === 2) {
+    } else if (arrayLength === 2) {
       return 6;
-    } else if (data.length === 3) {
+    } else if (arrayLength === 3) {
       return index < 2 ? 6 : 12;
     }
     // Add more conditions if you have a different requirement for more items
@@ -30,30 +31,20 @@ export default function CardStatus(props: any) {
 
   return (
     <>
-      {typeof data.value === 'number'
-        && (
+      {(typeof data.value === 'number' || typeof data.value === 'string') && (
         <Box className="status-number pt-0 pb-3">
-          <Typography
-            className="status-info-display"
-            align="center"
-          >
+          <Typography className="status-info-display" align="center">
             {data.value}
-            <span
-              className="status-info-display-unit"
-            >
+            <span className="status-info-display-unit">
               {data.unit}
             </span>
           </Typography>
-          <Typography
-            className="status-number-title text-h6 d-block px-3"
-            align="center"
-          >
+          <Typography className="status-number-title text-h6 d-block px-3" align="center">
             {data.label}
           </Typography>
         </Box>
-        )}
-      {Array.isArray(data.value)
-        && (
+      )}
+      {Array.isArray(data.value) && (
         <Grid
           container
           spacing={2}
@@ -68,25 +59,17 @@ export default function CardStatus(props: any) {
             return (
               <Grid
                 item
-                xs={getItemSize(index)}
+                xs={getItemSize(index, data.value.length)}
                 key={key}
               >
                 <Box className="status-number pt-0 pb-3">
-                  <Typography
-                    className="status-info-display"
-                    align="center"
-                  >
+                  <Typography className="status-info-display" align="center">
                     {object.value}
-                    <span
-                      className="status-info-display-unit"
-                    >
+                    <span className="status-info-display-unit">
                       {object.unit}
                     </span>
                   </Typography>
-                  <Typography
-                    className="status-number-title text-h6 d-block px-3"
-                    align="center"
-                  >
+                  <Typography className="status-number-title text-h6 d-block px-3" align="center">
                     {object.label}
                   </Typography>
                 </Box>
@@ -94,7 +77,7 @@ export default function CardStatus(props: any) {
             );
           })}
         </Grid>
-        )}
+      )}
     </>
   );
 }
