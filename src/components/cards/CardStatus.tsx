@@ -17,6 +17,17 @@ import '../../styles/App.scss';
 export default function CardStatus(props: any) {
   const { data } = props;
 
+  const getItemSize = (index: number) => {
+    if (data.length === 1) {
+      return 12;
+    } else if (data.length === 2) {
+      return 6;
+    } else if (data.length === 3) {
+      return index < 2 ? 6 : 12;
+    }
+    // Add more conditions if you have a different requirement for more items
+  };
+
   return (
     <>
       {typeof data.value === 'number'
@@ -52,19 +63,13 @@ export default function CardStatus(props: any) {
             height: '100%',
           }}
         >
-          {data.value.map((object: any) => {
+          {data.value.map((object: any, index: number) => {
             const key = uuidv4();
             return (
               <Grid
                 item
-                xs={12}
+                xs={getItemSize(index)}
                 key={key}
-                sx={{
-                  '&:nth-of-type(odd):last-child': {
-                    maxWidth: '100%',
-                    flexBasis: '100%',
-                  },
-                }}
               >
                 <Box className="status-number pt-0 pb-3">
                   <Typography

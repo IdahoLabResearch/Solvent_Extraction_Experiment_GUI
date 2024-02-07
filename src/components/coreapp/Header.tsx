@@ -57,7 +57,7 @@ export default function Header(props: any) {
     <AppBar elevation={3} color={"secondary"} >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <Typography variant="h6" noWrap component="div">
-          BCTC GUI
+          LBC GUI
         </Typography>
         <Box
           sx={{
