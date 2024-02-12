@@ -48,8 +48,7 @@ export default function CardSelectedSectionReadings() {
                   </Grid>
                 )
               })}
-
-          </Grid>
+            </Grid>
           </ContentCardOutline>
         </Grid>
         <Grid item xs={4}>
@@ -76,8 +75,7 @@ export default function CardSelectedSectionReadings() {
                   </Grid>
                 )
               })}
-
-          </Grid>
+            </Grid>
           </ContentCardOutline>
         </Grid>
         <Grid item xs={4}>
@@ -104,8 +102,7 @@ export default function CardSelectedSectionReadings() {
                   </Grid>
                 )
               })}
-
-          </Grid>
+            </Grid>
           </ContentCardOutline>
         </Grid>
       </Grid>

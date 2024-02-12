@@ -880,19 +880,19 @@
               "value": [
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Measured"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Modeled"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Predicted"
                 }
@@ -905,19 +905,19 @@
               "value": [
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Measured"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Modeled"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Predicted"
                 }
@@ -935,19 +935,19 @@
               "value": [
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Measured"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Modeled"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Predicted"
                 }
@@ -960,19 +960,19 @@
               "value": [
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Measured"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Modeled"
                 },
                 {
                   "title": "",
-                  "value": 8.3,
+                  "value": 0,
                   "unit": "mM",
                   "label": "Predicted"
                 }
@@ -1015,149 +1015,150 @@
       "title": "scrub",
       "statuses": [
         {
-          "title": "Flow Rate",
+          "title": "Flow Characteristics",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Flow Rate",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Organic"
+                },
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Aqueous"
+                }
+              ],
+              "unit": "ml/min",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "O/A",
+              "value": 0.000,
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Density",
+              "value": "N/A",
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "ml/min",
-          "label": ""
+          ]
         },
         {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Organic In",
+          "title": "Organic Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
+          ]
+        },  
         {
-          "title": "Organic Out",
+          "title": "Aqueous Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous In",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous Out",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Modeled Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Predicted Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
+          ]
         }
       ],
       "mlStatus": null,
@@ -1192,149 +1193,150 @@
       "title": "strip",
       "statuses": [
         {
-          "title": "Flow Rate",
+          "title": "Flow Characteristics",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Flow Rate",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Organic"
+                },
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Aqueous"
+                }
+              ],
+              "unit": "ml/min",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "O/A",
+              "value": 0.000,
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Density",
+              "value": "N/A",
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "ml/min",
-          "label": ""
+          ]
         },
         {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Organic In",
+          "title": "Organic Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
+          ]
+        },  
         {
-          "title": "Organic Out",
+          "title": "Aqueous Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous In",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous Out",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Modeled Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Predicted Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
+          ]
         }
       ],
       "mlStatus": "RPMs are too high",
@@ -1369,149 +1371,150 @@
       "title": "wash",
       "statuses": [
         {
-          "title": "Flow Rate",
+          "title": "Flow Characteristics",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Flow Rate",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Organic"
+                },
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Aqueous"
+                }
+              ],
+              "unit": "ml/min",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "O/A",
+              "value": 0.000,
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Density",
+              "value": "N/A",
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "ml/min",
-          "label": ""
+          ]
         },
         {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Organic In",
+          "title": "Organic Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
+          ]
+        },  
         {
-          "title": "Organic Out",
+          "title": "Aqueous Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous In",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous Out",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Modeled Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Predicted Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
+          ]
         }
       ],
       "mlStatus": null,
@@ -1546,149 +1549,150 @@
       "title": "rinse",
       "statuses": [
         {
-          "title": "Flow Rate",
+          "title": "Flow Characteristics",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Flow Rate",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Organic"
+                },
+                {
+                  "title": "",
+                  "value": 0.000,
+                  "unit": "mM",
+                  "label": "mL/min Aqueous"
+                }
+              ],
+              "unit": "ml/min",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "O/A",
+              "value": 0.000,
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Density",
+              "value": "N/A",
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "ml/min",
-          "label": ""
+          ]
         },
         {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Density",
-          "value": 1.5,
-          "unit": "g/cm\u0033",
-          "label": ""
-        },
-        {
-          "title": "Organic In",
+          "title": "Organic Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
+          ]
+        },  
         {
-          "title": "Organic Out",
+          "title": "Aqueous Concentration",
           "value": [
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
+              "title": "Inlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             },
             {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
+              "title": "Outlet",
+              "value": [
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Measured"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Modeled"
+                },
+                {
+                  "title": "",
+                  "value": 0,
+                  "unit": "mM",
+                  "label": "Predicted"
+                }
+              ],
+              "unit": "",
+              "label": ""
             }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous In",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Aqueous Out",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Modeled Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
-        },
-        {
-          "title": "Predicted Concentration",
-          "value": [
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Nd Concentration"
-            },
-            {
-              "title": "",
-              "value": 8.3,
-              "unit": "mM",
-              "label": "Ni Concentration"
-            }
-          ],
-          "unit": "",
-          "label": ""
+          ]
         }
       ],
       "mlStatus": null,

@@ -12,7 +12,6 @@ import {
 // Import styles
 import '../../styles/App.scss';
 // @ts-ignore
-import COLORS from '../../styles/variables';
 
 export default function ContentCardOutline(props: any) {
   const { data, title, children, className } = props;
@@ -42,12 +41,10 @@ export default function ContentCardOutline(props: any) {
         >
           <Typography
             sx={{
-              // backgroundColor: COLORS.colorPrimary,
               fontWeight: 'bold',
               fontSize: 'large',
               display: 'inline',
               padding: '5px 10px',
-              // lineHeight: '1rem',
             }}
             variant="body2"
           >
