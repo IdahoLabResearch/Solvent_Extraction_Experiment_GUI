@@ -56,9 +56,12 @@ export default function Header(props: any) {
   return (
     <AppBar elevation={3} color={"secondary"} >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="h6" noWrap component="div">
-          BCTC GUI
-        </Typography>
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+          <img src="/LBL_Logo_Final_NoText.png" alt="logo" style={{ marginLeft: '-8px', marginRight: '15px', height: '26px' }} />
+          <Typography variant="h6" color="inherit" noWrap>
+            Lindsay Boulevard Laboratory
+          </Typography>
+        </Box>
         <Box
           sx={{
             height: '50px',
