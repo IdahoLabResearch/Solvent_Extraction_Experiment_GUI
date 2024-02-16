@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // Hooks
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAppSelector, useAppDispatch } from '../../app/hooks/reduxTypeScriptHooks';
 
 // Import Redux Actions
@@ -70,7 +70,7 @@ export default function ContentCard(props: any) {
 
   const currentStage: selectedStage = useAppSelector((state) => state.stages.selectedStage);
   const currentSection: selectedSection = useAppSelector((state) => state.sections.selectedSection);
-  const getStageInfoState = useAppSelector((state: any) => state.stages.stageInfoState);
+  const getSectionInfoState = useAppSelector((state: any) => state.sections.sectionInfoState);
 
   const classes = `card ${className}`;
 
@@ -288,19 +288,19 @@ export default function ContentCard(props: any) {
                 }
               }}
             >
-            {buttonLinkList.map((buttonLinkItem, index) => {
-              return (
-                <Button
-                  name={buttonLinkItem.pane}
-                  sx={{ whiteSpace: 'nowrap', padding: '2px 12px 0px' }}
-                  key={buttonLinkItem.pane}
-                  onClick={() => handleSelectButtonLink(buttonLinkItem.pane)}
-                  className={getStageInfoState === `${buttonLinkItem.pane}` ? 'btn-active' : 'btn-inactive'}
-                >
-                  {buttonLinkItem.title}
-                </Button>
-              )
-            })}
+              {buttonLinkList.map((buttonLinkItem, index) => {
+                return (
+                  <Button
+                    name={buttonLinkItem.pane}
+                    sx={{ whiteSpace: 'nowrap', padding: '2px 12px 0px' }}
+                    key={buttonLinkItem.pane}
+                    onClick={() => handleSelectButtonLink(buttonLinkItem.pane)}
+                    className={getSectionInfoState === buttonLinkItem.pane ? 'btn-active' : 'btn-inactive'}
+                  >
+                    {buttonLinkItem.title}
+                  </Button>
+                )
+              })}
             </ButtonGroup>
           }
         </Box>

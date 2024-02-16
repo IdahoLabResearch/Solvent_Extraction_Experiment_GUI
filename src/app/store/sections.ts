@@ -20,8 +20,10 @@ const sectionsSlice = createSlice({
     },
 
     changeSectionInfoState(state, action) {
-      const store = state;
-      store.sectionInfoState = action.payload;
+      return {
+        ...state,
+        sectionInfoState: action.payload
+      };
     },
   },
 });
