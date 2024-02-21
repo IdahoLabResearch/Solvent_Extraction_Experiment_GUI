@@ -2,20 +2,20 @@
 import * as React from 'react';
 
 // Hooks
-import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
+import { useAppSelector } from '../../../app/hooks/reduxTypeScriptHooks';
 
 // MUI Components
 import { Grid } from '@mui/material';
 
 // Custom Components
-import ContentCard from '../coreapp/ContentCard';
-import ContentCardInline from '../coreapp/ContentCardInline';
-import ContentCardOutline from '../coreapp/ContentCardOutline';  
-import CardStatus from './CardStatus';
-import Card3DModel from './Card3DModel';
+import ContentCard from '../../coreapp/ContentCard';
+import ContentCardInline from '../../coreapp/ContentCardInline';
+import ContentCardOutline from '../../coreapp/ContentCardOutline';  
+import CardStatus from '../../cards/CardStatus';
+import Card3DModel from '../../cards/Card3DModel';
 
 // Import styles
-import '../../styles/App.scss';
+import '../../../styles/App.scss';
 
 export default function CardSelectedSectionReadings() {
   const selectedSection = useAppSelector((state: any) => state.sections.selectedSection);

@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 // Hooks
-import { useAppSelector } from '../../app/hooks/reduxTypeScriptHooks';
+import { useAppSelector } from '../../../app/hooks/reduxTypeScriptHooks';
 
 // Import Packages
 import classNames from 'classnames';
@@ -19,13 +19,13 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 
 // Custom Components
-import ContentCard from '../coreapp/ContentCard';
-import ContentCardInline from '../coreapp/ContentCardInline';
+import ContentCard from '../../coreapp/ContentCard';
+import ContentCardInline from '../../coreapp/ContentCardInline';
 
 // Import styles
-import '../../styles/App.scss';
+import '../../../styles/App.scss';
 // @ts-ignore
-import COLORS from '../../styles/variables';
+import COLORS from '../../../styles/variables';
 
 export default function CardSelectedStageResults() {
   type selectedSection = {
