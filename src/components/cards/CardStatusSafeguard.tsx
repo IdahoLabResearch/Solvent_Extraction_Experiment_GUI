@@ -30,6 +30,7 @@ export default function CardStatusSafeguard(props: any) {
   return (
     <>
       <Box
+        component="div"
         sx={{
           width: '100%',
           height: '100%',
@@ -42,8 +43,13 @@ export default function CardStatusSafeguard(props: any) {
       >
         <StatusBox alarm={alarmBoolean()} />
         <Box
+          component="div"
           sx={{
-            display: 'flex', flex: '1 100%', p: 3, backgroundColor: '#121212', alignItems: 'center',
+            display: 'flex',
+            flex: '1 100%',
+            p: 3,
+            backgroundColor: '#121212',
+            alignItems: 'center'
           }}
         >
           <Typography 

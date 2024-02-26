@@ -90,6 +90,7 @@ export default function ContentCard(props: any) {
     >
       {title === 'Selected Stage Information' ? (
         <Box
+          component="div"
           className="card-title-container"
           sx={{
             marginTop: '-16px',
@@ -98,6 +99,7 @@ export default function ContentCard(props: any) {
           }}
         >
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               padding: '.25rem 0px .25rem .6rem',
@@ -113,12 +115,25 @@ export default function ContentCard(props: any) {
               {title}
             </Typography>
           </Box>
-          <Box className="card-title-arrow-out" />
-          <Box className="card-title-arrow-in-container">
-            <Box className="card-title-arrow-in-top" />
-            <Box className="card-title-arrow-in-bottom" />
+          <Box
+            component="div"
+            className="card-title-arrow-out"
+          />
+          <Box
+            component="div"
+            className="card-title-arrow-in-container"
+          >
+            <Box
+              component="div"
+              className="card-title-arrow-in-top"
+            />
+            <Box
+              component="div"
+              className="card-title-arrow-in-bottom"
+            />
           </Box>
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               padding: '.25rem .6rem',
@@ -142,6 +157,7 @@ export default function ContentCard(props: any) {
             </Typography>
           </Box>
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               display: 'flex',
@@ -162,6 +178,7 @@ export default function ContentCard(props: any) {
         </Box>
       ) : title === 'Selected Section Information' ? (
         <Box
+          component="div"
           className="card-title-container"
           sx={{
             marginTop: '-16px',
@@ -170,6 +187,7 @@ export default function ContentCard(props: any) {
           }}
         >
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               padding: '.25rem 0px .25rem .6rem',
@@ -185,12 +203,25 @@ export default function ContentCard(props: any) {
               {title}
             </Typography>
           </Box>
-          <Box className="card-title-arrow-out" />
-          <Box className="card-title-arrow-in-container">
-            <Box className="card-title-arrow-in-top" />
-            <Box className="card-title-arrow-in-bottom" />
+          <Box
+            component="div"
+            className="card-title-arrow-out"
+          />
+          <Box
+            component="div"
+            className="card-title-arrow-in-container"
+          >
+            <Box
+              component="div"
+              className="card-title-arrow-in-top"
+            />
+            <Box
+              component="div"
+              className="card-title-arrow-in-bottom"
+            />
           </Box>
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               padding: '.25rem .6rem',
@@ -210,6 +241,7 @@ export default function ContentCard(props: any) {
             </Typography>
           </Box>
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               display: 'flex',
@@ -230,6 +262,7 @@ export default function ContentCard(props: any) {
         </Box>
       ) : (
         <Box
+          component="div"
           className="card-title-container"
           sx={{
             marginTop: '-16px',
@@ -238,6 +271,7 @@ export default function ContentCard(props: any) {
           }}
         >
           <Box
+            component="div"
             sx={{
               backgroundColor: COLORS.colorPrimary,
               padding: '.25rem 10px .25rem',
@@ -270,6 +304,7 @@ export default function ContentCard(props: any) {
         }}
       >
         <Box
+          component="div"
           sx={{
             position: 'absolute',
             right: '16px',

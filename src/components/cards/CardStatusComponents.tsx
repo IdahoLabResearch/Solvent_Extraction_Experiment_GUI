@@ -51,6 +51,7 @@ export default function CardStatusComponents() {
           return (
             <Slide key={key} index={0}>
               <Box
+                component="div"
                 sx={{
                   display: 'flex',
                   flexGrow: 1
@@ -58,19 +59,35 @@ export default function CardStatusComponents() {
               >
                 <StatusBox alarm={alarmBoolean(component)} />
                 <Box
-                  sx={{ display: 'flex', flex: '1 100%', backgroundColor: '#121212' }}
+                  component="div"
+                  sx={{
+                    display: 'flex',
+                    flex: '1 100%',
+                    backgroundColor: '#121212'
+                  }}
                 >
                   <Box
+                    component="div"
                     sx={{
-                      display: 'flex', flex: '1 1 100%', alignItems: 'center', padding: '6px 20px',
+                      display: 'flex',
+                      flex: '1 1 100%',
+                      alignItems: 'center',
+                      padding: '6px 20px',
                     }}
                   >
                     <Typography><strong>{component.title}</strong></Typography>
                   </Box>
                   <Box
+                    component="div"
                     className="status-time"
                     sx={{
-                      display: 'flex', justifyContent: 'center', flex: '0 50%', flexDirection: 'column', padding: '12px 16px', textAlign: 'right', fontSize: '.85rem!important',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      flex: '0 50%',
+                      flexDirection: 'column',
+                      padding: '12px 16px',
+                      textAlign: 'right',
+                      fontSize: '.85rem!important'
                     }}
                   >
                     <Typography sx={{ fontSize: '.85rem!important' }}>

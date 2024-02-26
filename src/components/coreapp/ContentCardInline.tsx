@@ -33,6 +33,7 @@ export default function ContentCardInline(props: any) {
       {title
         && (
         <Box
+          component="div"
           sx={{
             marginTop: '-3px',
             marginBottom: '6px',

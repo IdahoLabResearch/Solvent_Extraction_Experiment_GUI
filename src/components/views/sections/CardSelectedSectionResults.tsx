@@ -58,6 +58,7 @@ export default function CardSelectedStageResults() {
               lg={2}
             >
               <Box
+                component="div"
                 sx={{
                   width: '100%',
                   height: '100%',
@@ -77,6 +78,7 @@ export default function CardSelectedStageResults() {
                 {selectedSection.mlStatus === 'good'
                   ? (
                     <Box
+                      component="div"
                       sx={{
                         display: 'flex',
                         height: '100%',
@@ -92,6 +94,7 @@ export default function CardSelectedStageResults() {
                     </Box>
                   ) : (
                     <Box
+                      component="div"
                       sx={{
                         display: 'flex',
                         height: '100%',
@@ -107,6 +110,7 @@ export default function CardSelectedStageResults() {
                     </Box>
                   )}
                 <Box
+                  component="div"
                   sx={{
                     display: 'flex',
                     flexGrow: 1,
@@ -149,6 +153,7 @@ export default function CardSelectedStageResults() {
                   key={key}
                 >
                   <Box
+                    component="div"
                     sx={{
                       width: '100%',
                       height: '100%',
@@ -159,6 +164,7 @@ export default function CardSelectedStageResults() {
                     }}
                   >
                     <Box
+                      component="div"
                       sx={{
                         display: 'flex',
                         backgroundColor: COLORS.colorGrayDark,
@@ -175,6 +181,7 @@ export default function CardSelectedStageResults() {
                       </Typography>
                     </Box>
                     <Box
+                      component="div"
                       sx={{
                         display: 'flex',
                         flexGrow: 1,

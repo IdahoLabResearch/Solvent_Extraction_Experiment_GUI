@@ -160,7 +160,10 @@ const CardLineGraph: React.FC<Props> = ({
 
   return (
     <>
-      <Box sx={{ padding: '30px 20px' }}>
+      <Box
+        component="div"
+        sx={{ padding: '30px 20px' }}
+      >
         <Grid container>
           <Grid item xs={12}>
             <Grid container spacing={2}>
@@ -175,7 +178,14 @@ const CardLineGraph: React.FC<Props> = ({
                           </IconButton>
                         }
                           
-                        <Box sx={{ minWidth: 120, display: 'flex', flexDirection: 'column' }}>
+                        <Box
+                          component="div"
+                          sx={{
+                            minWidth: 120,
+                            display: 'flex',
+                            flexDirection: 'column'
+                          }}
+                        >
                           <FormControl sx={{ minWidth: '120px', marginBottom: '12px' }} size="small">
                             <InputLabel id="demo-simple-select-label">Time Point</InputLabel>
                             <Select
@@ -245,18 +255,6 @@ const CardLineGraph: React.FC<Props> = ({
           </Grid>
         </Grid>
       </Box>
-      {/* <Box sx={{ padding: '24px' }}>
-        <Plot
-          data={data}
-          layout={layout}
-          style={{
-            width: '100%',
-            height: '100%',
-          }}
-          useResizeHandler
-        />
-      </Box> */}
-
     </>
   );
 }

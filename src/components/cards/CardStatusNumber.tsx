@@ -13,7 +13,10 @@ export default function CardStatusNumber(props: any) {
   const { data } = props;
 
   return (
-    <Box className="status-number text-center pt-0 pb-3">
+    <Box
+      component="div"
+      className="status-number text-center pt-0 pb-3"
+    >
       <div
         className="status-info-display blue--text"
       >

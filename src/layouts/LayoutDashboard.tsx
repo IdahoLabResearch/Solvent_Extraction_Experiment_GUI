@@ -39,7 +39,10 @@ function LayoutDashboard() {
   const { data: flowsheetConcentrationsList } = useFetchFlowsheetQuery();
 
   return (
-    <Box sx={{ padding: '30px' }}>
+    <Box
+      component="div"
+      sx={{ padding: '30px' }}
+    >
       <Grid container spacing={3}>
         <Grid item xs={12} lg={12}>
           <ContentCard className="stage-flowsheet" title="Flowsheet Overview">

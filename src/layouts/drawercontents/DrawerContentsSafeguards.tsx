@@ -43,8 +43,14 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
   const sectionListWithSensorsAndNoError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus === "");
 
   return (
-    <Box sx={{ padding: '16px'}}>
+    <Box
+      component="div"
+      sx={{
+        padding: '16px'
+      }}
+    >
       <Box
+        component="div"
         sx={{
           width: '100%',
           display: 'flex',
@@ -56,8 +62,13 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
       >
         <StatusBox alarm={alarmBoolean()} />
         <Box
+          component="div"
           sx={{
-            display: 'flex', flex: '1 100%', p: 3, backgroundColor: '#121212', alignItems: 'center',
+            display: 'flex',
+            flex: '1 100%',
+            p: 3,
+            backgroundColor: '#121212',
+            alignItems: 'center'
           }}
         >
           <Typography 
@@ -88,10 +99,15 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
         return (
           <Grid item xs={12}>
             <ContentCardInline title={`Section: ${ section.title?.replace(/\b\w/, (c: string) => c.toUpperCase()) }`} >
-              <Box key={key} sx={{ paddingTop: '8px'}}>
+              <Box
+                component="div"
+                key={key}
+                sx={{ paddingTop: '8px'}}
+              >
                 {section.ml.map((mlValue: any, index: number) => {
                   return (
                     <Box
+                      component="div"
                       key={index}
                       sx={{
                         width: '100%',
@@ -106,6 +122,7 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
                       }}
                     >
                       <Box
+                        component="div"
                         sx={{
                           display: 'flex',
                           backgroundColor: COLORS.colorGrayDark,
@@ -123,6 +140,7 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
                         </Typography>
                       </Box>
                       <Box
+                        component="div"
                         sx={{
                           display: 'flex',
                           flexGrow: 1,
@@ -163,10 +181,15 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
         return (
           <Grid item xs={12}>
             <ContentCardInline title={`Section ${ section.title }`} >
-              <Box key={key} sx={{ paddingTop: '8px'}}>
+              <Box
+                component="div"
+                key={key}
+                sx={{ paddingTop: '8px'}}
+              >
                 {section.ml.map((mlValue: any, index: number) => {
                   return (
                     <Box
+                      component="div"
                       key={index}
                       sx={{
                         width: '100%',
@@ -181,6 +204,7 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
                       }}
                     >
                       <Box
+                        component="div"
                         sx={{
                           display: 'flex',
                           backgroundColor: COLORS.colorGrayDark,
@@ -198,6 +222,7 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
                         </Typography>
                       </Box>
                       <Box
+                        component="div"
                         sx={{
                           display: 'flex',
                           flexGrow: 1,
