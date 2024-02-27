@@ -32,7 +32,10 @@ export default function CardStatus(props: any) {
   return (
     <>
       {(typeof data.value === 'number' || typeof data.value === 'string') && (
-        <Box className="status-number pt-0 pb-3">
+        <Box
+          component="div"
+          className="status-number pt-0 pb-3"
+        >
           <Typography className="status-info-display" align="center">
             {data.value}
             <span className="status-info-display-unit">
@@ -62,7 +65,10 @@ export default function CardStatus(props: any) {
                 xs={getItemSize(index, data.value.length)}
                 key={key}
               >
-                <Box className="status-number pt-0 pb-3">
+                <Box
+                  component="div"
+                  className="status-number pt-0 pb-3"
+                >
                   <Typography className="status-info-display" align="center">
                     {object.value}
                     <span className="status-info-display-unit">

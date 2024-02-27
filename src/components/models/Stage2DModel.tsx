@@ -84,7 +84,10 @@ export default function Stage2DModel(props: any) {
   }
 
   return (
-    <Box sx={{ position: 'relative'}}>
+    <Box
+      component="div"
+      sx={{ position: 'relative'}}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="100%"
@@ -108,7 +111,17 @@ export default function Stage2DModel(props: any) {
       </svg>
       
       {firstItem === true &&
-        <Box sx={{ position: 'absolute', bottom: '-1px', left: '-2px', height: '12px', width: '40px', transform: 'rotate(270deg) scale(.6)'}}>
+        <Box
+          component="div"
+          sx={{
+            position: 'absolute',
+            bottom: '-1px',
+            left: '-2px',
+            height: '12px',
+            width: '40px',
+            transform: 'rotate(270deg) scale(.6)'
+          }}
+        >
           <Tooltip title={tooltipAqueousOut(section)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +134,17 @@ export default function Stage2DModel(props: any) {
         </Box>
       }
       {lastItem === true &&
-        <Box sx={{ position: 'absolute', bottom: '0px', right: '3px', height: '12px', width: '40px', transform: 'rotate(90deg) scale(.6)'}}>
+        <Box
+          component="div"
+          sx={{
+            position: 'absolute',
+            bottom: '0px',
+            right: '3px',
+            height: '12px',
+            width: '40px',
+            transform: 'rotate(90deg) scale(.6)'
+          }}
+        >
           <Tooltip title={tooltipAqueousIn(section)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

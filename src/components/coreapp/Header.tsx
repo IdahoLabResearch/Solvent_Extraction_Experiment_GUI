@@ -56,13 +56,29 @@ export default function Header(props: any) {
   return (
     <AppBar elevation={3} color={"secondary"} >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-          <img src="/LBL_Logo_Final_NoText.png" alt="logo" style={{ marginLeft: '-8px', marginRight: '15px', height: '26px' }} />
+        <Box
+          component="div"
+          sx={{
+            flexGrow: 1,
+            display: 'flex',
+            alignItems: 'center'
+          }}
+        >
+          <img
+            src="/LBL_Logo_Final_NoText.png"
+            alt="logo"
+            style={{
+              marginLeft: '-8px',
+              marginRight: '15px',
+              height: '26px'
+            }}
+          />
           <Typography variant="h6" color="inherit" noWrap>
             Lindsay Boulevard Laboratory
           </Typography>
         </Box>
         <Box
+          component="div"
           sx={{
             height: '50px',
             display: 'flex',
@@ -74,8 +90,12 @@ export default function Header(props: any) {
 
           <StatusBox alarm={alarmBoolean()} />
           <Box
+            component="div"
             sx={{
-              display: 'flex', padding: '0 10px', backgroundColor: '#121212', alignItems: 'center',
+              display: 'flex',
+              padding: '0 10px',
+              backgroundColor: '#121212',
+              alignItems: 'center'
             }}
           >
             {alarmBoolean() === false
@@ -93,7 +113,14 @@ export default function Header(props: any) {
                   <span>No Safeguard Alerts</span>
                 </Typography>
               ) : (
-                <Button variant="contained" color="error" size="small" onClick={() => handleToggleOpenDrawerLeft() }>See Safeguard Alerts</Button>
+                <Button
+                  variant="contained"
+                  color="error"
+                  size="small"
+                  onClick={() => handleToggleOpenDrawerLeft() }
+                >
+                  See Safeguard Alerts
+                </Button>
               )
             }
             

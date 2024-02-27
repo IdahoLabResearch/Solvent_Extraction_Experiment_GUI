@@ -152,8 +152,14 @@ const DrawerLeft: React.FC<Props> = ({}) => {
         })
       }}
     >
-      <Box sx={{ display: 'flex', height: '100%', flexDirection: 'row'}}>
-        <Box sx={{ width: '64px', height: '100%' }}>
+      <Box
+        component="div"
+        sx={{ display: 'flex', height: '100%', flexDirection: 'row'}}
+      >
+        <Box
+          component="div"
+          sx={{ width: '64px', height: '100%' }}
+        >
           <List sx={{ p: 0 }}>
             {/* Hamburger menu icon to open and close Drawer */}
             <ListItem key={uuidv4()} disablePadding>
@@ -223,8 +229,24 @@ const DrawerLeft: React.FC<Props> = ({}) => {
             })}
           </List>
         </Box>
-        <Box sx={{ display: 'flex', flex: '1 1 100%', flexDirection: 'column', overflow: 'hidden'}}>
-          <Box sx={{ flex: '1, 1, auto', display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '16px 16px 4px' }}>
+        <Box
+          component="div"
+          sx={{
+            display: 'flex',
+            flex: '1 1 100%',
+            flexDirection: 'column',
+            overflow: 'hidden'
+          }}
+        >
+          <Box
+            component="div"
+            sx={{
+              flex: '1, 1, auto',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              padding: '16px 16px 4px' }}
+            >
             <Typography
               variant="h3"
               sx={{
@@ -256,7 +278,10 @@ const DrawerLeft: React.FC<Props> = ({}) => {
               />
             </Tooltip>
           </Box>
-          <Box sx={{ overflowY: 'scroll'}}>
+          <Box
+            component="div"
+            sx={{ overflowY: 'scroll'}}
+          >
             {selected === 'safeguards' && 
               <DrawerContentsSafeguards />
             }

@@ -24,15 +24,40 @@ export default function MainScaffold(props: any) {
   const theme = useTheme();
 
   return (
-    <Box sx={{ display: 'grid', gridTemplateRows: 'minmax(64px, auto) 1fr', overflow: 'hidden', margin: 0 }}>
-      <Box sx={{ }}>
+    <Box
+      component="div"
+      sx={{
+        display: 'grid',
+        gridTemplateRows: 'minmax(64px, auto) 1fr',
+        overflow: 'hidden',
+        margin: 0
+      }}
+    >
+      <Box
+        component="div"
+        sx={{ }}
+      >
         <Header />
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'row', height: 'calc(100vh - 64px)' }}>
-
+      <Box
+        component="div"
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          height: 'calc(100vh - 64px)'
+        }}
+      >
         <DrawerLeft />
 
-        <Box component="main" sx={{ flexGrow: 1, padding: '20px', overflow: 'auto', margin: 0 }}>
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            padding: '20px',
+            overflow: 'auto',
+            margin: 0
+          }}
+        >
           {children}
         </Box>
       </Box>

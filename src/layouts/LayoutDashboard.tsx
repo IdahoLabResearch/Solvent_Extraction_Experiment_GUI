@@ -20,10 +20,10 @@ import ContentCardInline from '../components/coreapp/ContentCardInline';
 // import CardStatusComponents from '../components/cards/CardStatusComponents';
 import CardStatus from '../components/cards/CardStatus';
 import Card2DModel from '../components/cards/Card2DModel';
-import CardSelectedStageReadings from '../components/cards/CardSelectedStageReadings';
-import CardSelectedSectionTimeseries from '../components/cards/CardSelectedSectionTimeseries';
-import CardSelectedSectionResults from '../components/cards/CardSelectedSectionResults';
-import CardSelectedSectionReadings from '../components/cards/CardSelectedSectionReadings';
+import CardSelectedStageReadings from '../components/views/stages/CardSelectedStageReadings';
+import CardSelectedSectionTimeseries from '../components/views/sections/CardSelectedSectionTimeseries';
+import CardSelectedSectionResults from '../components/views/sections/CardSelectedSectionResults';
+import CardSelectedSectionReadings from '../components/views/sections/CardSelectedSectionReadings';
 
 function LayoutDashboard() {
   type stageCurrentlySelected = boolean;
@@ -39,18 +39,11 @@ function LayoutDashboard() {
   const { data: flowsheetConcentrationsList } = useFetchFlowsheetQuery();
 
   return (
-    <Box sx={{ padding: '30px' }}>
+    <Box
+      component="div"
+      sx={{ padding: '30px' }}
+    >
       <Grid container spacing={3}>
-        {/* <Grid item xs={12} lg={3} style={{ display: 'flex', flexDirection: 'column' }}>
-          <ContentCard className="safeguard-notification" title="Safeguard Notification">
-            <CardStatusSafeguard />
-          </ContentCard>
-        </Grid>
-        <Grid item xs={12} lg={9} style={{ display: 'flex' }}>
-          <ContentCard className="flowsheet-component-status" title="Flowsheet Component Status">
-            <CardStatusComponents />
-          </ContentCard>
-        </Grid> */}
         <Grid item xs={12} lg={12}>
           <ContentCard className="stage-flowsheet" title="Flowsheet Overview">
             <Grid container spacing={2}>

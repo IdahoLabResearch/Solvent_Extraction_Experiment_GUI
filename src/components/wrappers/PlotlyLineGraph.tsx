@@ -65,7 +65,10 @@ const PlotlyLineGraph: React.FC<Props> = ({
 
   return (
     <>
-      <Box sx={{}}>
+      <Box
+        component="div"
+        sx={{}}
+      >
         <Plot
           data={data}
           layout={layout}

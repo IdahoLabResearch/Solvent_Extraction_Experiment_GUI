@@ -64,7 +64,9 @@ export default function Card2DModel() {
   const dispatch = useAppDispatch();
 
   return (
-    <Box>
+    <Box
+      component="div"
+    >
       <Typography
         sx={{
           marginBottom: '16px',
@@ -81,9 +83,11 @@ export default function Card2DModel() {
         below to view its information. Hover over arrows to see terms relating to the flow. Dashed lines are Organic Flow. Solid lines entering and exiting the stages are Aqueous Flow.
       </Typography>
 
-      <Box sx={{
-        width: '100%', display: 'grid', gridAutoRows: '1fr',
-      }}
+      <Box
+        component="div"
+        sx={{
+          width: '100%', display: 'grid', gridAutoRows: '1fr',
+        }}
       >
 
       {/* Create row of stages if stages have that row designation in their data. */}
@@ -91,7 +95,8 @@ export default function Card2DModel() {
         const key = uuidv4();
         if (row?.length !== 0) {
           return (
-            <Box 
+            <Box
+              component="div"
               key={key}
               sx={{
                 position: 'relative',
@@ -101,8 +106,14 @@ export default function Card2DModel() {
             >
               
 
-                <Box sx={{ position: 'absolute', zIndex: 0, width: '100%'}}>
-                  <Box sx={{ position: 'absolute', top: '0px', left: '50%', height: '12px', width: '40px',}}>
+                <Box
+                  component="div"
+                  sx={{ position: 'absolute', zIndex: 0, width: '100%'}}
+                >
+                  <Box
+                    component="div"
+                    sx={{ position: 'absolute', top: '0px', left: '50%', height: '12px', width: '40px',}}
+                  >
                     <Tooltip title="Organic Recycle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +124,10 @@ export default function Card2DModel() {
                       </svg>
                     </Tooltip>
                   </Box>
-                  <Box sx={{ position: 'absolute', bottom: '0px', left: '50%', height: '12px', width: '40px', transform: 'rotate(180deg)'}}>
+                  <Box
+                    component="div"
+                    sx={{ position: 'absolute', bottom: '0px', left: '50%', height: '12px', width: '40px', transform: 'rotate(180deg)'}}
+                  >
                     <Tooltip title="Loaded Organic">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -144,6 +158,7 @@ export default function Card2DModel() {
                   const key = uuidv4();
                   return (
                     <Box
+                      component="div"
                       key={key}
                       sx={{
                         display: 'flex',
@@ -164,14 +179,21 @@ export default function Card2DModel() {
                         },
                       )}
                     >
-                      <Box style={{ display: 'flex' }}>
+                      <Box
+                        component="div"
+                        sx={{ display: 'flex' }}
+                      >
 
                         {/* Create a stage for each entry in the filtered row. */}
                         {row.filter((stage: any) => stage.section === section.title).map((stage: any, index: number) => {
                           const key = uuidv4();
                           const rowLen = row.filter((stage: any) => stage.section === section.title).length;
                           return (
-                            <Box key={key} sx={{ display: 'flex' }}>
+                            <Box
+                              component="div"
+                              key={key}
+                              sx={{ display: 'flex' }}
+                            >
                               <Stage2DModel
                                 id={stage.id}
                                 section={stage.section}
@@ -189,7 +211,15 @@ export default function Card2DModel() {
                           );
                         })}
                       </Box>
-                      <Box sx={{ display: 'flex', padding: '16px 4px', justifyContent: 'center', overflowX: 'hidden' }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          display: 'flex',
+                          padding: '16px 4px',
+                          justifyContent: 'center',
+                          overflowX: 'hidden'
+                        }}
+                      >
                         <Button
                           className={classNames(
                             'capital-btn',

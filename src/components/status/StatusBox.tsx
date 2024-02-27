@@ -19,6 +19,7 @@ export default function StatusBox({alarm}: {alarm: boolean}) {
   return (
     <>
       <Box
+       component="div"
         sx={{
           display: 'flex',
           width: '50px',

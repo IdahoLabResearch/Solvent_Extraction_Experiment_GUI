@@ -31,6 +31,7 @@ export default function ContentCardOutline(props: any) {
       {title
         && (
         <Box
+          component="div"
           sx={{
             padding: '10px 10px',
             marginTop: '6px',

@@ -34,11 +34,17 @@ const DrawerContentsComponents: React.FC<Props> = ({}) => {
   const alarmBoolean = (component: any) => component.status !== null;
 
   return (
-    <Box sx={{ padding: '16px'}}>
+    <Box
+      component="div"
+      sx={{
+        padding: '16px'
+      }}
+    >
       {componentsList?.map((component: any) => {
         const key = component.title;
         return (
           <Box
+            component="div"
             sx={{
               display: 'flex',
               marginBottom: '16px'
@@ -46,19 +52,35 @@ const DrawerContentsComponents: React.FC<Props> = ({}) => {
           >
             <StatusBox alarm={alarmBoolean(component)} />
             <Box
-              sx={{ display: 'flex', flex: '1 100%', backgroundColor: '#121212' }}
+              component="div"
+              sx={{
+                display: 'flex',
+                flex: '1 100%',
+                backgroundColor: '#121212'
+              }}
             >
               <Box
+                component="div"
                 sx={{
-                  display: 'flex', flex: '1 1 100%', alignItems: 'center', padding: '6px 20px',
+                  display: 'flex',
+                  flex: '1 1 100%',
+                  alignItems: 'center',
+                  padding: '6px 20px'
                 }}
               >
                 <Typography><strong>{component.title}</strong></Typography>
               </Box>
               <Box
+                component="div"
                 className="status-time"
                 sx={{
-                  display: 'flex', justifyContent: 'center', flex: '0 50%', flexDirection: 'column', padding: '12px 16px', textAlign: 'right', fontSize: '.85rem!important',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  flex: '0 50%',
+                  flexDirection: 'column',
+                  padding: '12px 16px',
+                  textAlign: 'right',
+                  fontSize: '.85rem!important'
                 }}
               >
                 <Typography sx={{ fontSize: '.85rem!important' }}>

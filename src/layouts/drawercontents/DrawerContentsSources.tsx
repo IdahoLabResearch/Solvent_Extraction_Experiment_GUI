@@ -20,9 +20,23 @@ const DrawerContentsSettings: React.FC<Props> = ({}) => {
 
   return (
     <Box
-      sx={{ display: 'flex', flexDirection: 'column', overflowX: 'hidden', }}
+      component="div"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        overflowX: 'hidden'
+      }}
     >
-      <Box sx={{ flex: 1, minHeight: 0, overflowX: 'hidden', overflowY: 'auto', padding: '0 16px 16px' }}>
+      <Box
+        component="div"
+        sx={{
+          flex: 1,
+          minHeight: 0,
+          overflowX: 'hidden',
+          overflowY: 'auto',
+          padding: '0 16px 16px'
+        }}
+      >
         Sources go here
       </Box>
     </Box>
