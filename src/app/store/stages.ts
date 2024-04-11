@@ -101,11 +101,11 @@ const initialStagesState = {
       ml: [
         {
           title: 'Findings',
-          value: 'Unexpected Low Concentration',
+          value: 'Unexpected High Nd Concentration',
         },
         {
           title: 'Locations of Interest',
-          value: 'Inlet',
+          value: 'Raffinate',
         },
         {
           title: 'Anomaly Strength',
@@ -113,7 +113,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '0mM, Predicted 0mM, Modeled',
+          value: '10.5 mM Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -217,11 +217,11 @@ const initialStagesState = {
       ml: [
         {
           title: 'Findings',
-          value: 'Unexpected Low Concentration',
+          value: 'Unexpected High Nd Concentration',
         },
         {
           title: 'Locations of Interest',
-          value: 'Inlet',
+          value: 'Raffinate',
         },
         {
           title: 'Anomaly Strength',
@@ -229,7 +229,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '0mM, Predicted 0mM, Modeled',
+          value: '10.5 mM Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -333,11 +333,11 @@ const initialStagesState = {
       ml: [
         {
           title: 'Findings',
-          value: 'Unexpected Low Concentration',
+          value: 'Unexpected High Nd Concentration',
         },
         {
           title: 'Locations of Interest',
-          value: 'Inlet',
+          value: 'Raffinate',
         },
         {
           title: 'Anomaly Strength',
@@ -345,7 +345,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '0mM, Predicted 0mM, Modeled',
+          value: '10.5 mM Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -449,11 +449,11 @@ const initialStagesState = {
       ml: [
         {
           title: 'Findings',
-          value: 'Unexpected Low Concentration',
+          value: 'Unexpected High Nd Concentration',
         },
         {
           title: 'Locations of Interest',
-          value: 'Inlet',
+          value: 'Raffinate',
         },
         {
           title: 'Anomaly Strength',
@@ -461,7 +461,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '0mM, Predicted 0mM, Modeled',
+          value: '10.5 mM Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -565,11 +565,11 @@ const initialStagesState = {
       ml: [
         {
           title: 'Findings',
-          value: 'Unexpected Low Concentration',
+          value: 'Unexpected High Nd Concentration',
         },
         {
           title: 'Locations of Interest',
-          value: 'Inlet',
+          value: 'Raffinate',
         },
         {
           title: 'Anomaly Strength',
@@ -577,7 +577,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '0mM, Predicted 0mM, Modeled',
+          value: '10.5 mM Expected = 0.0002 mM',
         },
         {
           title: 'Response',

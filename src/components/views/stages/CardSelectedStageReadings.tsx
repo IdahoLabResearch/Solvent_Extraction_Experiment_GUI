@@ -35,7 +35,7 @@ export default function CardSelectedStageReadings() {
   return (
     <ContentCard className="selected-stage" title="Selected Stage Information">
       <Grid container spacing={2}>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} lg={4}>
           <Grid
             container
             spacing={2}
@@ -48,8 +48,8 @@ export default function CardSelectedStageReadings() {
               return (
                 <Grid
                   item
-                  xs={6}
-                  lg={6}
+                  xs={12}
+                  lg={12}
                   key={key}
                 >
                   <ContentCardInline data={object} title={object.title}>
@@ -60,7 +60,7 @@ export default function CardSelectedStageReadings() {
             })}
           </Grid>
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} lg={8}>
           <ContentCardInline title="Stage 3D Model">
             <Card3DModel />
           </ContentCardInline>

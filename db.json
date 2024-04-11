@@ -5,14 +5,14 @@
       "value": [
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Nd Concentration"
         },
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Ni Concentration"
         }
       ],
@@ -24,14 +24,14 @@
       "value": [
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Nd Concentration"
         },
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Ni Concentration"
         }
       ],
@@ -43,13 +43,13 @@
       "value": [
         {
           "title": "",
-          "value": 0,
+          "value": 23.8,
           "unit": "mM",
           "label": "Nd Concentration"
         },
         {
           "title": "",
-          "value": 0,
+          "value": 23.6,
           "unit": "mM",
           "label": "Ni Concentration"
         }
@@ -62,14 +62,14 @@
       "value": [
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Nd Concentration"
         },
         {
           "title": "",
-          "value": 0,
-          "unit": "mM",
+          "value": "N/A",
+          "unit": "",
           "label": "Ni Concentration"
         }
       ],
@@ -100,11 +100,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -112,7 +112,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -145,11 +145,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -157,7 +157,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -190,11 +190,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -202,7 +202,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -235,11 +235,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -247,7 +247,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -280,11 +280,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -292,7 +292,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -325,11 +325,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -337,7 +337,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -807,11 +807,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -819,7 +819,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -844,15 +844,15 @@
               "value": [
                 {
                   "title": "",
-                  "value": 0.000,
-                  "unit": "mM",
-                  "label": "mL/min Organic"
+                  "value": 253,
+                  "unit": "mL/min",
+                  "label": "Organic"
                 },
                 {
                   "title": "",
-                  "value": 0.000,
-                  "unit": "mM",
-                  "label": "mL/min Aqueous"
+                  "value": 297,
+                  "unit": "mL/min",
+                  "label": "Aqueous"
                 }
               ],
               "unit": "ml/min",
@@ -860,7 +860,7 @@
             },
             {
               "title": "O/A",
-              "value": 0.000,
+              "value": 0.85,
               "unit": "",
               "label": ""
             },
@@ -880,46 +880,53 @@
               "value": [
                 {
                   "title": "",
-                  "value": 0,
-                  "unit": "mM",
-                  "label": "Measured"
+                  "value": "N/A",
+                  "unit": "",
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
-                  "unit": "mM",
-                  "label": "Modeled"
-                },
-                {
-                  "title": "",
-                  "value": 0,
-                  "unit": "mM",
-                  "label": "Predicted"
+                  "value": "N/A",
+                  "unit": "",
+                  "label": "Ni"
                 }
               ],
               "unit": "",
               "label": ""
             },
             {
-              "title": "Outlet",
+              "title": "Outlet (measured)",
               "value": [
                 {
                   "title": "",
-                  "value": 0,
-                  "unit": "mM",
-                  "label": "Measured"
+                  "value": "N/A",
+                  "unit": "",
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "N/A",
+                  "unit": "",
+                  "label": "Ni"
+                }
+              ],
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Outlet (model)",
+              "value": [
+                {
+                  "title": "",
+                  "value": "23.7898",
                   "unit": "mM",
-                  "label": "Modeled"
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "23.58",
                   "unit": "mM",
-                  "label": "Predicted"
+                  "label": "Ni"
                 }
               ],
               "unit": "",
@@ -935,46 +942,53 @@
               "value": [
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "23.79 ± 0.75",
                   "unit": "mM",
-                  "label": "Measured"
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "23.58 ± 3.52",
                   "unit": "mM",
-                  "label": "Modeled"
-                },
-                {
-                  "title": "",
-                  "value": 0,
-                  "unit": "mM",
-                  "label": "Predicted"
+                  "label": "Ni"
                 }
               ],
               "unit": "",
               "label": ""
             },
             {
-              "title": "Outlet",
+              "title": "Outlet (measured)",
               "value": [
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "0.01 ± 0.67",
                   "unit": "mM",
-                  "label": "Measured"
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "25.36 ± 3.56",
                   "unit": "mM",
-                  "label": "Modeled"
+                  "label": "Ni"
+                }
+              ],
+              "unit": "",
+              "label": ""
+            },
+            {
+              "title": "Outlet (model)",
+              "value": [
+                {
+                  "title": "",
+                  "value": "0.0002",
+                  "unit": "mM",
+                  "label": "Nd"
                 },
                 {
                   "title": "",
-                  "value": 0,
+                  "value": "23.67",
                   "unit": "mM",
-                  "label": "Predicted"
+                  "label": "Ni"
                 }
               ],
               "unit": "",
@@ -987,11 +1001,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -999,7 +1013,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -1165,11 +1179,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -1177,7 +1191,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -1343,11 +1357,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -1355,7 +1369,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -1521,11 +1535,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -1533,7 +1547,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
@@ -1699,11 +1713,11 @@
       "ml": [
         {
           "title": "Findings",
-          "value": "Unexpected Low Concentration"
+          "value": "Unexpected High Nd Concentration"
         },
         {
           "title": "Locations of Interest",
-          "value": "Inlet"
+          "value": "Raffinate"
         },
         {
           "title": "Anomaly Strength",
@@ -1711,7 +1725,7 @@
         },
         {
           "title": "Nd Concentration",
-          "value": "0mM, Predicted 0mM, Modeled"
+          "value": "10.5 mM Expected = 0.0002 mM"
         },
         {
           "title": "Response",
