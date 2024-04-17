@@ -37,10 +37,10 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
   const alarmBoolean = () => sectionListWithErrors?.length > 0;
 
   type sectionListWithSensorsAndError = Array<{ [key: string]: any; }>;
-  const sectionListWithSensorsAndError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus !== "");
+  const sectionListWithSensorsAndError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus !== '');
 
   type sectionListWithSensorsAndNoError = Array<{ [key: string]: any; }>;
-  const sectionListWithSensorsAndNoError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus === "");
+  const sectionListWithSensorsAndNoError = sectionList?.filter((section: any) => section.timeseries.values === true && section.mlStatus === '');
 
   return (
     <Box
@@ -49,6 +49,21 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
         padding: '16px'
       }}
     >
+      <Box
+        component="div"
+        sx={{
+          width: '100%',
+          marginBottom: '12px',
+          flex: 1
+
+
+        }}
+      >
+        <Typography sx={{ background: COLORS.colorSuccessBackground, padding: '16px' }}>
+          {sectionListWithSensorsAndNoError?.length} Monitored Sections Working Optimally
+        </Typography>
+      </Box>
+
       <Box
         component="div"
         sx={{
@@ -85,7 +100,7 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
               ? (
                 <span>Optimal system function</span>
               ) : (
-                <span><strong>Alert:&nbsp;</strong>2 Sections with Issues</span>
+                <span><strong>Alert:&nbsp;</strong>{sectionListWithErrors.length} Section(s) with Issues</span>
               )
             }
           </Typography>
@@ -169,89 +184,6 @@ const DrawerContentsSafeguards: React.FC<Props> = ({}) => {
         )
       })}
       </Grid>
-
-      {/* <Typography sx={{ background: COLORS.colorSuccess, marginTop: '24px', padding: '16px' }}>
-        2 Monitored Sections Working Optimally
-      </Typography> */}
-      <Grid container spacing={2} sx={{ marginTop: '0px' }}>
-
-      {sectionListWithSensorsAndNoError?.map((section: any, index: number) => {
-        const key = index;
-
-        return (
-          <Grid item xs={12}>
-            <ContentCardInline title={`Section ${ section.title }`} >
-              <Box
-                component="div"
-                key={key}
-                sx={{ paddingTop: '8px'}}
-              >
-                {section.ml.map((mlValue: any, index: number) => {
-                  return (
-                    <Box
-                      component="div"
-                      key={index}
-                      sx={{
-                        width: '100%',
-                        alignItems: 'stretch',
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        marginBottom: '8px',
-                        '&:last-of-type': {
-                          marginBottom: 0
-                        }
-                      }}
-                    >
-                      <Box
-                        component="div"
-                        sx={{
-                          display: 'flex',
-                          backgroundColor: COLORS.colorGrayDark,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          padding: '8px',
-                          width: '130px !important'
-                        }}
-                      >
-                        <Typography
-                          align="center"
-                          sx={{ fontSize: '14px'}}
-                        >
-                          {mlValue.title}
-                        </Typography>
-                      </Box>
-                      <Box
-                        component="div"
-                        sx={{
-                          display: 'flex',
-                          flexGrow: 1,
-                          backgroundColor: COLORS.colorGrayDarker,
-                          alignItems: 'center',
-                          justifyContent: 'center',
-                          padding: '8px'
-                        }}
-                      >
-                        <Typography
-                          sx={{
-                            textAlign: 'center',
-                            lineHeight: '1.25',
-                            fontSize: '.8rem'
-                          }}
-                        >
-                          {mlValue.value}
-                        </Typography>
-                      </Box>
-                    </Box>
-                  )
-                })}
-              </Box>
-            </ContentCardInline>
-          </Grid>
-        )
-      })}
-      </Grid>
-
     </Box>
   );
 }

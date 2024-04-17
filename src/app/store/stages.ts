@@ -113,7 +113,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '10.5 mM Expected = 0.0002 mM',
+          value: '10.5 mM, Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -229,7 +229,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '10.5 mM Expected = 0.0002 mM',
+          value: '10.5 mM, Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -345,7 +345,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '10.5 mM Expected = 0.0002 mM',
+          value: '10.5 mM, Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -461,7 +461,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '10.5 mM Expected = 0.0002 mM',
+          value: '10.5 mM, Expected = 0.0002 mM',
         },
         {
           title: 'Response',
@@ -577,7 +577,7 @@ const initialStagesState = {
         },
         {
           title: 'Nd Concentration',
-          value: '10.5 mM Expected = 0.0002 mM',
+          value: '10.5 mM, Expected = 0.0002 mM',
         },
         {
           title: 'Response',
