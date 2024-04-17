@@ -70,12 +70,12 @@ export default function CardSelectedStageResults() {
                 }}
                 className={classNames(
                   {
-                    'outline-success': selectedSection.mlStatus === 'good',
+                    'outline-success': selectedSection.mlStatus === '',
                     'outline-error': selectedSection.mlStatus === 'alarm',
                   },
                 )}
               >
-                {selectedSection.mlStatus === 'good'
+                {selectedSection.mlStatus === ''
                   ? (
                     <Box
                       component="div"
