@@ -9,11 +9,13 @@ npm install
 ### Compiles and hot-reloads for development
 Start a local web server with HMR for development
 ```
-npm run serve
-```
-or
-```
 npm run dev
+```
+
+### Run mock data server
+Start a local web server with HMR for development
+```
+npm run dev:server
 ```
 
 ### Compiles and minifies for production
@@ -33,8 +35,3 @@ Search files for code that does not match styles defined by style guide and styl
 ```
 npm run lint
 ```
-
-### Run Cypress App
-Open Cypress Application for testing
-```
-npx cypress open

@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 type SectionsResponse = Array<{ [key: string]: any; }>

@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
