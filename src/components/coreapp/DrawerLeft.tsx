@@ -297,8 +297,15 @@ const DrawerLeft: React.FC<Props> = ({}) => {
               <DrawerContentsSettings />
             }
           </Box>
-        </Box>
+        </Box>     
       </Box>
+      { openDrawerLeftState &&
+        <Box sx={{ textAlign: 'left', width: '300px' }}>
+          <Typography sx={{ fontSize: '.75rem', padding: '.75rem 1rem' }}>
+            Copyright 2024, Battelle Energy Alliance, LLC
+          </Typography>
+        </Box>
+      }
     </Drawer>
   );
 }
