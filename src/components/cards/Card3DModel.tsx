@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 import React, { useEffect } from 'react';
 import { Canvas, useThree } from '@react-three/fiber';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';

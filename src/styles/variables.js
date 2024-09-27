@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 const COLORS = {
   colorPrimary: '#005981',
   colorPrimaryBackground: '#002334', 

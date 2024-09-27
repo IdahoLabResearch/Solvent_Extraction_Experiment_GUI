@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 // React
 import * as React from 'react';
 import ReactDOM from 'react-dom/client'
