@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { RootState, AppDispatch } from '../store';
 

@@ -1,3 +1,5 @@
+{/* Copyright 2024, Battelle Energy Alliance, LLC */}
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialComponentsState = {};
