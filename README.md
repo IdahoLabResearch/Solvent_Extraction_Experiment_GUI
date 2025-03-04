@@ -16,12 +16,12 @@ This project provides a Graphical User Interface (GUI) and Mixed Reality (MR) in
 
 1. **Clone the repository:**
 ```sh
-git clone https://github.inl.gov/Digital-Engineering/BCTC-Beartooth-GUI.git
+git clone https://github.com/IdahoLabResearch/Solvent_Extraction_Experiment_GUI.git
 ```
 
 2. **Navigate to directory**
 ```sh
-cd /path-to-directory/BCTC-Beartooth-GUI
+cd /path-to-directory/Solvent_Extraction_Experiment_GUI
 ```
 
 3. **Install dependencies:**
@@ -44,7 +44,7 @@ npm run dev:server
 ```
 
 3. **Run the app in a browser:**
-Open your browser and navigate to [http://localhost:5173/](http://localhost:5173/ "BCTC/LBL Beartooth GUI")
+Open your browser and navigate to [http://localhost:5173/](http://localhost:5173/ "Solvent_Extraction_Experiment_GUI")
 
 ## Alternate App commands
 
