@@ -74,6 +74,8 @@ npm run lint:styles
 ### 1: System Overview
 The System Overview provides high-level insights into the chemical solvent extraction process. It includes a flowsheet overview that represents the real-world aqueous separation system components, including stages, sections, material and solution input and output points, flow direction, placements of sensors, and their readings. The overall system status is categorized into four sections: Fresh Organic, Organic Recycle, Aqueous Feed, and Strip Product. The dashboard shows real-time data on key parameters like neodymium and nickel concentrations. Users can easily identify which sections are operating within optimal conditions and which may require attention.
 
+![System Overview](public/screenshots/BCTC-LBL_1-1_LandingPage.png)
+
 ### 2: Selected Section Information
 The Section Readings view displays detailed data for each section of the flowsheet. Users can click on individual sections to view specific data points.
 
@@ -85,6 +87,8 @@ This is the main overview of each section. It provides the key data such as:
 
 This view helps users understand the performance of each section and identify any deviations from expected values.
 
+![Chemical Readings](public/screenshots/BCTC-LBL_2-1_Section_Readings.png)
+
 #### 2.2: Timeseries Data
 This view displays the data over time, allowing users to monitor trends and changes throughout the experiment. Timeseries data includes:
 - Concentration Over Time: Tracking the concentration levels of neodymium and nickel in both organic and aqueous phases.
@@ -93,8 +97,13 @@ This view displays the data over time, allowing users to monitor trends and chan
 
 This view helps users understand the data over time, allowing them to monitor the process and make informed decisions. It is worth noting that this view has been cleared of any sensitive data and is therefore not as functional as it would be in a real-world experiment.
 
+![Timeseries Data](public/screenshots/BCTC-LBL_3-1_Section_TimeseriesData.png)
+
 #### 2.3: Safeguards Assessment
 This view provides detailed information about the safeguards status for the selected section, including anomaly details, locations of interest, anomaly strength, concentration levels, and recommended responses.
+
+![Safeguards Assessment - Optimal](public/screenshots/BCTC-LBL_4-1_Section_Safeguards_Okay.png)
+![Safeguards Assessment - Alert](public/screenshots/BCTC-LBL_4-4_Section_Safeguards_Alert.png)
 
 ### 3: Selected Stage Information
 The Stage Information view provides information on the status of individual stages within each section. This includes metrics such as:
@@ -104,16 +113,22 @@ The Stage Information view provides information on the status of individual stag
 
 Users can interact with the stages to get a deeper understanding of the system's health. For example, if the RPM or temperature is outside the optimal range, it may indicate a malfunction or need for maintenance.
 
+![Selected Stage Information](public/screenshots/BCTC-LBL_5-1_Stage_Info.png)
+
 ### 4: Safeguards and Alerts
 The Safeguards and Alerts section displays notifications about any issues within the system. Alerts are shown in three places:
 - Top-right corner of the application: An indicator notifies the operator of an issue when the menu is collapsed and there is no selected section. This indicator is a red exclamation point symbol to draw attention.
-- Menu sidebar: Displays system information and alerts when expanded. Users can choose to keep it open permanently or collapse it.
+- Menu sidebar: Displays system information and alerts when expanded. Users can choose to keep it open permanently or collapse it. Keeping it open permanently allows the user to keep apprised of the safeguard statuses.
 - Safeguards assessment tab of a selected section: Provides detailed information about the safeguards status for the selected section, including anomaly details, locations of interest, anomaly strength, concentration levels, and recommended responses.
 
 These safeguards notifications allow users to stay on top of potential issues and take corrective actions promptly.
 
+![Safeguards and Alerts](public/screenshots/BCTC-LBL_4-3_Section_Safeguards_Alert.png)
+
 ### 5: System Components Status
 The System Components sidebar section displays the status of the Data Historian, ML Adapter, and Chemical Adapter. If there is an issue with any component, a user is alerted so that they can investigate.
+
+![System Components Status](public/screenshots/BCTC-LBL_1-3_LandingPage.png)
 
 ## Technologies Used
 - **React:** A JavaScript library for building user interfaces.
